@@ -1,0 +1,13 @@
+.row
+  .col-sm-6.col-sm-offset-3
+    %form
+      %select.destinations-select
+        %option
+        - @destinations['destinations'].each do |destination|
+          - option_value = destination['countryCode'] + "-" + destination['code']
+          %option{ value: option_value }
+            = destination['name']['content']
+          - if destination['zones']
+            - destination['zones'].each do |zone|
+              %option{ value: option_value + "-" + zone['zoneCode'].to_s }
+                = destination['name']['content'] + " " + zone['name']
