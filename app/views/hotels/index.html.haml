@@ -1,5 +1,11 @@
-- @hotels['hotels']['hotels'].each do |hotel|
-  .hotel
-    = hotel.inspect
-    %br
-    %br
+.hotels
+  - @hotels['hotels'].each do |hotel|
+    .hotel
+      .row
+        .col-sm-3
+          %image{ src: hotel }
+        .col-sm-5
+        .col-sm-4
+      = hotel.inspect
+      %br
+      %br
