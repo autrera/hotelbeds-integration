@@ -1,0 +1,119 @@
+{
+    "from": 1,
+    "to": 1000,
+    "total": 21,
+    "auditData": {
+        "processTime": "8",
+        "timestamp": "2016-03-30 05:29:22.409",
+        "requestHost": "212.170.239.6",
+        "serverId": "sa3RKSJACHXE79K.env",
+        "environment": "[int]",
+        "release": "dff3bd24bf42ab2fac6879168d792cdcd7091be6"
+    },
+    "facilityGroups": [{
+        "code": 10,
+        "description": {
+            "content": "Location"
+        }
+    }, {
+        "code": 20,
+        "description": {
+            "content": "Hotel type"
+        }
+    }, {
+        "code": 30,
+        "description": {
+            "content": "Methods of payment"
+        }
+    }, {
+        "code": 40,
+        "description": {
+            "content": "Distances (in meters)"
+        }
+    }, {
+        "code": 60,
+        "description": {
+            "content": "Room facilities (Standard room)"
+        }
+    }, {
+        "code": 61,
+        "description": {
+            "content": "Room Distribution"
+        }
+    }, {
+        "code": 62,
+        "description": {
+            "content": "Room distribution Alternative"
+        }
+    }, {
+        "code": 70,
+        "description": {
+            "content": "Facilities"
+        }
+    }, {
+        "code": 71,
+        "description": {
+            "content": "Catering"
+        }
+    }, {
+        "code": 72,
+        "description": {
+            "content": "Business"
+        }
+    }, {
+        "code": 73,
+        "description": {
+            "content": "Entertainment"
+        }
+    }, {
+        "code": 74,
+        "description": {
+            "content": "Health"
+        }
+    }, {
+        "code": 75,
+        "description": {
+            "content": "Green Programmes - Worldwide"
+        }
+    }, {
+        "code": 76,
+        "description": {
+            "content": "Green Programmes - Europe"
+        }
+    }, {
+        "code": 77,
+        "description": {
+            "content": "Green Programmes - Americas"
+        }
+    }, {
+        "code": 78,
+        "description": {
+            "content": "Green Programmes - Asia-Pacific"
+        }
+    }, {
+        "code": 79,
+        "description": {
+            "content": "Green Programmes - Africa"
+        }
+    }, {
+        "code": 80,
+        "description": {
+            "content": "Meals"
+        }
+    }, {
+        "code": 85,
+        "description": {
+            "content": "Things to keep in mind"
+        }
+    }, {
+        "code": 90,
+        "description": {
+            "content": "Sports"
+        }
+    }, {
+        "code": 100,
+        "description": {
+            "content": "Points of interest"
+        }
+    }]
+}

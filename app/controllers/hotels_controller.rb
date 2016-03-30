@@ -1,7 +1,9 @@
 class HotelsController < ApplicationController
   def index
+    country_code, destination_code, zone_code = params['destination'].split '-'
+    hotels_file = File.read(Rails.root + "app/assets/jsons/hotels.json")
+    @hotels = JSON.parse hotels_file
     signature = Digest::SHA256.hexdigest "4whec3tnzq9abhrx2ku9n78t" + "bS6CCG3tkc" + Time.now.to_i.to_s
-    logger.info "X-Signature: #{signature.inspect}"
     body = {
       stay: {
         checkIn: "2016-06-08",
@@ -49,8 +51,8 @@ class HotelsController < ApplicationController
         }
       ],
       destination: {
-        code: "PMI",
-        zone: "90"
+        code: destination_code,
+        zone: zone_code
       }
     }
     request = Typhoeus::Request.new(
@@ -59,8 +61,8 @@ class HotelsController < ApplicationController
       body: JSON.generate(body),
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
-    request.run
-    @response = request.response
-    @body = JSON.parse @response.body
+    # request.run
+    # @response = request.response
+    # @body = JSON.parse @response.body
   end
 end

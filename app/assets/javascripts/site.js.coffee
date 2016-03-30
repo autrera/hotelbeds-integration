@@ -1,11 +1,10 @@
 ready = () ->
 
-  eventHandler = (name) =>
-    console.log(name, arguments)
-    return
-
-  $('.destinations-select').selectize
-    onChange: eventHandler 'onChange'
+  $select = $('.destinations-select').selectize
+    onChange: (value) ->
+      console.log value
+      $('#destination-form').submit()
+      return
 
   return
 

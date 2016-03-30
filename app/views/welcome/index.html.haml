@@ -1,7 +1,7 @@
 .row
   .col-sm-6.col-sm-offset-3
-    %form
-      %select.destinations-select
+    %form#destination-form{ action: "/hotels" }
+      %select.destinations-select{ name: 'destination' }
         %option
         - @destinations['destinations'].each do |destination|
           - option_value = destination['countryCode'] + "-" + destination['code']
