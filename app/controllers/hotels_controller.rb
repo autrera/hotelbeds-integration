@@ -1,6 +1,9 @@
 class HotelsController < ApplicationController
+
+  include HotelHelper
+
   def index
-    country_code, destination_code, zone_code = params['destination'].split '-'
+    @country_code, @destination_code, @zone_code = params['destination'].split '-'
 
     hotels_file = File.read(Rails.root + "app/assets/jsons/hotels_content.json")
     @hotels = JSON.parse hotels_file
@@ -69,5 +72,13 @@ class HotelsController < ApplicationController
     # request.run
     # @response = request.response
     # @body = JSON.parse @response.body
+  end
+
+  def show
+    @hotel_code = params[:id].split('-').pop.to_i
+    hotel_file = File.read(Rails.root + "app/assets/jsons/hotel_availability.json")
+    @hotel = JSON.parse hotel_file
+    hotel_content_file = File.read(Rails.root + "app/assets/jsons/hotel_content.json")
+    @hotel_content = JSON.parse hotel_content_file
   end
 end

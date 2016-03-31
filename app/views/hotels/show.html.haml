@@ -1,0 +1,14 @@
+- @hotel['hotels']['hotels'].each do |hotel|
+  .hotel-show
+    .row
+      .col-sm-12
+        %h1
+          = hotel['name']
+          %span.star-rating{ class: "star-" + hotel["categoryCode"] }
+            &nbsp;
+    .row
+      .col-sm-12
+        %p= "#{hotel['destinationName']}, #{hotel['zoneName']}"
+    .row
+      .col-sm-12
+        %p= "#{hotel['destinationName']}, #{hotel['zoneName']}"

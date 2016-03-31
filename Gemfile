@@ -22,6 +22,8 @@ gem 'normalize-rails'
 gem 'typhoeus'
 # Better selects
 gem 'chosen-rails'
+# Font Awesome Icons
+gem "font-awesome-rails"
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

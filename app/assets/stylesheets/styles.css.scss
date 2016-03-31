@@ -1,0 +1,56 @@
+$highlight_strong: #00418c;
+$highlight_ligth: #588fb7;
+$action: #0d9259;
+
+body {
+  color: #555555;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1 {
+  color: $highlight_strong;
+  font-weight: 200;
+  margin-bottom: 12px;
+}
+
+h2 {
+  color: $highlight_ligth;
+  font-weight: 200;
+  margin-bottom: 8px;
+}
+
+span.star-rating {
+  background-image: image-url('star.png');
+  display: inline-block;
+  width: 23px;
+  font-size: 18px;
+}
+
+span.star-rating.star-2EST {
+  width: 46px;
+}
+
+span.star-rating.star-3EST {
+  width: 69px;
+}
+
+span.star-rating.star-4EST {
+  width: 92px;
+}
+
+span.star-rating.star-5EST {
+  width: 115px;
+}
+
+.hotels
+{
+  .hotel
+  {
+    margin-bottom: 12px;
+  }
+}

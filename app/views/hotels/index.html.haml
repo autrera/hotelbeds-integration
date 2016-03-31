@@ -1,11 +1,28 @@
+%br
+%br
+%h1= "Hoteles en #{full_destination(@country_code, @destination_code, @zone_code)}"
+%br
+%br
 .hotels
   - @hotels['hotels'].each do |hotel|
     .hotel
       .row
-        .col-sm-3
-          %image{ src: hotel }
-        .col-sm-5
-        .col-sm-4
-      = hotel.inspect
-      %br
-      %br
+        .col-sm-2
+          %a{ href: hotel_link(hotel) }
+            %image.img-responsive{ src: hotel_image(hotel) }
+        .col-sm-8
+          .row
+            .col-sm-12
+              %h2
+                %a{ href: hotel_link(hotel) }= hotel["name"]["content"]
+                %span.star-rating{ class: "star-" + hotel["categoryCode"] }
+                  &nbsp;
+          .row
+            .col-sm-12
+              - if hotel.has_key? "description"
+                %p= hotel["description"]["content"].truncate(200, separator: ' ')
+        .col-sm-2
+          .row
+            .col-sm-12
+              &nbsp;
+              %a.btn.btn-block.btn-success{ href: hotel_link(hotel) } Ver Hotel >
