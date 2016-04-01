@@ -5,11 +5,11 @@
 %br
 .hotels
   - @hotels['hotels'].each do |hotel|
-    .hotel
+    .hotel-index
       .row
         .col-sm-2
-          %a{ href: hotel_link(hotel) }
-            %img.img-responsive{ src: hotel_image(hotel) }
+          %a.image-container{ href: hotel_link(hotel) }
+            %img{ src: hotel_image(hotel) }
         .col-sm-8
           .row
             .col-sm-12
