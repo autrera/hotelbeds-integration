@@ -1,13 +1,36 @@
-.row
-  .col-sm-6.col-sm-offset-3
-    %form#destination-form{ action: "/hotels" }
-      %select.destinations-select{ name: 'destination' }
-        %option
-        - @destinations['destinations'].each do |destination|
-          - option_value = destination['countryCode'] + "-" + destination['code']
-          %option{ value: option_value }
-            = destination['name']['content']
-          - if destination['zones']
-            - destination['zones'].each do |zone|
-              %option{ value: option_value + "-" + zone['zoneCode'].to_s }
-                = destination['name']['content'] + " " + zone['name']
+!!!
+%html
+  %head
+    %title
+      Neandertravel
+
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
+    %meta{ charset: 'utf-8' }
+    %meta{ content: 'IE=edge,chrome=1', http: { equiv: 'X-UA-Compatible' } }
+    %meta{ name: 'description', content: "" }
+
+    -# = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,300"
+    -# = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:300italic"
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+
+  %body
+    .container
+      .row
+        .col-sm-6.col-sm-offset-3
+          %img{ src: asset_path('logo-neander-travel.png'), style: 'display: block; margin: 80px auto 20px; ' }
+
+      .row
+        .col-sm-6.col-sm-offset-3
+          %form#destination-form{ action: "/hotels" }
+            %select.destinations-select{ name: 'destination' }
+              %option
+              - @destinations['destinations'].each do |destination|
+                - option_value = destination['countryCode'] + "-" + destination['code']
+                %option{ value: option_value }
+                  = destination['name']['content']
+                - if destination['zones']
+                  - destination['zones'].each do |zone|
+                    %option{ value: option_value + "-" + zone['zoneCode'].to_s }
+                      = destination['name']['content'] + " " + zone['name']

@@ -5,7 +5,7 @@ $action: #0d9259;
 body {
   color: #555555;
   font-weight: 200;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,12 +16,18 @@ h1 {
   color: $highlight_strong;
   font-weight: 200;
   margin-bottom: 12px;
+  font-size: 28px;
 }
 
 h2 {
   color: $highlight_ligth;
   font-weight: 200;
   margin-bottom: 8px;
+  font-size: 21px;
+}
+
+h3 {
+  font-size: 16px;
 }
 
 span.star-rating {
@@ -53,6 +59,7 @@ span.star-rating.star-5EST {
   .image-container
   {
     height: 120px;
+    display: block;
     img
     {
       width: 100%;
@@ -68,8 +75,75 @@ span.star-rating.star-5EST {
   }
   .about
   {
+    margin: 37px 0;
   }
   .rooms
+  {
+    .room
+    {
+      margin-bottom: 28px;
+      .name
+      {
+        font-weight: bold;
+        color: $highlight_strong;
+      }
+      .image-container
+      {
+        height: 120px;
+        display: block;
+        margin-bottom: 12px;
+        img
+        {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .facilities
+      {
+        font-size: 12px;
+        color: $highlight_ligth;
+        .facility
+        {
+          .fee
+          {
+            color: $action;
+          }
+        }
+      }
+      .rate
+      {
+        margin-bottom: 20px;
+        .board-name
+        {
+        }
+        .offer
+        {
+          font-size: 12px;
+          color: $action;
+        }
+        .comparison
+        {
+          text-align: center;
+          .original
+          {
+            color: gray;
+            text-decoration: line-through;
+          }
+          .new
+          {
+            color: $action;
+          }
+        }
+        .price
+        {
+          text-align: right;
+          color: $highlight_strong;
+          font-size: 21px;
+        }
+      }
+    }
+  }
+  .facilities
   {
   }
 }

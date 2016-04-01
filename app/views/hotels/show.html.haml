@@ -1,59 +1,100 @@
 - @hotel['hotels']['hotels'].each do |hotel|
-  - @hotel_content['hotels'].each do |hotel_content|
+  - hotel_content = @hotel_content['hotel']
 
-    .hotel-show
+  .hotel-show
+    .row
+      .col-sm-12
+        %h1
+          = hotel['name']
+          %span.star-rating{ class: "star-" + hotel["categoryCode"] }
+            &nbsp;
+    .row
+      .col-sm-12
+        %p= "#{hotel['destinationName']}, #{hotel['zoneName']}"
+    .row
+      .col-sm-12
+        %p= "#{hotel_content['address']['content']}, #{hotel['destinationName']}"
+
+    .images
       .row
         .col-sm-12
-          %h1
+          .owl-carousel
+            - hotel_content['images'].each do |image|
+              .item
+                %img.owl-lazy{ data: { src: "http://photos.hotelbeds.com/giata/small/" + image['path'] } }
+
+    .about
+      .row
+        .col-sm-12
+          %h2
             = hotel['name']
-            %span.star-rating{ class: "star-" + hotel["categoryCode"] }
-              &nbsp;
       .row
         .col-sm-12
-          %p= "#{hotel['destinationName']}, #{hotel['zoneName']}"
-      .row
-        .col-sm-12
-          %p= "#{hotel_content['address']['content']}, #{hotel['destinationName']}"
+          %p
+            = hotel_content['description']['content']
 
-      .images
-        .row
-          .col-sm-12
-            .owl-carousel
-              - hotel_content['images'].each do |image|
-                .item
-                  %img.owl-lazy{ data: { src: "http://photos.hotelbeds.com/giata/small/" + image['path'] } }
-
-      .about
-        .row
-          .col-sm-12
-            %h2
-              = hotel['name']
-        .row
-          .col-sm-12
-            %p
-              = hotel_content['description']['content']
-
-      .rooms
-        - hotel['rooms'].each do |room|
-          .room
-            .row
-              .col-sm-3
-                .row
-                  .col-sm-12
+    .rooms
+      - hotel['rooms'].each do |room|
+        .room
+          .row
+            .col-sm-3
+              .row
+                .col-sm-12
+                  .name
                     = room['name']
-              .col-sm-9
-                - room['rates'].each do |rate|
+              .row
+                .col-sm-12
+                  .image-container
+                    %img{ src: room_image(room['code'], hotel_content['images']) }
+              .row
+                .col-sm-12
+                  %ul.facilities
+                    - room_facilities(room['code'], hotel_content['rooms']).each do |room_facility|
+                      %li.facility
+                        = room_facility['description']['content']
+                        - if room_facility.has_key? 'indFee'
+                          %span.fee
+                            $
+            .col-sm-9
+              - room['rates'].each do |rate|
+                - calculated_rates = calculate_gross_room_rate(rate)
+                .rate
                   .row
                     .col-sm-4
                       .row
                         .col-sm-12
-                          = rate['boardName']
+                          .board-name
+                            = rate['boardName']
                       - if rate.has_key? 'offers'
                         - rate['offers'].each do |offer|
                           .row
                             .col-sm-12
-                              = offer['name']
-                              = offer['amount']
+                              .offer
+                                = offer['name']
+                                / = offer['amount']
                     .col-sm-4
-                      = rate['sellingRate']
+                      - if calculated_rates['gross'] != calculated_rates['client_total']
+                        .comparison
+                          .original
+                            $
+                            = calculated_rates['gross']
+                          .new
+                            $
+                            = calculated_rates['client_total']
                     .col-sm-4
+                      .price
+                        $
+                        = calculated_rates['client_total']
+                      .btn.btn-danger.btn-mini.pull-right
+                        Seleccionar
+
+    .facilities
+      .row
+        .col-sm-12
+          %ul
+            - hotel_content['facilities'].each do |facility|
+              %li
+                = facility['description']['content']
+                - if facility.has_key? 'indFee'
+                  %span.facility_fee
+                    $

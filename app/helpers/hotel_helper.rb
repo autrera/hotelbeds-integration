@@ -3,13 +3,30 @@ module HotelHelper
     if hotel.has_key? "images"
       hotel["images"].each do |image|
         if image["imageTypeCode"] == "GEN" && image['order'] == 1
-          return "http://photos.hotelbeds.com/giata/" + image["path"]
+          return "http://photos.hotelbeds.com/giata/small/" + image["path"]
         end
       end
-      return "http://photos.hotelbeds.com/giata/" + hotel["images"][0]["path"]
+      return "http://photos.hotelbeds.com/giata/small/" + hotel["images"][0]["path"]
     end
     # Return default missing image
     return asset_path("logo-neander-travel.png")
+  end
+
+  def room_image(room_code, hotel_images)
+    hotel_images.each do |image|
+      if image['roomCode'] == room_code
+        return "http://photos.hotelbeds.com/giata/small/" + image['path']
+      end
+    end
+    return asset_path("logo-neander-travel.png")
+  end
+
+  def room_facilities(room_code, hotel_rooms)
+    hotel_rooms.each do |room|
+      if room['roomCode'] == room_code
+        return room['roomFacilities']
+      end
+    end
   end
 
   def full_destination(country_code, destination_code, zone_code)
@@ -39,6 +56,28 @@ module HotelHelper
 
   def hotel_link(hotel)
     return '/hotels/' + hotel["name"]["content"].parameterize + "-" + hotel["code"].to_s
+  end
+
+  def calculate_gross_room_rate(rate)
+    if rate.has_key? 'hotelMandatory'
+      rate_in_cents = rate['sellingRate'].to_f * 100
+    else
+      rate_in_cents = rate['net'].to_f * 100 # * 1.25
+    end
+    Rails.logger.info "Rate in cents: #{rate_in_cents.inspect}"
+
+    discount_in_cents = 0.00
+    if rate.has_key? 'offers'
+      rate['offers'].each do |offer|
+        discount_in_cents += offer['amount'].to_f * (-1) * 100
+      end
+    end
+    Rails.logger.info "Discount in cents: #{discount_in_cents.inspect}"
+
+    gross_rate_in_cents = rate_in_cents + discount_in_cents
+    Rails.logger.info "Gross in cents: #{gross_rate_in_cents.inspect}"
+
+    return { "gross" => gross_rate_in_cents / 100, "client_total" => rate_in_cents / 100 }
   end
 
 end

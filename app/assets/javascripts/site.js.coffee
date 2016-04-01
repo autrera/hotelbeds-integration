@@ -1,6 +1,7 @@
 ready = () ->
 
   $select = $('.destinations-select').selectize
+    openOnFocus: false
     onChange: (value) ->
       console.log value
       $('#destination-form').submit()
