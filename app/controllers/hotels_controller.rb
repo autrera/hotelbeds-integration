@@ -76,8 +76,10 @@ class HotelsController < ApplicationController
 
   def show
     @hotel_code = params[:id].split('-').pop.to_i
+
     hotel_file = File.read(Rails.root + "app/assets/jsons/hotel_availability.json")
     @hotel = JSON.parse hotel_file
+
     hotel_content_file = File.read(Rails.root + "app/assets/jsons/hotel_content.json")
     @hotel_content = JSON.parse hotel_content_file
   end

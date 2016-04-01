@@ -2,7 +2,7 @@ module HotelHelper
   def hotel_image(hotel)
     if hotel.has_key? "images"
       hotel["images"].each do |image|
-        if image["imageTypeCode"] == "GEN"
+        if image["imageTypeCode"] == "GEN" && image['order'] == 1
           return "http://photos.hotelbeds.com/giata/" + image["path"]
         end
       end

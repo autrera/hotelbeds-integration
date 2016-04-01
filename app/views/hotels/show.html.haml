@@ -1,14 +1,59 @@
 - @hotel['hotels']['hotels'].each do |hotel|
-  .hotel-show
-    .row
-      .col-sm-12
-        %h1
-          = hotel['name']
-          %span.star-rating{ class: "star-" + hotel["categoryCode"] }
-            &nbsp;
-    .row
-      .col-sm-12
-        %p= "#{hotel['destinationName']}, #{hotel['zoneName']}"
-    .row
-      .col-sm-12
-        %p= "#{hotel['destinationName']}, #{hotel['zoneName']}"
+  - @hotel_content['hotels'].each do |hotel_content|
+
+    .hotel-show
+      .row
+        .col-sm-12
+          %h1
+            = hotel['name']
+            %span.star-rating{ class: "star-" + hotel["categoryCode"] }
+              &nbsp;
+      .row
+        .col-sm-12
+          %p= "#{hotel['destinationName']}, #{hotel['zoneName']}"
+      .row
+        .col-sm-12
+          %p= "#{hotel_content['address']['content']}, #{hotel['destinationName']}"
+
+      .images
+        .row
+          .col-sm-12
+            .owl-carousel
+              - hotel_content['images'].each do |image|
+                .item
+                  %img.owl-lazy{ data: { src: "http://photos.hotelbeds.com/giata/small/" + image['path'] } }
+
+      .about
+        .row
+          .col-sm-12
+            %h2
+              = hotel['name']
+        .row
+          .col-sm-12
+            %p
+              = hotel_content['description']['content']
+
+      .rooms
+        - hotel['rooms'].each do |room|
+          .room
+            .row
+              .col-sm-3
+                .row
+                  .col-sm-12
+                    = room['name']
+              .col-sm-9
+                - room['rates'].each do |rate|
+                  .row
+                    .col-sm-4
+                      .row
+                        .col-sm-12
+                          = rate['boardName']
+                      - if rate.has_key? 'offers'
+                        - rate['offers'].each do |offer|
+                          .row
+                            .col-sm-12
+                              = offer['name']
+                              = offer['amount']
+                    .col-sm-4
+                      = rate['sellingRate']
+                    .col-sm-4

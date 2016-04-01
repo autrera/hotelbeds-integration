@@ -6,6 +6,13 @@ ready = () ->
       $('#destination-form').submit()
       return
 
+  $('.owl-carousel').owlCarousel
+    stagePadding: 50
+    loop: true
+    margin: 10
+    items: 1
+    lazyLoad: true
+
   return
 
 $(document).ready ready
