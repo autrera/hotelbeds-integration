@@ -119,24 +119,20 @@ span.star-rating.star-5EST {
       color: $wet_asphalt;
     }
   }
-}
-
-.testing
-{
-  background: $belize_hole;
-  margin-top: 119px;
-  margin-bottom: 119px;
-  padding: 21px;
-  border-radius: 4px;
-}
-
-.destinations-select
-{
+  .search-box-container
+  {
+    background: $belize_hole;
+    // margin-top: 119px;
+    // margin-bottom: 119px;
+    padding: 21px;
+    border-radius: 0 0 4px 4px;
+  }
 }
 
 .recommended-destinations
 {
-  margin-bottom: 50px;
+  margin-top: 89px;
+  margin-bottom: 89px;
   .title
   {
     color: $belize_hole;
@@ -165,7 +161,8 @@ span.star-rating.star-5EST {
   }
   .boards
   {
-    padding-left: 16px;
+    list-style-type: none;
+    padding-left: 0;
     .board
     {
       font-size: 16px;

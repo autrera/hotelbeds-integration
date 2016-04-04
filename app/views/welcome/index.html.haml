@@ -1,85 +1,48 @@
-!!!
-%html
-  %head
-    %title
-      Neandertravel
-
-    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
-    %meta{ charset: 'utf-8' }
-    %meta{ content: 'IE=edge,chrome=1', http: { equiv: 'X-UA-Compatible' } }
-    %meta{ name: 'description', content: "" }
-
-    -# = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Open+Sans:400,300"
-    -# = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:300italic"
-    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-    = javascript_include_tag "application", "data-turbolinks-track" => true
-    = csrf_meta_tags
-
-  %body
-    .container
-      = render 'shared/header'
+.recommended-destinations
+  .row
+    .col-sm-12
+      %h2.title
+        Recommended Destinations
+  .row
+    .col-sm-12
       .row
-        .col-sm-12
-          .testing
-            %form#destination-form{ action: "/hotels" }
-              %select.destinations-select{ name: 'destination', placeholder: "Where do you want to go?" }
-                %option
-                - @destinations['destinations'].each do |destination|
-                  - option_value = destination['countryCode'] + "-" + destination['code']
-                  %option{ value: option_value }
-                    = destination['name']['content']
-                  - if destination['zones']
-                    - destination['zones'].each do |zone|
-                      %option{ value: option_value + "-" + zone['zoneCode'].to_s }
-                        = destination['name']['content'] + " " + zone['name']
+        .col-sm-2
+          %a{ href: "" }
+            %img.picture{ src: asset_path("cancun.png") }
+            %p.name Cancun
+        .col-sm-2
+          %a{ href: "" }
+            %img.picture{ src: asset_path("acapulco.png") }
+            %p.name Acapulco
+        .col-sm-2
+          %a{ href: "" }
+            %img.picture{ src: asset_path("vallarta.png") }
+            %p.name Puerto Vallarta
+        .col-sm-2
+          %a{ href: "" }
+            %img.picture{ src: asset_path("playa.png") }
+            %p.name Playa del Carmen
+        .col-sm-2
+          %a{ href: "" }
+            %img.picture{ src: asset_path("ixtapa.png") }
+            %p.name Ixtapa Zihuatanejo
+        .col-sm-2
+          %a{ href: "" }
+            %img.picture{ src: asset_path("ciudad_mexico.png") }
+            %p.name Ciudad de Mexico
 
-    .recommended-destinations
-      .container
-        .row
-          .col-sm-12
-            %h2.title
-              Recommended Destinations
-        .row
-          .col-sm-12
-            .row
-              .col-sm-2
-                %a{ href: "" }
-                  %img.picture{ src: asset_path("cancun.png") }
-                  %p.name Cancun
-              .col-sm-2
-                %a{ href: "" }
-                  %img.picture{ src: asset_path("acapulco.png") }
-                  %p.name Acapulco
-              .col-sm-2
-                %a{ href: "" }
-                  %img.picture{ src: asset_path("vallarta.png") }
-                  %p.name Puerto Vallarta
-              .col-sm-2
-                %a{ href: "" }
-                  %img.picture{ src: asset_path("playa.png") }
-                  %p.name Playa del Carmen
-              .col-sm-2
-                %a{ href: "" }
-                  %img.picture{ src: asset_path("ixtapa.png") }
-                  %p.name Ixtapa Zihuatanejo
-              .col-sm-2
-                %a{ href: "" }
-                  %img.picture{ src: asset_path("ciudad_mexico.png") }
-                  %p.name Ciudad de Mexico
-
-    .hotels-by-board
-      .container
-        .row
-          .col-sm-12
-            %h2.title
-              Available Boards
-        .row
-          - grouped_boards = group_items(@boards['boards'])
-          - grouped_boards.each do |grouped_board|
-            .col-sm-4
-              %ul.boards
-                - grouped_board.each do |board|
-                  - if board.has_key? "description"
-                    %li.board
-                      %a{ href: '#' }
-                        = board['description']['content']
+.hotels-by-board
+  .row
+    .col-sm-12
+      %h2.title
+        Available Boards
+  .row
+    - grouped_boards = group_items(@boards['boards'])
+    - grouped_boards.each do |grouped_board|
+      .col-sm-4
+        %ul.boards
+          - grouped_board.each do |board|
+            - if board.has_key? "description"
+              %li.board
+                %a{ href: '#' }
+                  = board['description']['content']

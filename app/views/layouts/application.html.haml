@@ -16,6 +16,7 @@
     = csrf_meta_tags
 
   %body
+    = render 'shared/header'
     .container
-      = render 'shared/header'
       = yield
+    = render 'shared/footer'
