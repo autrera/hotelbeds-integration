@@ -1,28 +1,59 @@
 $highlight_strong: #00418c;
 $highlight_ligth: #588fb7;
 $action: #0d9259;
+$text: #555555;
+
+$peter_river: #3498DB;
+$belize_hole: #2980B9;
+
+$turquoise: #1ABC9C;
+$green_sea: #16A085;
+
+$emerald: #2ECC71;
+$nephritis: #27AE60;
+$grass: #97d037;
+
+$amethyst: #9B59B6;
+$wisteria: #8E44AD;
+
+$wet_asphalt: #34495E;
+$midnight_blue: #2C3E50;
+
+$sun_flower: #F1C40F;
+$orange: #F39C12;
+
+$carrot: #E67E22;
+$pumpkin: #D35400;
+
+$alizarin: #E74C3C;
+$pome_granate: #C0392B;
+
+$clouds: #ECF0F1;
+// $clouds: #F5F5F5;
+$silver: #BDC3C7;
+
+$concrete: #95A5A6;
+$asbestos: #7F8C8D;
 
 body {
-  color: #555555;
+  color: $text;
   font-weight: 200;
   font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  font-weight: 200;
+  margin-bottom: 12px;
 }
 
 h1 {
-  color: $highlight_strong;
-  font-weight: 200;
-  margin-bottom: 12px;
+  color: $belize_hole;
   font-size: 28px;
 }
 
 h2 {
-  color: $highlight_ligth;
-  font-weight: 200;
-  margin-bottom: 8px;
+  color: $peter_river;
   font-size: 21px;
 }
 
@@ -53,6 +84,100 @@ span.star-rating.star-5EST {
   width: 115px;
 }
 
+.header
+{
+  margin-bottom: 28px;
+  .btn-group
+  {
+    font-size: 12px;
+    .btn-link
+    {
+      color: $concrete;
+      font-weight: 200;
+      border-right: 1px solid $clouds;
+      padding: 12px 0;
+    }
+    .btn-link:last-child
+    {
+      border-right: none;
+    }
+  }
+  .first-row
+  {
+    border-bottom: 1px solid $clouds;
+  }
+  .call-us
+  {
+    background: $clouds;
+    span
+    {
+      font-size: 12px;
+    }
+    .number
+    {
+      font-weight: bold;
+      color: $wet_asphalt;
+    }
+  }
+}
+
+.testing
+{
+  background: $belize_hole;
+  margin-top: 119px;
+  margin-bottom: 119px;
+  padding: 21px;
+  border-radius: 4px;
+}
+
+.destinations-select
+{
+}
+
+.recommended-destinations
+{
+  margin-bottom: 50px;
+  .title
+  {
+    color: $belize_hole;
+  }
+  .picture
+  {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    // @include box-shadow(#444 0px 1px 2px);
+  }
+  .name{
+    margin-top: 5px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: $text;
+  }
+}
+
+.hotels-by-board
+{
+  .title
+  {
+    color: $belize_hole;
+  }
+  .boards
+  {
+    padding-left: 16px;
+    .board
+    {
+      font-size: 16px;
+      font-weight: 200;
+      a
+      {
+        color: $text;
+      }
+    }
+  }
+}
+
 .hotel-index
 {
   margin-bottom: 12px;
@@ -72,20 +197,28 @@ span.star-rating.star-5EST {
 {
   .images
   {
+    margin-bottom: 37px;
   }
   .about
   {
-    margin: 37px 0;
+    margin-bottom: 37px;
+    .title
+    {
+      margin-bottom: 12px;
+    }
   }
   .rooms
   {
+    margin-bottom: 37px;
+    .title
+    {
+      margin-bottom: 12px;
+    }
     .room
     {
       margin-bottom: 28px;
       .name
       {
-        font-weight: bold;
-        color: $highlight_strong;
       }
       .image-container
       {
@@ -101,12 +234,13 @@ span.star-rating.star-5EST {
       .facilities
       {
         font-size: 12px;
-        color: $highlight_ligth;
+        // color: $highlight_ligth;
         .facility
         {
           .fee
           {
-            color: $action;
+            font-weight: bold;
+            color: $orange;
           }
         }
       }
@@ -137,7 +271,7 @@ span.star-rating.star-5EST {
         .price
         {
           text-align: right;
-          color: $highlight_strong;
+          color: $belize_hole;
           font-size: 21px;
         }
       }
@@ -145,5 +279,10 @@ span.star-rating.star-5EST {
   }
   .facilities
   {
+    font-size: 12px;
+    .title
+    {
+      margin-bottom: 12px;
+    }
   }
 }

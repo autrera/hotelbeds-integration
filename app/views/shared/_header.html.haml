@@ -1,2 +1,47 @@
-%a{ href: '/' }
-  %img{ src: asset_path('logo-neander-travel.png'), style: 'display: block; margin: 10px auto; 20px;' }
+.header
+  .row.first-row
+    .col-sm-5
+      .row
+        .col-sm-12
+          .btn-group.btn-group-justified
+            %a.btn.btn-link{ href: "#" }
+              = fa_icon "user"
+              Agent Login
+            %a.btn.btn-link{ href: "#" }
+              = fa_icon "user"
+              Customer Login
+            %a.btn.btn-link{ href: "#" }
+              = fa_icon "edit"
+              Not a member?
+
+    .col-sm-5.col-sm-offset-2
+      .row
+        .col-sm-12
+          .btn-group.btn-group-justified
+            %a.btn.btn-link{ href: "#" }
+              Why us?
+            %a.btn.btn-link{ href: "#" }
+              Contact
+            %a.btn.btn-link{ href: "#" }
+              = fa_icon "facebook"
+            %a.btn.btn-link{ href: "#" }
+              = fa_icon "twitter"
+            %a.btn.btn-link{ href: "#" }
+              = fa_icon "google-plus"
+
+  .row
+    .col-sm-5
+      .logo
+        %a{ href: '/' }
+          %img{ src: asset_path('logo-neander-travel.png'), style: 'display: block; margin: 10px auto; 20px;' }
+
+    .col-sm-4
+      &nbsp;
+    .col-sm-3
+      .btn-group.btn-group-justified
+        .btn.btn-link.call-us{ href: "#" }
+          %span
+            CALL US
+          %p.number
+            = fa_icon "phone"
+            815-815-8815

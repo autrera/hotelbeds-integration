@@ -26,7 +26,7 @@
     .about
       .row
         .col-sm-12
-          %h2
+          %h2.title
             = hotel['name']
       .row
         .col-sm-12
@@ -34,6 +34,10 @@
             = hotel_content['description']['content']
 
     .rooms
+      .row
+        .col-sm-12
+          %h2.title
+            Rooms
       - hotel['rooms'].each do |room|
         .room
           .row
@@ -85,16 +89,24 @@
                       .price
                         $
                         = calculated_rates['client_total']
-                      .btn.btn-danger.btn-mini.pull-right
+                      .btn.btn-success.btn-mini.pull-right
                         Seleccionar
 
     .facilities
       .row
         .col-sm-12
-          %ul
-            - hotel_content['facilities'].each do |facility|
-              %li
-                = facility['description']['content']
-                - if facility.has_key? 'indFee'
-                  %span.facility_fee
-                    $
+          %h2.title
+            Facilities
+      .row
+        .col-sm-12
+          .row
+            - grouped_facilities = group_facilities hotel_content['facilities']
+            - grouped_facilities.each do |grouped_facility|
+              .col-sm-3
+                %ul
+                  - grouped_facility.each do |facility|
+                    %li
+                      = facility['description']['content']
+                      - if facility.has_key? 'indFee'
+                        %span.facility_fee
+                          $

@@ -1,0 +1,118 @@
+{
+    "from": 1,
+    "to": 100,
+    "total": 18,
+    "auditData": {
+        "processTime": "9",
+        "timestamp": "2016-04-04 21:05:13.642",
+        "requestHost": "212.170.239.6",
+        "serverId": "sa37AUX3ROLBLIS.env",
+        "environment": "[int]",
+        "release": "dff3bd24bf42ab2fac6879168d792cdcd7091be6"
+    },
+    "boards": [{
+        "code": "AB",
+        "description": {
+            "content": "AMERICAN BREAKFAST"
+        },
+        "multiLingualCode": "AB"
+    }, {
+        "code": "AI",
+        "description": {
+            "content": "ALL INCLUSIVE"
+        },
+        "multiLingualCode": "AI"
+    }, {
+        "code": "AS",
+        "description": {
+            "content": "ALL INCLUSIVE SPECIAL"
+        },
+        "multiLingualCode": "AS"
+    }, {
+        "code": "BB",
+        "description": {
+            "content": "BED AND BREAKFAST"
+        },
+        "multiLingualCode": "BB"
+    }, {
+        "code": "BH",
+        "description": {
+            "content": "1 BED AND BREAKFAST + 1 HALF BOARD"
+        },
+        "multiLingualCode": "BH"
+    }, {
+        "code": "CB",
+        "description": {
+            "content": "CONTINENTAL BREAKFAST"
+        },
+        "multiLingualCode": "CB"
+    }, {
+        "code": "DB",
+        "description": {
+            "content": "BUFFET BREAKFAST"
+        },
+        "multiLingualCode": "BF"
+    }, {
+        "code": "FB",
+        "description": {
+            "content": "FULL BOARD"
+        },
+        "multiLingualCode": "FB"
+    }, {
+        "code": "FH",
+        "description": {
+            "content": "1 HALF BOARD + 1 FULL BOARD"
+        },
+        "multiLingualCode": "FH"
+    }, {
+        "code": "GB",
+        "description": {
+            "content": "ENGLISH BREAKFAST"
+        },
+        "multiLingualCode": "EB"
+    }, {
+        "code": "HB",
+        "description": {
+            "content": "HALF BOARD"
+        },
+        "multiLingualCode": "HB"
+    }, {
+        "code": "HH"
+    }, {
+        "code": "IB",
+        "description": {
+            "content": "IRISH BREAKFAST"
+        },
+        "multiLingualCode": "IB"
+    }, {
+        "code": "MB",
+        "description": {
+            "content": "HALF BOARD WITH BEVERAGES INCLUDED"
+        },
+        "multiLingualCode": "HV"
+    }, {
+        "code": "PB",
+        "description": {
+            "content": "FULL BOARD BEVERAGES INCLUDED"
+        },
+        "multiLingualCode": "FV"
+    }, {
+        "code": "RO",
+        "description": {
+            "content": "ROOM ONLY"
+        },
+        "multiLingualCode": "RO"
+    }, {
+        "code": "SB",
+        "description": {
+            "content": "SCOTTISH BREAKFAST"
+        },
+        "multiLingualCode": "SB"
+    }, {
+        "code": "SC",
+        "description": {
+            "content": "SELF CATERING"
+        },
+        "multiLingualCode": "SC"
+    }]
+}

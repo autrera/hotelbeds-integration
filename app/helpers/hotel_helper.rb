@@ -36,7 +36,6 @@ module HotelHelper
 
     destinations['destinations'].each do |destination|
       if destination['code'] == destination_code && destination['countryCode'] == country_code
-        Rails.logger.info "#{destination['name']['content']}"
         if zone_code == nil
           full_destination_string = "#{destination['name']['content']}"
         else
@@ -64,7 +63,6 @@ module HotelHelper
     else
       rate_in_cents = rate['net'].to_f * 100 # * 1.25
     end
-    Rails.logger.info "Rate in cents: #{rate_in_cents.inspect}"
 
     discount_in_cents = 0.00
     if rate.has_key? 'offers'
@@ -72,12 +70,45 @@ module HotelHelper
         discount_in_cents += offer['amount'].to_f * (-1) * 100
       end
     end
-    Rails.logger.info "Discount in cents: #{discount_in_cents.inspect}"
 
     gross_rate_in_cents = rate_in_cents + discount_in_cents
-    Rails.logger.info "Gross in cents: #{gross_rate_in_cents.inspect}"
 
     return { "gross" => gross_rate_in_cents / 100, "client_total" => rate_in_cents / 100 }
+  end
+
+  def group_facilities(facilities)
+    factor = (facilities.length.to_f / 4).ceil
+    grouped_facilities = []
+    grouped_facilities[0] = facilities[0..(factor - 1)]
+    grouped_facilities[1] = facilities[factor..(2 * factor - 1)]
+    grouped_facilities[2] = facilities[(2 * factor)..(3 * factor - 1)]
+    grouped_facilities[3] = facilities[(3 * factor)..facilities.length]
+
+    Rails.logger.info "Factor: #{factor.inspect}"
+    Rails.logger.info "Facilidades: #{facilities.length}"
+    Rails.logger.info "Grupo 1: #{grouped_facilities[0].length}"
+    Rails.logger.info "Grupo 2: #{grouped_facilities[1].length}"
+    Rails.logger.info "Grupo 3: #{grouped_facilities[2].length}"
+    Rails.logger.info "Grupo 4: #{grouped_facilities[3].length}"
+
+    return grouped_facilities
+  end
+
+  def group_items(items)
+    factor = (items.length.to_f / 3).ceil
+    grouped_items = []
+    grouped_items[0] = items[0..(factor - 1)]
+    grouped_items[1] = items[factor..(2 * factor - 1)]
+    # grouped_items[2] = items[(2 * factor)..(3 * factor - 1)]
+    grouped_items[2] = items[(2 * factor)..items.length]
+
+    Rails.logger.info "Factor: #{factor.inspect}"
+    Rails.logger.info "Items: #{items.length}"
+    Rails.logger.info "Grupo 1: #{grouped_items[0].length}"
+    Rails.logger.info "Grupo 2: #{grouped_items[1].length}"
+    Rails.logger.info "Grupo 3: #{grouped_items[2].length}"
+
+    return grouped_items
   end
 
 end
