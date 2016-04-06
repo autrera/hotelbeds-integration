@@ -1,12 +1,12 @@
 {
     "auditData": {
-        "processTime": "197",
-        "timestamp": "2016-03-30 17:35:15.070",
-        "requestHost": "23.23.79.232",
+        "processTime": "127",
+        "timestamp": "2016-04-05 23:09:47.160",
+        "requestHost": "23.23.79.234",
         "serverId": "sa37AUX3ROLBLIS.env",
         "environment": "[int]",
         "release": "2cb1bad878d2195c9b508e2007ef96616007dacb",
-        "internal": "4whec3tnzq9abhrx2ku9n78t||02||7|407|||||||||1"
+        "internal": "4whec3tnzq9abhrx2ku9n78t||02||7|401|||||||||1"
     },
     "hotels": {
         "hotels": [{
@@ -24,49 +24,14 @@
                 "code": "DBL.SU",
                 "name": "DOUBLE SUPERIOR",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "187.58",
-                    "allotment": 20,
-                    "rateCommentsId": "71|36450|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "93.79",
-                        "from": "2016-06-04T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9002",
-                        "name": "Early Booking discount",
-                        "amount": "-46.90"
-                    }, {
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-117.24"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6882|DBL.SU|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "187.58",
-                        "allotment": 20,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|6882|DBL.SU|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -74,51 +39,24 @@
                         "allotment": 20,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|6882|DBL.SU|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "187.58",
+                        "allotment": 20,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }, {
-                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "232.98",
-                    "allotment": 20,
-                    "rateCommentsId": "71|36435|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "DB",
                     "boardName": "BUFFET BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "116.49",
-                        "from": "2016-06-04T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9002",
-                        "name": "Early Booking discount",
-                        "amount": "-58.24"
-                    }, {
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-124.38"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6882|DBL.SU|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "232.98",
-                        "allotment": 20,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|6882|DBL.SU|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -126,55 +64,28 @@
                         "allotment": 20,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|6882|DBL.SU|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "232.98",
+                        "allotment": 20,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }, {
                 "code": "DBL.OV-SU",
                 "name": "DOUBLE SUPERIOR OCEAN VIEW",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV-SU|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "206.02",
-                    "allotment": 20,
-                    "rateCommentsId": "71|36450|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "103.01",
-                        "from": "2016-06-04T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9002",
-                        "name": "Early Booking discount",
-                        "amount": "-51.50"
-                    }, {
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-128.74"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6882|DBL.OV-SU|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "206.02",
-                        "allotment": 20,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|6882|DBL.OV-SU|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -182,51 +93,24 @@
                         "allotment": 20,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|6882|DBL.OV-SU|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "206.02",
+                        "allotment": 20,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }, {
-                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV-SU|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "251.38",
-                    "allotment": 20,
-                    "rateCommentsId": "71|36435|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "DB",
                     "boardName": "BUFFET BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "125.69",
-                        "from": "2016-06-04T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9002",
-                        "name": "Early Booking discount",
-                        "amount": "-62.86"
-                    }, {
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-135.88"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6882|DBL.OV-SU|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "251.38",
-                        "allotment": 20,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|6882|DBL.OV-SU|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -234,6 +118,14 @@
                         "allotment": 20,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|6882|DBL.OV-SU|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "251.38",
+                        "allotment": 20,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }, {
@@ -412,49 +304,14 @@
                 "code": "DBL.DX-OV",
                 "name": "DOUBLE DELUXE OCEAN VIEW",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-OV|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "261.06",
-                    "allotment": 20,
-                    "rateCommentsId": "71|36450|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "130.53",
-                        "from": "2016-06-04T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9002",
-                        "name": "Early Booking discount",
-                        "amount": "-65.26"
-                    }, {
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-163.14"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6882|DBL.DX-OV|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "261.06",
-                        "allotment": 20,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|6882|DBL.DX-OV|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -462,51 +319,24 @@
                         "allotment": 20,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|6882|DBL.DX-OV|CGW- TODOSRO1|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "261.06",
+                        "allotment": 20,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }, {
-                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-OV|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "306.42",
-                    "allotment": 20,
-                    "rateCommentsId": "71|36435|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "DB",
                     "boardName": "BUFFET BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "153.21",
-                        "from": "2016-06-04T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9002",
-                        "name": "Early Booking discount",
-                        "amount": "-76.62"
-                    }, {
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-170.30"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6882|DBL.DX-OV|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "306.42",
-                        "allotment": 20,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|6882|DBL.DX-OV|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -514,6 +344,14 @@
                         "allotment": 20,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|6882|DBL.DX-OV|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "306.42",
+                        "allotment": 20,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }, {
@@ -4316,82 +4154,6 @@
                     "childrenAges": "8"
                 }]
             }, {
-                "code": "DBL.SU",
-                "name": "DOUBLE SUPERIOR",
-                "rates": [{
-                    "paymentType": "AT_WEB",
-                    "boardCode": "RO",
-                    "boardName": "ROOM ONLY",
-                    "rooms": 1,
-                    "adults": 2,
-                    "children": 1,
-                    "childrenAges": "8",
-                    "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6883|DBL.SU|CGW- TODOS1|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "269.82",
-                        "allotment": 999,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }]
-                }, {
-                    "paymentType": "AT_WEB",
-                    "boardCode": "DB",
-                    "boardName": "BUFFET BREAKFAST",
-                    "rooms": 1,
-                    "adults": 2,
-                    "children": 1,
-                    "childrenAges": "8",
-                    "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6883|DBL.SU|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "315.14",
-                        "allotment": 999,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }]
-                }]
-            }, {
-                "code": "DBL.LX-OV",
-                "name": "DOUBLE LUXURY OCEAN VIEW",
-                "rates": [{
-                    "paymentType": "AT_WEB",
-                    "boardCode": "RO",
-                    "boardName": "ROOM ONLY",
-                    "rooms": 1,
-                    "adults": 2,
-                    "children": 1,
-                    "childrenAges": "8",
-                    "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6883|DBL.LX-OV|CGW- TODOS1|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "313.90",
-                        "allotment": 20,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }]
-                }, {
-                    "paymentType": "AT_WEB",
-                    "boardCode": "DB",
-                    "boardName": "BUFFET BREAKFAST",
-                    "rooms": 1,
-                    "adults": 2,
-                    "children": 1,
-                    "childrenAges": "8",
-                    "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6883|DBL.LX-OV|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "359.20",
-                        "allotment": 20,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }]
-                }]
-            }, {
                 "code": "QUA.VG",
                 "name": "QUADRUPLE GOLF VIEW",
                 "rates": [{
@@ -4562,44 +4324,6 @@
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8"
-                }]
-            }, {
-                "code": "DBL.OV",
-                "name": "DOUBLE OCEAN VIEW",
-                "rates": [{
-                    "paymentType": "AT_WEB",
-                    "boardCode": "RO",
-                    "boardName": "ROOM ONLY",
-                    "rooms": 1,
-                    "adults": 2,
-                    "children": 1,
-                    "childrenAges": "8",
-                    "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6883|DBL.OV|CGW- TODOS1|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "402.06",
-                        "allotment": 20,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }]
-                }, {
-                    "paymentType": "AT_WEB",
-                    "boardCode": "DB",
-                    "boardName": "BUFFET BREAKFAST",
-                    "rooms": 1,
-                    "adults": 2,
-                    "children": 1,
-                    "childrenAges": "8",
-                    "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|6883|DBL.OV|CGW- TODOSDB1|DB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "447.36",
-                        "allotment": 20,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }]
                 }]
             }, {
                 "code": "SGL.GV",
@@ -8576,45 +8300,14 @@
                 "code": "DBL.LX",
                 "name": "DOUBLE LUXURY",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|8199|DBL.LX|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "241.90",
-                    "allotment": 99,
-                    "rateCommentsId": "71|27713|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "120.95",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-127.32"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|8199|DBL.LX|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "241.90",
-                        "allotment": 99,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|8199|DBL.LX|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -8622,51 +8315,28 @@
                         "allotment": 99,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|8199|DBL.LX|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "247.86",
+                        "allotment": 99,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }, {
                 "code": "DBL.ST",
                 "name": "DOUBLE STANDARD",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|8199|DBL.ST|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "320.54",
-                    "allotment": 99,
-                    "rateCommentsId": "71|27713|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "160.27",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-168.72"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|8199|DBL.ST|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "320.54",
-                        "allotment": 99,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|8199|DBL.ST|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -8674,10 +8344,18 @@
                         "allotment": 99,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|8199|DBL.ST|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "326.50",
+                        "allotment": 99,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }],
-            "minRate": "241.90",
+            "minRate": "247.86",
             "maxRate": "332.46",
             "currency": "USD"
         }, {
@@ -8695,51 +8373,14 @@
                 "code": "DBL.SU",
                 "name": "DOUBLE SUPERIOR",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|104875|DBL.SU|CG-RECEP-B2B-RO|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "209.92",
-                    "allotment": 814,
-                    "rateCommentsId": "71|33849|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "104.96",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }, {
-                            "included": false,
-                            "amount": "16.48",
-                            "currency": "USD",
-                            "clientAmount": "16.48",
-                            "clientCurrency": "USD"
-                        }],
-                        "allIncluded": false
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-104.96"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|104875|DBL.SU|CG-RECEP-B2B-RO|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "209.92",
-                        "allotment": 814,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|104875|DBL.SU|CG-RECEP-B2B-RO|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -8747,53 +8388,24 @@
                         "allotment": 814,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|104875|DBL.SU|CG-RECEP-B2B-RO|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "209.92",
+                        "allotment": 814,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }, {
-                    "rateKey": "20160608|20160610|W|71|104875|DBL.SU|GC-RECEPT-B2BBB|BB||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "291.54",
-                    "allotment": 814,
-                    "rateCommentsId": "71|33852|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "BB",
                     "boardName": "BED AND BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "145.77",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }, {
-                            "included": false,
-                            "amount": "16.48",
-                            "currency": "USD",
-                            "clientAmount": "16.48",
-                            "clientCurrency": "USD"
-                        }],
-                        "allIncluded": false
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-93.30"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|104875|DBL.SU|GC-RECEPT-B2BBB|BB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "291.54",
-                        "allotment": 814,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|104875|DBL.SU|GC-RECEPT-B2BBB|BB||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -8801,57 +8413,28 @@
                         "allotment": 814,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|104875|DBL.SU|GC-RECEPT-B2BBB|BB||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "291.54",
+                        "allotment": 814,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }, {
                 "code": "DBL.DX",
                 "name": "DOUBLE DELUXE",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|104875|DBL.DX|CG-RECEP-B2B-RO|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "230.90",
-                    "allotment": 814,
-                    "rateCommentsId": "71|33849|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "115.45",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }, {
-                            "included": false,
-                            "amount": "16.48",
-                            "currency": "USD",
-                            "clientAmount": "16.48",
-                            "clientCurrency": "USD"
-                        }],
-                        "allIncluded": false
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-115.46"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|104875|DBL.DX|CG-RECEP-B2B-RO|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "230.90",
-                        "allotment": 814,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|104875|DBL.DX|CG-RECEP-B2B-RO|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -8859,53 +8442,24 @@
                         "allotment": 814,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|104875|DBL.DX|CG-RECEP-B2B-RO|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "230.90",
+                        "allotment": 814,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }, {
-                    "rateKey": "20160608|20160610|W|71|104875|DBL.DX|GC-RECEPT-B2BBB|BB||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "312.54",
-                    "allotment": 814,
-                    "rateCommentsId": "71|33852|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "BB",
                     "boardName": "BED AND BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "156.27",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }, {
-                            "included": false,
-                            "amount": "16.48",
-                            "currency": "USD",
-                            "clientAmount": "16.48",
-                            "clientCurrency": "USD"
-                        }],
-                        "allIncluded": false
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-103.80"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|104875|DBL.DX|GC-RECEPT-B2BBB|BB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "312.54",
-                        "allotment": 814,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|104875|DBL.DX|GC-RECEPT-B2BBB|BB||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -8913,6 +8467,14 @@
                         "allotment": 814,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|104875|DBL.DX|GC-RECEPT-B2BBB|BB||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "312.54",
+                        "allotment": 814,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }],
@@ -8934,45 +8496,14 @@
                 "code": "SUI.ST",
                 "name": "SUITE STANDARD",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|56154|SUI.ST|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "326.32",
-                    "allotment": 99,
-                    "rateCommentsId": "71|27604|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "163.16",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-171.76"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|56154|SUI.ST|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "326.32",
-                        "allotment": 99,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|56154|SUI.ST|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -8980,51 +8511,28 @@
                         "allotment": 99,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|56154|SUI.ST|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "326.32",
+                        "allotment": 99,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }, {
                 "code": "SUI.GD",
                 "name": "SUITE GRAND",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|56154|SUI.GD|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "385.62",
-                    "allotment": 99,
-                    "rateCommentsId": "71|27604|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "192.81",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-202.96"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|56154|SUI.GD|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "385.62",
-                        "allotment": 99,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|56154|SUI.GD|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9032,6 +8540,14 @@
                         "allotment": 99,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|56154|SUI.GD|CGW-TODOSB2B|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "385.62",
+                        "allotment": 99,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }],
@@ -9053,49 +8569,14 @@
                 "code": "VIL.BV",
                 "name": "VILLA BAY VIEW",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|188476|VIL.BV|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "1021.30",
-                    "sellingRate": "1129.32",
-                    "hotelMandatory": true,
-                    "allotment": 9,
-                    "rateCommentsId": "71|37369|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "437.94",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-429.25"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|188476|VIL.BV|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "875.88",
-                        "sellingRate": "968.52",
-                        "hotelMandatory": true,
-                        "allotment": 9,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|188476|VIL.BV|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9105,51 +8586,26 @@
                         "allotment": 9,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|188476|VIL.BV|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1166.72",
+                        "sellingRate": "1290.12",
+                        "hotelMandatory": true,
+                        "allotment": 9,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }, {
-                    "rateKey": "20160608|20160610|W|71|188476|VIL.BV|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "1149.15",
-                    "sellingRate": "1263.32",
-                    "hotelMandatory": true,
-                    "allotment": 9,
-                    "rateCommentsId": "71|35425|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "BB",
                     "boardName": "BED AND BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "501.44",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-492.70"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|188476|VIL.BV|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "1002.88",
-                        "sellingRate": "1102.52",
-                        "hotelMandatory": true,
-                        "allotment": 9,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|188476|VIL.BV|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9159,55 +8615,30 @@
                         "allotment": 9,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|188476|VIL.BV|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1295.42",
+                        "sellingRate": "1424.12",
+                        "hotelMandatory": true,
+                        "allotment": 9,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }, {
                 "code": "VIL.OV-2",
                 "name": "VILLA OCEAN VIEW",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|188476|VIL.OV-2|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "1239.50",
-                    "sellingRate": "1370.60",
-                    "hotelMandatory": true,
-                    "allotment": 3,
-                    "rateCommentsId": "71|37369|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "547.04",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-538.35"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|188476|VIL.OV-2|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "1094.08",
-                        "sellingRate": "1209.80",
-                        "hotelMandatory": true,
-                        "allotment": 3,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|188476|VIL.OV-2|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9217,51 +8648,26 @@
                         "allotment": 3,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|188476|VIL.OV-2|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1384.92",
+                        "sellingRate": "1531.40",
+                        "hotelMandatory": true,
+                        "allotment": 3,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }, {
-                    "rateKey": "20160608|20160610|W|71|188476|VIL.OV-2|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "1368.62",
-                    "sellingRate": "1504.60",
-                    "hotelMandatory": true,
-                    "allotment": 3,
-                    "rateCommentsId": "71|35425|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "BB",
                     "boardName": "BED AND BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "611.17",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-602.43"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|188476|VIL.OV-2|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "1222.34",
-                        "sellingRate": "1343.80",
-                        "hotelMandatory": true,
-                        "allotment": 3,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|188476|VIL.OV-2|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9271,55 +8677,30 @@
                         "allotment": 3,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|188476|VIL.OV-2|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1514.90",
+                        "sellingRate": "1665.40",
+                        "hotelMandatory": true,
+                        "allotment": 3,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }, {
                 "code": "VIL.C2",
                 "name": "VILLA CAPACITY 2",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|188476|VIL.C2|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "1578.73",
-                    "sellingRate": "1745.72",
-                    "hotelMandatory": true,
-                    "allotment": 5,
-                    "rateCommentsId": "71|37369|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "716.66",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-707.97"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|188476|VIL.C2|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "1433.32",
-                        "sellingRate": "1584.92",
-                        "hotelMandatory": true,
-                        "allotment": 5,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|188476|VIL.C2|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9329,51 +8710,26 @@
                         "allotment": 5,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|188476|VIL.C2|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1724.14",
+                        "sellingRate": "1906.52",
+                        "hotelMandatory": true,
+                        "allotment": 5,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }, {
-                    "rateKey": "20160608|20160610|W|71|188476|VIL.C2|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "1709.84",
-                    "sellingRate": "1879.72",
-                    "hotelMandatory": true,
-                    "allotment": 5,
-                    "rateCommentsId": "71|35425|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "BB",
                     "boardName": "BED AND BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "781.79",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-773.05"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|188476|VIL.C2|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "1563.58",
-                        "sellingRate": "1718.92",
-                        "hotelMandatory": true,
-                        "allotment": 5,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|188476|VIL.C2|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9383,55 +8739,30 @@
                         "allotment": 5,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|188476|VIL.C2|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1856.10",
+                        "sellingRate": "2040.52",
+                        "hotelMandatory": true,
+                        "allotment": 5,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }, {
                 "code": "VIL.OF",
                 "name": "VILLA OCEAN FRONT",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|188476|VIL.OF|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "1796.87",
-                    "sellingRate": "1986.92",
-                    "hotelMandatory": true,
-                    "allotment": 4,
-                    "rateCommentsId": "71|37369|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "825.73",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-817.04"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|188476|VIL.OF|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "1651.46",
-                        "sellingRate": "1826.12",
-                        "hotelMandatory": true,
-                        "allotment": 4,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|188476|VIL.OF|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9441,51 +8772,26 @@
                         "allotment": 4,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|188476|VIL.OF|GC-PROMOB2C|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "1942.28",
+                        "sellingRate": "2147.72",
+                        "hotelMandatory": true,
+                        "allotment": 4,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }, {
-                    "rateKey": "20160608|20160610|W|71|188476|VIL.OF|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "1929.24",
-                    "sellingRate": "2120.92",
-                    "hotelMandatory": true,
-                    "allotment": 4,
-                    "rateCommentsId": "71|35425|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "BB",
                     "boardName": "BED AND BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "891.49",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-882.75"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|188476|VIL.OF|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "1782.98",
-                        "sellingRate": "1960.12",
-                        "hotelMandatory": true,
-                        "allotment": 4,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|188476|VIL.OF|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9495,10 +8801,20 @@
                         "allotment": 4,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|188476|VIL.OF|BAR-TODOS|BB||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "2075.50",
+                        "sellingRate": "2281.72",
+                        "hotelMandatory": true,
+                        "allotment": 4,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }],
-            "minRate": "968.52",
+            "minRate": "1290.12",
             "maxRate": "2281.72",
             "currency": "USD"
         }, {
@@ -9516,45 +8832,14 @@
                 "code": "DBL.ST",
                 "name": "DOUBLE STANDARD",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|126047|DBL.ST|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "158.60",
-                    "allotment": 99,
-                    "rateCommentsId": "71|32967|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "79.30",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-79.30"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|126047|DBL.ST|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "158.60",
-                        "allotment": 99,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|126047|DBL.ST|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9562,51 +8847,28 @@
                         "allotment": 99,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|126047|DBL.ST|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "158.60",
+                        "allotment": 99,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }, {
                 "code": "TPL.ST",
                 "name": "TRIPLE STANDARD",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|126047|TPL.ST|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "158.60",
-                    "allotment": 99,
-                    "rateCommentsId": "71|32967|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "79.30",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-52.88"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|126047|TPL.ST|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "158.60",
-                        "allotment": 99,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|126047|TPL.ST|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9614,51 +8876,28 @@
                         "allotment": 99,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|126047|TPL.ST|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "158.60",
+                        "allotment": 99,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }, {
                 "code": "DBL.ST-1",
                 "name": "DOUBLE STANDARD",
                 "rates": [{
-                    "rateKey": "20160608|20160610|W|71|126047|DBL.ST-1|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
-                    "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "209.92",
-                    "allotment": 99,
-                    "rateCommentsId": "71|32967|0",
                     "paymentType": "AT_WEB",
-                    "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "104.96",
-                        "from": "2016-06-05T23:59:00-05:00"
-                    }],
-                    "taxes": {
-                        "taxes": [{
-                            "included": true,
-                            "percent": "19.00"
-                        }],
-                        "allIncluded": true
-                    },
                     "rooms": 1,
                     "adults": 2,
                     "children": 1,
                     "childrenAges": "8",
-                    "offers": [{
-                        "code": "9001",
-                        "name": "Child discount",
-                        "amount": "-104.96"
-                    }],
                     "shiftRates": [{
-                        "rateKey": "20160606|20160608|W|71|126047|DBL.ST-1|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
-                        "rateClass": "NOR",
-                        "rateType": "BOOKABLE",
-                        "net": "209.92",
-                        "allotment": 99,
-                        "checkIn": "2016-06-06",
-                        "checkOut": "2016-06-08"
-                    }, {
                         "rateKey": "20160610|20160612|W|71|126047|DBL.ST-1|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
                         "rateClass": "NOR",
                         "rateType": "BOOKABLE",
@@ -9666,6 +8905,14 @@
                         "allotment": 99,
                         "checkIn": "2016-06-10",
                         "checkOut": "2016-06-12"
+                    }, {
+                        "rateKey": "20160609|20160611|W|71|126047|DBL.ST-1|CGW-TODO4B2B|RO||1~2~1|8|N@-1225351991",
+                        "rateClass": "NOR",
+                        "rateType": "BOOKABLE",
+                        "net": "209.92",
+                        "allotment": 99,
+                        "checkIn": "2016-06-09",
+                        "checkOut": "2016-06-11"
                     }]
                 }]
             }],

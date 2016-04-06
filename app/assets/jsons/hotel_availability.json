@@ -1,45 +1,2526 @@
 {
     "auditData": {
-        "processTime": "47",
-        "timestamp": "2016-04-01 22:48:54.419",
-        "requestHost": "23.23.79.234",
-        "serverId": "sa3RKSJACHXE79K.env",
+        "processTime": "64",
+        "timestamp": "2016-04-05 23:17:06.373",
+        "requestHost": "23.23.79.237",
+        "serverId": "sa37AUX3ROLBLIS.env",
         "environment": "[int]",
         "release": "2cb1bad878d2195c9b508e2007ef96616007dacb",
-        "internal": "4whec3tnzq9abhrx2ku9n78t||03|HA|1|8|||||||||1"
+        "internal": "4whec3tnzq9abhrx2ku9n78t||03|HA|1|182|||||||||1"
     },
     "hotels": {
         "hotels": [{
-            "code": 5294,
-            "name": "Copacabana Beach Hotel Acapulco",
-            "categoryCode": "4EST",
-            "categoryName": "4 STARS",
+            "code": 6882,
+            "name": "Pierre Mundo Imperial Riviera Diamante Acapulco",
+            "categoryCode": "5EST",
+            "categoryName": "5 STARS",
             "destinationCode": "ACA",
             "destinationName": "Acapulco",
-            "zoneCode": 20,
-            "zoneName": "Bahia",
-            "latitude": "16.8524",
-            "longitude": "-99.8565",
+            "zoneCode": 10,
+            "zoneName": "Zona Diamante",
+            "latitude": "16.7918974504022",
+            "longitude": "-99.8225596477278",
             "rooms": [{
+                "code": "DBL.SU",
+                "name": "DOUBLE SUPERIOR",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|CGW- TODOSRO1|RO||1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "BOOKABLE",
+                    "net": "187.58",
+                    "allotment": 20,
+                    "rateCommentsId": "71|36450|0",
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "cancellationPolicies": [{
+                        "amount": "93.79",
+                        "from": "2016-06-04T23:59:00-05:00"
+                    }],
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0,
+                    "offers": [{
+                        "code": "9002",
+                        "name": "Early Booking discount",
+                        "amount": "-46.90"
+                    }]
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|CGW- TODOSDB1|DB||1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "BOOKABLE",
+                    "net": "221.64",
+                    "allotment": 20,
+                    "rateCommentsId": "71|36435|0",
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "DB",
+                    "boardName": "BUFFET BREAKFAST",
+                    "cancellationPolicies": [{
+                        "amount": "110.82",
+                        "from": "2016-06-04T23:59:00-05:00"
+                    }],
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0,
+                    "offers": [{
+                        "code": "9002",
+                        "name": "Early Booking discount",
+                        "amount": "-55.42"
+                    }]
+                }]
+            }, {
+                "code": "DBL.OV-SU",
+                "name": "DOUBLE SUPERIOR OCEAN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV-SU|CGW- TODOSRO1|RO||1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "BOOKABLE",
+                    "net": "206.02",
+                    "allotment": 20,
+                    "rateCommentsId": "71|36450|0",
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "cancellationPolicies": [{
+                        "amount": "103.01",
+                        "from": "2016-06-04T23:59:00-05:00"
+                    }],
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0,
+                    "offers": [{
+                        "code": "9002",
+                        "name": "Early Booking discount",
+                        "amount": "-51.50"
+                    }]
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV-SU|CGW- TODOSDB1|DB||1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "BOOKABLE",
+                    "net": "240.06",
+                    "allotment": 20,
+                    "rateCommentsId": "71|36435|0",
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "DB",
+                    "boardName": "BUFFET BREAKFAST",
+                    "cancellationPolicies": [{
+                        "amount": "120.03",
+                        "from": "2016-06-04T23:59:00-05:00"
+                    }],
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0,
+                    "offers": [{
+                        "code": "9002",
+                        "name": "Early Booking discount",
+                        "amount": "-60.02"
+                    }]
+                }]
+            }, {
+                "code": "SGL.OV",
+                "name": "SINGLE OCEAN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.OV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "240.96",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.OV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "240.96",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.OV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "361.44",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.OV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "361.44",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.OV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "421.68",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.OV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "421.68",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.OV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "481.92",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.OV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "481.92",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "DBL.DX-OV",
+                "name": "DOUBLE DELUXE OCEAN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-OV|CGW- TODOSRO1|RO||1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "BOOKABLE",
+                    "net": "261.06",
+                    "allotment": 20,
+                    "rateCommentsId": "71|36450|0",
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "cancellationPolicies": [{
+                        "amount": "130.53",
+                        "from": "2016-06-04T23:59:00-05:00"
+                    }],
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0,
+                    "offers": [{
+                        "code": "9002",
+                        "name": "Early Booking discount",
+                        "amount": "-65.26"
+                    }]
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-OV|CGW- TODOSDB1|DB||1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "BOOKABLE",
+                    "net": "295.10",
+                    "allotment": 20,
+                    "rateCommentsId": "71|36435|0",
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "DB",
+                    "boardName": "BUFFET BREAKFAST",
+                    "cancellationPolicies": [{
+                        "amount": "147.55",
+                        "from": "2016-06-04T23:59:00-05:00"
+                    }],
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0,
+                    "offers": [{
+                        "code": "9002",
+                        "name": "Early Booking discount",
+                        "amount": "-73.78"
+                    }]
+                }]
+            }, {
+                "code": "SGL.ST",
+                "name": "SINGLE STANDARD",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.ST|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "361.44",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.ST|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "361.44",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.ST|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "481.92",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.ST|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "481.92",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.ST|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "542.16",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.ST|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "542.16",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.ST|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "602.40",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.ST|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "602.40",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "SGL.DX-GV",
+                "name": "SINGLE DELUXE GARDEN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "481.92",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "481.92",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "602.40",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "602.40",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "662.66",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "662.66",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "722.90",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "722.90",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "FAM.DX-GV",
+                "name": "FAMILY ROOM DELUXE GARDEN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.DX-GV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "602.40",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.DX-GV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "602.40",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.DX-GV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "722.90",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.DX-GV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "722.90",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.DX-GV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "783.14",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.DX-GV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "783.14",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.DX-GV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "843.38",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.DX-GV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "843.38",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "FAM.OV",
+                "name": "FAMILY ROOM OCEAN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.OV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "722.90",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.OV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "722.90",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.OV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "843.38",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.OV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "843.38",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.OV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "903.62",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.OV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "903.62",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.OV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "963.86",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.OV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "963.86",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "FAM.ST",
+                "name": "FAMILY ROOM STANDARD",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.ST|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "843.38",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.ST|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "843.38",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.ST|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "963.86",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.ST|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "963.86",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.ST|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1024.10",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.ST|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1024.10",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.ST|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1084.34",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|FAM.ST|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1084.34",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "TPL.DX-OV",
+                "name": "TRIPLE DELUXE OCEAN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-OV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "963.86",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-OV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "963.86",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-OV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1084.34",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-OV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1084.34",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-OV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1144.58",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-OV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1144.58",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-OV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1204.82",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-OV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1204.82",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "TPL.DX-GV",
+                "name": "TRIPLE DELUXE GARDEN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-GV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1084.34",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-GV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1084.34",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-GV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1204.82",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-GV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1204.82",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-GV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1265.06",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-GV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1265.06",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-GV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1325.30",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.DX-GV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1325.30",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "TPL.ST",
+                "name": "TRIPLE STANDARD",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.ST|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1204.82",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.ST|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1204.82",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.ST|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1325.30",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.ST|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1325.30",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.ST|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1385.54",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.ST|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1385.54",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.ST|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1445.78",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.ST|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1445.78",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "QUA.ST",
+                "name": "QUADRUPLE STANDARD",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.ST|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1325.30",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.ST|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1325.30",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.ST|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1445.78",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.ST|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1445.78",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.ST|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1506.02",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.ST|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1506.02",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.ST|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1566.26",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.ST|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1566.26",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "QUA.DX-GV",
+                "name": "QUADRUPLE DELUXE GARDEN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.DX-GV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1445.78",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.DX-GV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1445.78",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.DX-GV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1566.26",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.DX-GV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1566.26",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.DX-GV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1626.50",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.DX-GV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1626.50",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.DX-GV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1686.74",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.DX-GV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1686.74",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "QUA.OV",
+                "name": "QUADRUPLE OCEAN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.OV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1566.26",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.OV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1566.26",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.OV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1686.74",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.OV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1686.74",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.OV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1746.98",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.OV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1746.98",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.OV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1807.22",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|QUA.OV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1807.22",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "DBL.DX-GV",
+                "name": "DOUBLE DELUXE GARDEN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1686.74",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1686.74",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1807.22",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1807.22",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1867.46",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1867.46",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1927.72",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1927.72",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "DBL.OV",
+                "name": "DOUBLE OCEAN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1807.22",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1807.22",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1927.72",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1927.72",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1987.96",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "1987.96",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2048.20",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.OV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2048.20",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
                 "code": "DBL.ST",
                 "name": "DOUBLE STANDARD",
                 "rates": [{
-                    "rateKey": "20160615|20160620|W|71|5294|DBL.ST|CGW-TODO4 B2CEP|RO||1~1~0||N@1298513044",
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.ST|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
                     "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "395.12",
-                    "sellingRate": "457.00",
-                    "hotelMandatory": true,
+                    "rateType": "RECHECK",
+                    "net": "1927.72",
                     "allotment": 99,
-                    "rateCommentsId": "71|33782|0",
                     "paymentType": "AT_WEB",
                     "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "98.78",
-                        "from": "2016-06-12T23:59:00-05:00"
-                    }],
                     "taxes": {
                         "taxes": [{
                             "included": true,
@@ -49,33 +2530,17 @@
                     },
                     "rooms": 1,
                     "adults": 1,
-                    "children": 0,
-                    "offers": [{
-                        "code": "9002",
-                        "name": "Early Booking discount",
-                        "amount": "-372.55"
-                    }, {
-                        "code": "9004",
-                        "name": "Free nights",
-                        "amount": "-98.78"
-                    }]
+                    "children": 0
                 }, {
-                    "rateKey": "20160615|20160620|W|71|5294|DBL.ST|CGW-TODO4 B2CAI|AI||1~1~0||N@1298513044",
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.ST|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
                     "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "712.80",
-                    "sellingRate": "824.47",
-                    "hotelMandatory": true,
+                    "rateType": "RECHECK",
+                    "net": "1927.72",
                     "allotment": 99,
-                    "rateCommentsId": "71|33777|0",
                     "paymentType": "AT_WEB",
                     "packaging": false,
-                    "boardCode": "AI",
-                    "boardName": "ALL INCLUSIVE",
-                    "cancellationPolicies": [{
-                        "amount": "142.56",
-                        "from": "2016-06-12T23:59:00-05:00"
-                    }],
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
                     "taxes": {
                         "taxes": [{
                             "included": true,
@@ -85,27 +2550,17 @@
                     },
                     "rooms": 1,
                     "adults": 1,
-                    "children": 0,
-                    "offers": [{
-                        "code": "9002",
-                        "name": "Early Booking discount",
-                        "amount": "-803.80"
-                    }]
+                    "children": 0
                 }, {
-                    "rateKey": "20160615|20160620|W|71|5294|DBL.ST|CGW-TODO4B2BEP|BB||1~1~0||N@1298513044",
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.ST|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
                     "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "1817.00",
+                    "rateType": "RECHECK",
+                    "net": "2048.20",
                     "allotment": 99,
-                    "rateCommentsId": "71|33834|3",
                     "paymentType": "AT_WEB",
                     "packaging": false,
                     "boardCode": "BB",
                     "boardName": "BED AND BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "412.51",
-                        "from": "2016-06-12T23:59:00-05:00"
-                    }],
                     "taxes": {
                         "taxes": [{
                             "included": true,
@@ -115,33 +2570,121 @@
                     },
                     "rooms": 1,
                     "adults": 1,
-                    "children": 0,
-                    "offers": [{
-                        "code": "9004",
-                        "name": "Free nights",
-                        "amount": "-245.55"
-                    }]
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.ST|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2048.20",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.ST|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2108.44",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.ST|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2108.44",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.ST|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2168.68",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.ST|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2168.68",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
                 }]
             }, {
-                "code": "JSU.ST",
-                "name": "JUNIOR SUITE STANDARD",
+                "code": "DBL.SU",
+                "name": "DOUBLE SUPERIOR",
                 "rates": [{
-                    "rateKey": "20160615|20160620|W|71|5294|JSU.ST|CGW-TODO4 B2CEP|RO||1~1~0||N@1298513044",
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
                     "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "505.24",
-                    "sellingRate": "584.34",
-                    "hotelMandatory": true,
+                    "rateType": "RECHECK",
+                    "net": "2048.20",
                     "allotment": 99,
-                    "rateCommentsId": "71|33782|0",
                     "paymentType": "AT_WEB",
                     "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "126.31",
-                        "from": "2016-06-12T23:59:00-05:00"
-                    }],
                     "taxes": {
                         "taxes": [{
                             "included": true,
@@ -151,33 +2694,17 @@
                     },
                     "rooms": 1,
                     "adults": 1,
-                    "children": 0,
-                    "offers": [{
-                        "code": "9002",
-                        "name": "Early Booking discount",
-                        "amount": "-476.35"
-                    }, {
-                        "code": "9004",
-                        "name": "Free nights",
-                        "amount": "-126.29"
-                    }]
+                    "children": 0
                 }, {
-                    "rateKey": "20160615|20160620|W|71|5294|JSU.ST|CGW-TODO4 B2CAI|AI||1~1~0||N@1298513044",
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
                     "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "827.00",
-                    "sellingRate": "956.50",
-                    "hotelMandatory": true,
-                    "allotment": 430,
-                    "rateCommentsId": "71|33777|0",
+                    "rateType": "RECHECK",
+                    "net": "2048.20",
+                    "allotment": 99,
                     "paymentType": "AT_WEB",
                     "packaging": false,
-                    "boardCode": "AI",
-                    "boardName": "ALL INCLUSIVE",
-                    "cancellationPolicies": [{
-                        "amount": "165.40",
-                        "from": "2016-06-12T23:59:00-05:00"
-                    }],
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
                     "taxes": {
                         "taxes": [{
                             "included": true,
@@ -187,27 +2714,17 @@
                     },
                     "rooms": 1,
                     "adults": 1,
-                    "children": 0,
-                    "offers": [{
-                        "code": "9002",
-                        "name": "Early Booking discount",
-                        "amount": "-932.50"
-                    }]
+                    "children": 0
                 }, {
-                    "rateKey": "20160615|20160620|W|71|5294|JSU.ST|CGW-TODO4B2BEP|BB||1~1~0||N@1298513044",
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
                     "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "2028.15",
+                    "rateType": "RECHECK",
+                    "net": "2168.68",
                     "allotment": 99,
-                    "rateCommentsId": "71|33834|3",
                     "paymentType": "AT_WEB",
                     "packaging": false,
                     "boardCode": "BB",
                     "boardName": "BED AND BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "460.83",
-                        "from": "2016-06-12T23:59:00-05:00"
-                    }],
                     "taxes": {
                         "taxes": [{
                             "included": true,
@@ -217,33 +2734,121 @@
                     },
                     "rooms": 1,
                     "adults": 1,
-                    "children": 0,
-                    "offers": [{
-                        "code": "9004",
-                        "name": "Free nights",
-                        "amount": "-276.00"
-                    }]
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2168.68",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2228.92",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2228.92",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2289.16",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.SU|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2289.16",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
                 }]
             }, {
-                "code": "DBL.KT",
-                "name": "DOUBLE WITH KITCHENETTE",
+                "code": "SGL.SU",
+                "name": "SINGLE SUPERIOR",
                 "rates": [{
-                    "rateKey": "20160615|20160620|W|71|5294|DBL.KT|CGW-TODO4 B2CEP|RO||1~1~0||N@1298513044",
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.SU|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
                     "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "709.20",
-                    "sellingRate": "820.29",
-                    "hotelMandatory": true,
+                    "rateType": "RECHECK",
+                    "net": "2168.68",
                     "allotment": 99,
-                    "rateCommentsId": "71|33782|0",
                     "paymentType": "AT_WEB",
                     "packaging": false,
                     "boardCode": "RO",
                     "boardName": "ROOM ONLY",
-                    "cancellationPolicies": [{
-                        "amount": "141.84",
-                        "from": "2016-06-12T23:59:00-05:00"
-                    }],
                     "taxes": {
                         "taxes": [{
                             "included": true,
@@ -253,27 +2858,957 @@
                     },
                     "rooms": 1,
                     "adults": 1,
-                    "children": 0,
-                    "offers": [{
-                        "code": "9002",
-                        "name": "Early Booking discount",
-                        "amount": "-535.00"
-                    }]
+                    "children": 0
                 }, {
-                    "rateKey": "20160615|20160620|W|71|5294|DBL.KT|CGW-TODO4B2BEP|BB||1~1~0||N@1298513044",
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.SU|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
                     "rateClass": "NOR",
-                    "rateType": "BOOKABLE",
-                    "net": "3591.95",
+                    "rateType": "RECHECK",
+                    "net": "2168.68",
                     "allotment": 99,
-                    "rateCommentsId": "71|33834|3",
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.SU|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2289.16",
+                    "allotment": 99,
                     "paymentType": "AT_WEB",
                     "packaging": false,
                     "boardCode": "BB",
                     "boardName": "BED AND BREAKFAST",
-                    "cancellationPolicies": [{
-                        "amount": "718.39",
-                        "from": "2016-06-12T23:59:00-05:00"
-                    }],
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.SU|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2289.16",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.SU|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2349.40",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.SU|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2349.40",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.SU|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2409.64",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.SU|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2409.64",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "SGL.KG",
+                "name": "SINGLE KING SIZE BED",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.KG|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2289.16",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.KG|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2289.16",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.KG|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2409.64",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.KG|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2409.64",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.KG|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2469.88",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.KG|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2469.88",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.KG|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2530.12",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.KG|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2530.12",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "DBL.KG",
+                "name": "DOUBLE KING SIZE BED",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.KG|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2409.64",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.KG|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2409.64",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.KG|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2530.12",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.KG|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2530.12",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.KG|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2590.36",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.KG|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2590.36",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.KG|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2650.60",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.KG|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "2650.60",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "TPL.OV",
+                "name": "TRIPLE OCEAN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.OV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "3132.54",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.OV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "3132.54",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.OV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "3253.02",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.OV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "3253.02",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.OV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "3313.26",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.OV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "3313.26",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.OV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "3373.50",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|TPL.OV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "3373.50",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "SGL.DX-GV",
+                "name": "SINGLE DELUXE GARDEN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4457.84",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4457.84",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4578.32",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4578.32",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4638.56",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4638.56",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4698.80",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|SGL.DX-GV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4698.80",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }]
+            }, {
+                "code": "DBL.DX-GV",
+                "name": "DOUBLE DELUXE GARDEN VIEW",
+                "rates": [{
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|RO|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4578.32",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|RO|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4578.32",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "RO",
+                    "boardName": "ROOM ONLY",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|BB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4698.80",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|BB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4698.80",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|HB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4759.04",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|HB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4759.04",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "HB",
+                    "boardName": "HALF BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|FB|RATE4|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4819.28",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
+                    "taxes": {
+                        "taxes": [{
+                            "included": true,
+                            "percent": "19.00"
+                        }],
+                        "allIncluded": true
+                    },
+                    "rooms": 1,
+                    "adults": 1,
+                    "children": 0
+                }, {
+                    "rateKey": "20160608|20160610|W|71|6882|DBL.DX-GV|ID_B2B_19|FB|RATE14|1~1~0||N@1106103839",
+                    "rateClass": "NOR",
+                    "rateType": "RECHECK",
+                    "net": "4819.28",
+                    "allotment": 99,
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "FB",
+                    "boardName": "FULL BOARD",
                     "taxes": {
                         "taxes": [{
                             "included": true,
@@ -286,12 +3821,12 @@
                     "children": 0
                 }]
             }],
-            "minRate": "457.00",
-            "maxRate": "3591.95",
+            "minRate": "187.58",
+            "maxRate": "4819.28",
             "currency": "USD"
         }],
-        "checkIn": "2016-06-15",
-        "checkOut": "2016-06-20",
+        "checkIn": "2016-06-08",
+        "checkOut": "2016-06-10",
         "total": 1
     }
 }

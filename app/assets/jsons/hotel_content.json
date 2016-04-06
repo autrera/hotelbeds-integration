@@ -1,19 +1,19 @@
 {
     "auditData": {
         "processTime": "57",
-        "timestamp": "2016-04-01 22:36:51.454",
+        "timestamp": "2016-04-05 22:33:13.968",
         "requestHost": "212.170.239.6",
         "serverId": "sa3RKSJACHXE79K.env",
         "environment": "[int]",
         "release": "dff3bd24bf42ab2fac6879168d792cdcd7091be6"
     },
     "hotel": {
-        "code": 5294,
+        "code": 6882,
         "name": {
-            "content": "Copacabana Beach Hotel Acapulco"
+            "content": "Pierre Mundo Imperial Riviera Diamante Acapulco"
         },
         "description": {
-            "content": "The Copacabana Beach Hotel Acapulco is a great hotel beautifully nestled on Condesa beachfront, right in the renowned tourist area of Acapulco. Guests will be able to find in the centre of the area a number of shops, entertainment and leisure sites, reachable on foot. The Nightclubs and discos are found a stone's throw from the hotel. There is also a convenient public transport stop at approximately 50 m from the hotel. The hotel features colorful and quality rooms and fantastic facilities to guarantee a comfortable stay."
+            "content": "This award-winning resort is located on Acapulco's Revolcadero Beach, in Mexico. Ideal for holidaymakers seeking to escape from everyday routine, this luxurious property is the perfect getaway. General Juan N. Álvarez International Airport is just a 13-minute drive and Acapulco city centre is some 15 kilometres away. Set in a tropical paradise surrounded by scenic gardens and palm trees, this stylish complex boasts an atmosphere that is guaranteed to charm and delight even the most discerning travellers. The large, comfortable accommodation options include white villas, bungalows and low-rise pavilions. They all come with all the necessary services and amenities expected in a luxury hotel, such as high speed internet access. Sports lovers will appreciate the championship golf courses and the five outdoor tennis courts, perfect for casual players and those who take the sport a little more seriously."
         },
         "country": {
             "code": "MX",
@@ -30,20 +30,20 @@
             "countryCode": "MX"
         },
         "zone": {
-            "zoneCode": 20,
-            "name": "Bahia",
+            "zoneCode": 10,
+            "name": "Zona Diamante",
             "description": {
-                "content": "Bahia"
+                "content": "Zona Diamante"
             }
         },
         "coordinates": {
-            "longitude": -99.8565,
-            "latitude": 16.8524
+            "longitude": -99.8225596477278,
+            "latitude": 16.7918974504022
         },
         "category": {
-            "code": "4EST",
+            "code": "5EST",
             "description": {
-                "content": "4 STARS"
+                "content": "5 STARS"
             }
         },
         "accommodationType": {
@@ -54,97 +54,55 @@
             "typeDescription": "Hotel"
         },
         "boards": [{
-            "code": "AI",
+            "code": "DB",
             "description": {
-                "content": "ALL INCLUSIVE"
+                "content": "BUFFET BREAKFAST"
             }
         }, {
             "code": "RO",
             "description": {
                 "content": "ROOM ONLY"
             }
-        }, {
-            "code": "BB",
-            "description": {
-                "content": "BED AND BREAKFAST"
-            }
         }],
         "segments": [{
-            "code": 81,
+            "code": 100,
             "description": {
-                "content": "Family hotels "
+                "content": "Hotels with charm"
             }
         }, {
-            "code": 34,
+            "code": 36,
             "description": {
-                "content": "Business hotels "
+                "content": "Golf hotels "
             }
         }, {
-            "code": 45,
+            "code": 37,
             "description": {
-                "content": "Sport hotels"
+                "content": "Beach hotels"
+            }
+        }, {
+            "code": 39,
+            "description": {
+                "content": "Hotels with spa"
             }
         }],
         "address": {
-            "content": "TABACHINES  CLUB DEPORTIVO,2  "
+            "content": "Costera de las Palmas,S/N  "
         },
-        "postalCode": "39690",
+        "postalCode": "39890",
         "city": {
             "content": "ACAPULCO"
         },
-        "email": "ACAPULCO@HOTELCOPACABANA.COM",
+        "email": "elizabeth.jimenez2004@gmail.com",
         "phones": [{
-            "phoneNumber": "01 800 7109 888",
-            "phoneType": "PHONEBOOKING"
-        }, {
-            "phoneNumber": "527444843260",
+            "phoneNumber": "52 7444352600",
             "phoneType": "PHONEHOTEL"
         }, {
-            "phoneNumber": "52 744 484 3260",
-            "phoneType": "PHONEMANAGEMENT"
-        }, {
-            "phoneNumber": "527444846268",
+            "phoneNumber": "52 7444691018",
             "phoneType": "FAXNUMBER"
         }],
         "rooms": [{
-            "roomCode": "JSU.ST",
-            "description": "JUNIOR SUITE STANDARD",
-            "type": {
-                "code": "JSU",
-                "description": {
-                    "content": "JUNIOR SUITE"
-                }
-            },
-            "characteristic": {
-                "code": "ST",
-                "description": {
-                    "content": "STANDARD"
-                }
-            },
-            "roomFacilities": [{
-                "facilityCode": 100,
-                "facilityGroupCode": 60,
-                "description": {
-                    "content": "Internet access"
-                },
-                "indFee": true,
-                "indYesOrNo": false
-            }, {
-                "facilityCode": 250,
-                "facilityGroupCode": 60,
-                "description": {
-                    "content": "Wheelchair-accessible"
-                },
-                "indYesOrNo": false
-            }],
-            "roomStays": [{
-                "stayType": "BED",
-                "order": "1",
-                "description": "Bed room"
-            }]
-        }, {
-            "roomCode": "DBL.KT",
-            "description": "DOUBLE WITH KITCHENETTE",
+            "roomCode": "DBL.DX-OV",
+            "description": "DOUBLE DELUXE OCEAN VIEW",
             "type": {
                 "code": "DBL",
                 "description": {
@@ -152,26 +110,83 @@
                 }
             },
             "characteristic": {
-                "code": "KT",
+                "code": "DX-OV",
                 "description": {
-                    "content": "WITH KITCHENETTE"
+                    "content": "DELUXE OCEAN VIEW"
                 }
             },
             "roomFacilities": [{
-                "facilityCode": 100,
+                "facilityCode": 50,
                 "facilityGroupCode": 60,
                 "description": {
-                    "content": "Internet access"
+                    "content": "Direct dial telephone"
                 },
-                "indFee": true,
-                "indYesOrNo": false
+                "indLogic": true
             }, {
-                "facilityCode": 250,
+                "facilityCode": 120,
                 "facilityGroupCode": 60,
                 "description": {
-                    "content": "Wheelchair-accessible"
+                    "content": "Minibar"
                 },
-                "indYesOrNo": false
+                "indLogic": true,
+                "indFee": false
+            }, {
+                "facilityCode": 147,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Ironing set"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 10,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Bathroom"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 20,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Shower"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 180,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Individually adjustable air conditioning"
+                },
+                "indLogic": true,
+                "indFee": false
+            }, {
+                "facilityCode": 130,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Fridge"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 143,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Tea and coffee making facilities "
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 30,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Bathtub"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 276,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Toiletries"
+                },
+                "indLogic": true
             }],
             "roomStays": [{
                 "stayType": "BED",
@@ -179,8 +194,8 @@
                 "description": "Bed room"
             }]
         }, {
-            "roomCode": "DBL.ST",
-            "description": "DOUBLE STANDARD",
+            "roomCode": "DBL.DX-1",
+            "description": "DOUBLE DELUXE",
             "type": {
                 "code": "DBL",
                 "description": {
@@ -188,42 +203,350 @@
                 }
             },
             "characteristic": {
-                "code": "ST",
+                "code": "DX-1",
                 "description": {
-                    "content": "STANDARD"
+                    "content": "DELUXE"
                 }
             },
             "roomFacilities": [{
-                "facilityCode": 100,
+                "facilityCode": 50,
                 "facilityGroupCode": 60,
                 "description": {
-                    "content": "Internet access"
+                    "content": "Direct dial telephone"
                 },
-                "indFee": true,
-                "indYesOrNo": false
+                "indLogic": true
             }, {
-                "facilityCode": 250,
+                "facilityCode": 120,
                 "facilityGroupCode": 60,
                 "description": {
-                    "content": "Wheelchair-accessible"
+                    "content": "Minibar"
                 },
-                "indYesOrNo": false
-            }],
-            "roomStays": [{
-                "stayType": "BED",
-                "order": "1",
-                "description": "Bed room"
+                "indLogic": true,
+                "indFee": false
+            }, {
+                "facilityCode": 147,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Ironing set"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 10,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Bathroom"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 20,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Shower"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 180,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Individually adjustable air conditioning"
+                },
+                "indLogic": true,
+                "indFee": false
+            }, {
+                "facilityCode": 130,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Fridge"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 143,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Tea and coffee making facilities "
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 30,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Bathtub"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 276,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Toiletries"
+                },
+                "indLogic": true
+            }]
+        }, {
+            "roomCode": "DBL.OV-SU",
+            "description": "DOUBLE SUPERIOR OCEAN VIEW",
+            "type": {
+                "code": "DBL",
+                "description": {
+                    "content": "DOUBLE"
+                }
+            },
+            "characteristic": {
+                "code": "OV-SU",
+                "description": {
+                    "content": "SUPERIOR OCEAN VIEW"
+                }
+            },
+            "roomFacilities": [{
+                "facilityCode": 50,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Direct dial telephone"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 120,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Minibar"
+                },
+                "indLogic": true,
+                "indFee": false
+            }, {
+                "facilityCode": 147,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Ironing set"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 10,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Bathroom"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 20,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Shower"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 180,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Individually adjustable air conditioning"
+                },
+                "indLogic": true,
+                "indFee": false
+            }, {
+                "facilityCode": 130,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Fridge"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 143,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Tea and coffee making facilities "
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 30,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Bathtub"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 276,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Toiletries"
+                },
+                "indLogic": true
+            }]
+        }, {
+            "roomCode": "DBL.SU",
+            "description": "DOUBLE SUPERIOR",
+            "type": {
+                "code": "DBL",
+                "description": {
+                    "content": "DOUBLE"
+                }
+            },
+            "characteristic": {
+                "code": "SU",
+                "description": {
+                    "content": "SUPERIOR"
+                }
+            },
+            "roomFacilities": [{
+                "facilityCode": 50,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Direct dial telephone"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 120,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Minibar"
+                },
+                "indLogic": true,
+                "indFee": false
+            }, {
+                "facilityCode": 147,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Ironing set"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 10,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Bathroom"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 20,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Shower"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 180,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Individually adjustable air conditioning"
+                },
+                "indLogic": true,
+                "indFee": false
+            }, {
+                "facilityCode": 130,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Fridge"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 143,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Tea and coffee making facilities "
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 30,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Bathtub"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 276,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Toiletries"
+                },
+                "indLogic": true
+            }]
+        }, {
+            "roomCode": "DBL.KG-SU",
+            "description": "DOUBLE SUPERIOR KING BED",
+            "type": {
+                "code": "DBL",
+                "description": {
+                    "content": "DOUBLE"
+                }
+            },
+            "characteristic": {
+                "code": "KG-SU",
+                "description": {
+                    "content": "SUPERIOR KING BED"
+                }
+            },
+            "roomFacilities": [{
+                "facilityCode": 50,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Direct dial telephone"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 120,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Minibar"
+                },
+                "indLogic": true,
+                "indFee": false
+            }, {
+                "facilityCode": 147,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Ironing set"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 10,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Bathroom"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 20,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Shower"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 180,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Individually adjustable air conditioning"
+                },
+                "indLogic": true,
+                "indFee": false
+            }, {
+                "facilityCode": 130,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Fridge"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 143,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Tea and coffee making facilities "
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 30,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Bathtub"
+                },
+                "indLogic": true
+            }, {
+                "facilityCode": 276,
+                "facilityGroupCode": 60,
+                "description": {
+                    "content": "Toiletries"
+                },
+                "indLogic": true
             }]
         }],
         "facilities": [{
-            "facilityCode": 295,
-            "facilityGroupCode": 70,
-            "description": {
-                "content": "Wheelchair-accessible"
-            },
-            "order": 1,
-            "indYesOrNo": true
-        }, {
             "facilityCode": 10,
             "facilityGroupCode": 30,
             "description": {
@@ -232,64 +555,48 @@
             "order": 1,
             "indLogic": true
         }, {
-            "facilityCode": 615,
-            "facilityGroupCode": 74,
-            "description": {
-                "content": "Beauty salon"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": true
-        }, {
-            "facilityCode": 90,
+            "facilityCode": 295,
             "facilityGroupCode": 70,
             "description": {
-                "content": "Newspaper stand"
+                "content": "Wheelchair-accessible"
             },
             "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 95,
-            "facilityGroupCode": 10,
-            "description": {
-                "content": "Junior suites"
-            },
-            "order": 1,
-            "number": 38
-        }, {
-            "facilityCode": 340,
-            "facilityGroupCode": 73,
-            "description": {
-                "content": "Kids’ club"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 520,
-            "facilityGroupCode": 70,
-            "description": {
-                "content": "24-hour security"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 320,
-            "facilityGroupCode": 70,
-            "description": {
-                "content": "Car park"
-            },
-            "order": 1,
-            "indFee": true,
             "indYesOrNo": true
         }, {
-            "facilityCode": 460,
-            "facilityGroupCode": 90,
+            "facilityCode": 60,
+            "facilityGroupCode": 10,
             "description": {
-                "content": "Darts"
+                "content": "Number of floors (annexe)"
+            },
+            "order": 1,
+            "number": 4
+        }, {
+            "facilityCode": 420,
+            "facilityGroupCode": 74,
+            "description": {
+                "content": "Sauna"
             },
             "order": 1,
             "indLogic": true,
             "indFee": false
+        }, {
+            "facilityCode": 261,
+            "facilityGroupCode": 60,
+            "description": {
+                "content": "Wi-fi"
+            },
+            "order": 1,
+            "indFee": false,
+            "indYesOrNo": false
+        }, {
+            "facilityCode": 550,
+            "facilityGroupCode": 70,
+            "description": {
+                "content": "Wi-fi"
+            },
+            "order": 1,
+            "indFee": false,
+            "indYesOrNo": true
         }, {
             "facilityCode": 200,
             "facilityGroupCode": 60,
@@ -308,21 +615,14 @@
             "order": 1,
             "indLogic": true
         }, {
-            "facilityCode": 80,
-            "facilityGroupCode": 10,
+            "facilityCode": 620,
+            "facilityGroupCode": 74,
             "description": {
-                "content": "Single rooms"
+                "content": "Spa centre"
             },
             "order": 1,
-            "number": 36
-        }, {
-            "facilityCode": 10,
-            "facilityGroupCode": 60,
-            "description": {
-                "content": "Bathroom"
-            },
-            "order": 1,
-            "indLogic": true
+            "indLogic": true,
+            "indFee": false
         }, {
             "facilityCode": 540,
             "facilityGroupCode": 70,
@@ -342,15 +642,6 @@
             "indFee": false,
             "indYesOrNo": false
         }, {
-            "facilityCode": 550,
-            "facilityGroupCode": 70,
-            "description": {
-                "content": "Wi-fi"
-            },
-            "order": 1,
-            "indFee": true,
-            "indYesOrNo": true
-        }, {
             "facilityCode": 535,
             "facilityGroupCode": 70,
             "description": {
@@ -360,22 +651,13 @@
             "indFee": false,
             "indYesOrNo": false
         }, {
-            "facilityCode": 575,
-            "facilityGroupCode": 71,
+            "facilityCode": 80,
+            "facilityGroupCode": 10,
             "description": {
-                "content": "Air conditioning in Restaurant"
+                "content": "Single rooms"
             },
             "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 200,
-            "facilityGroupCode": 90,
-            "description": {
-                "content": "Diving"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": true
+            "number": 150
         }, {
             "facilityCode": 56,
             "facilityGroupCode": 10,
@@ -385,35 +667,28 @@
             "order": 1,
             "indYesOrNo": false
         }, {
+            "facilityCode": 320,
+            "facilityGroupCode": 70,
+            "description": {
+                "content": "Car park"
+            },
+            "order": 1,
+            "indFee": false,
+            "indYesOrNo": false
+        }, {
+            "facilityCode": 250,
+            "facilityGroupCode": 70,
+            "description": {
+                "content": "Wired Internet"
+            },
+            "order": 1,
+            "indFee": false,
+            "indYesOrNo": false
+        }, {
             "facilityCode": 110,
             "facilityGroupCode": 70,
             "description": {
                 "content": "Shop"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 190,
-            "facilityGroupCode": 90,
-            "description": {
-                "content": "Motor board ride"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": true
-        }, {
-            "facilityCode": 190,
-            "facilityGroupCode": 73,
-            "description": {
-                "content": "Game room"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 80,
-            "facilityGroupCode": 71,
-            "description": {
-                "content": "Café"
             },
             "order": 1,
             "indLogic": true
@@ -426,22 +701,23 @@
             "order": 1,
             "indYesOrNo": false
         }, {
-            "facilityCode": 20,
-            "facilityGroupCode": 10,
+            "facilityCode": 410,
+            "facilityGroupCode": 74,
             "description": {
-                "content": "Year of construction"
-            },
-            "order": 1,
-            "number": 1983
-        }, {
-            "facilityCode": 485,
-            "facilityGroupCode": 70,
-            "description": {
-                "content": "Babysitting service"
+                "content": "Hot tub"
             },
             "order": 1,
             "indLogic": true,
-            "indFee": true
+            "indFee": false
+        }, {
+            "facilityCode": 430,
+            "facilityGroupCode": 90,
+            "description": {
+                "content": "Tennis"
+            },
+            "order": 1,
+            "indLogic": true,
+            "indFee": false
         }, {
             "facilityCode": 30,
             "facilityGroupCode": 80,
@@ -451,19 +727,27 @@
             "order": 1,
             "indLogic": true
         }, {
-            "facilityCode": 40,
-            "facilityGroupCode": 70,
+            "facilityCode": 275,
+            "facilityGroupCode": 60,
             "description": {
-                "content": "Hotel safe"
+                "content": "Extra beds on demand"
             },
             "order": 1,
-            "indLogic": true,
-            "indFee": false
+            "indFee": false,
+            "indYesOrNo": false
         }, {
-            "facilityCode": 90,
-            "facilityGroupCode": 90,
+            "facilityCode": 289,
+            "facilityGroupCode": 60,
             "description": {
-                "content": "Aqua fit"
+                "content": "Cable TV"
+            },
+            "order": 1,
+            "indLogic": true
+        }, {
+            "facilityCode": 495,
+            "facilityGroupCode": 70,
+            "description": {
+                "content": "Transfer service"
             },
             "order": 1,
             "indLogic": true,
@@ -494,29 +778,14 @@
             "order": 1,
             "indLogic": true
         }, {
-            "facilityCode": 114,
-            "facilityGroupCode": 80,
-            "description": {
-                "content": "Snacks"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 50,
+            "facilityCode": 270,
             "facilityGroupCode": 70,
             "description": {
-                "content": "Currency exchange facilities"
+                "content": "Room service"
             },
             "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 40,
-            "facilityGroupCode": 80,
-            "description": {
-                "content": "Breakfast"
-            },
-            "order": 1,
-            "indLogic": true
+            "indLogic": true,
+            "indFee": false
         }, {
             "facilityCode": 30,
             "facilityGroupCode": 70,
@@ -526,31 +795,46 @@
             "order": 1,
             "indYesOrNo": true
         }, {
-            "facilityCode": 200,
-            "facilityGroupCode": 71,
+            "facilityCode": 40,
+            "facilityGroupCode": 40,
             "description": {
-                "content": "Restaurant"
+                "content": "Beach"
             },
             "order": 1,
-            "indLogic": true,
-            "number": 2
+            "distance": 0
         }, {
-            "facilityCode": 250,
-            "facilityGroupCode": 90,
+            "facilityCode": 40,
+            "facilityGroupCode": 30,
             "description": {
-                "content": "Pedal boating"
+                "content": "Diners Club"
             },
             "order": 1,
-            "indLogic": true,
-            "indFee": true
+            "indLogic": true
+        }, {
+            "facilityCode": 100,
+            "facilityGroupCode": 60,
+            "description": {
+                "content": "Internet access"
+            },
+            "order": 1,
+            "indFee": false,
+            "indYesOrNo": false
+        }, {
+            "facilityCode": 273,
+            "facilityGroupCode": 60,
+            "description": {
+                "content": "Alarm clock"
+            },
+            "order": 1,
+            "indLogic": true
         }, {
             "facilityCode": 30,
-            "facilityGroupCode": 10,
+            "facilityGroupCode": 30,
             "description": {
-                "content": "Year of most recent renovation"
+                "content": "JCB"
             },
             "order": 1,
-            "number": 2009
+            "indLogic": true
         }, {
             "facilityCode": 260,
             "facilityGroupCode": 60,
@@ -560,133 +844,13 @@
             "order": 1,
             "indYesOrNo": false
         }, {
-            "facilityCode": 395,
-            "facilityGroupCode": 73,
-            "description": {
-                "content": "Sun loungers"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": false
-        }, {
-            "facilityCode": 400,
-            "facilityGroupCode": 73,
-            "description": {
-                "content": "Parasols"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": false
-        }, {
-            "facilityCode": 145,
-            "facilityGroupCode": 40,
-            "description": {
-                "content": "Bus/Train station"
-            },
-            "order": 1,
-            "distance": 3000
-        }, {
-            "facilityCode": 555,
-            "facilityGroupCode": 71,
-            "description": {
-                "content": "Poolside snack bar"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 260,
-            "facilityGroupCode": 90,
-            "description": {
-                "content": "Table tennis"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": false
-        }, {
-            "facilityCode": 450,
-            "facilityGroupCode": 74,
-            "description": {
-                "content": "Massage"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": true
-        }, {
-            "facilityCode": 557,
-            "facilityGroupCode": 85,
-            "description": {
-                "content": "Identification card at arrival"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 290,
+            "facilityCode": 10,
             "facilityGroupCode": 70,
             "description": {
-                "content": "Medical service"
+                "content": "Air conditioning in public areas"
             },
             "order": 1,
-            "indLogic": true,
-            "indFee": true
-        }, {
-            "facilityCode": 180,
-            "facilityGroupCode": 60,
-            "description": {
-                "content": "Individually adjustable air conditioning"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": false
-        }, {
-            "facilityCode": 335,
-            "facilityGroupCode": 90,
-            "description": {
-                "content": "Volleyball"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": false
-        }, {
-            "facilityCode": 605,
-            "facilityGroupCode": 72,
-            "description": {
-                "content": "Business centre"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": true
-        }, {
-            "facilityCode": 401,
-            "facilityGroupCode": 73,
-            "description": {
-                "content": "Entertainment programme for adults"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": false
-        }, {
-            "facilityCode": 385,
-            "facilityGroupCode": 73,
-            "description": {
-                "content": "Children’s swimming area"
-            },
-            "order": 1
-        }, {
-            "facilityCode": 124,
-            "facilityGroupCode": 10,
-            "description": {
-                "content": "Disability-friendly rooms"
-            },
-            "order": 1,
-            "number": 2
-        }, {
-            "facilityCode": 40,
-            "facilityGroupCode": 40,
-            "description": {
-                "content": "Beach"
-            },
-            "order": 1,
-            "distance": 300000
+            "indLogic": true
         }, {
             "facilityCode": 130,
             "facilityGroupCode": 71,
@@ -696,55 +860,39 @@
             "order": 1,
             "indLogic": true
         }, {
-            "facilityCode": 430,
-            "facilityGroupCode": 70,
+            "facilityCode": 250,
+            "facilityGroupCode": 60,
             "description": {
-                "content": "Sun terrace"
+                "content": "Wheelchair-accessible"
+            },
+            "order": 1,
+            "indYesOrNo": false
+        }, {
+            "facilityCode": 200,
+            "facilityGroupCode": 71,
+            "description": {
+                "content": "Restaurant"
             },
             "order": 1,
             "indLogic": true
         }, {
-            "facilityCode": 270,
-            "facilityGroupCode": 70,
+            "facilityCode": 264,
+            "facilityGroupCode": 60,
             "description": {
-                "content": "Room service"
+                "content": "Cot on demand"
             },
             "order": 1,
-            "indLogic": true,
-            "indFee": true
+            "indFee": false,
+            "indYesOrNo": false
         }, {
-            "facilityCode": 330,
-            "facilityGroupCode": 90,
-            "description": {
-                "content": "Basketball"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": false
-        }, {
-            "facilityCode": 50,
+            "facilityCode": 70,
             "facilityGroupCode": 10,
             "description": {
-                "content": "Number of floors (main building)"
+                "content": "Total number of rooms"
             },
             "order": 1,
-            "number": 18
-        }, {
-            "facilityCode": 240,
-            "facilityGroupCode": 70,
-            "description": {
-                "content": "Mobile phone coverage"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 90,
-            "facilityGroupCode": 10,
-            "description": {
-                "content": "Double rooms"
-            },
-            "order": 1,
-            "number": 394
+            "indYesOrNo": false,
+            "number": 229
         }, {
             "facilityCode": 280,
             "facilityGroupCode": 70,
@@ -753,24 +901,7 @@
             },
             "order": 1,
             "indLogic": true,
-            "indFee": true
-        }, {
-            "facilityCode": 325,
-            "facilityGroupCode": 90,
-            "description": {
-                "content": "Handball"
-            },
-            "order": 1,
-            "indLogic": true,
             "indFee": false
-        }, {
-            "facilityCode": 70,
-            "facilityGroupCode": 70,
-            "description": {
-                "content": "Lift access"
-            },
-            "order": 1,
-            "indLogic": true
         }, {
             "facilityCode": 170,
             "facilityGroupCode": 60,
@@ -780,31 +911,6 @@
             "order": 1,
             "indLogic": true
         }, {
-            "facilityCode": 250,
-            "facilityGroupCode": 70,
-            "description": {
-                "content": "Wired Internet"
-            },
-            "order": 1,
-            "indFee": true,
-            "indYesOrNo": true
-        }, {
-            "facilityCode": 20,
-            "facilityGroupCode": 60,
-            "description": {
-                "content": "Shower"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 10,
-            "facilityGroupCode": 40,
-            "description": {
-                "content": "City centre"
-            },
-            "order": 1,
-            "distance": 9000
-        }, {
             "facilityCode": 230,
             "facilityGroupCode": 60,
             "description": {
@@ -813,97 +919,39 @@
             "order": 1,
             "indLogic": true
         }, {
-            "facilityCode": 130,
-            "facilityGroupCode": 40,
-            "description": {
-                "content": "Golf course"
-            },
-            "order": 1,
-            "distance": 500
-        }, {
-            "facilityCode": 60,
-            "facilityGroupCode": 80,
-            "description": {
-                "content": "À la carte lunch"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 170,
+            "facilityCode": 390,
             "facilityGroupCode": 90,
             "description": {
-                "content": "Waterskiing"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": true
-        }, {
-            "facilityCode": 135,
-            "facilityGroupCode": 70,
-            "description": {
-                "content": "Terrace"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 20,
-            "facilityGroupCode": 40,
-            "description": {
-                "content": "Nearest Bus / Metro Stop"
-            },
-            "order": 1,
-            "distance": 366000
-        }, {
-            "facilityCode": 50,
-            "facilityGroupCode": 80,
-            "description": {
-                "content": "Buffet lunch"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 405,
-            "facilityGroupCode": 73,
-            "description": {
-                "content": "Entertainment programme for children"
+                "content": "Golf"
             },
             "order": 1,
             "indLogic": true,
             "indFee": false
         }, {
-            "facilityCode": 180,
-            "facilityGroupCode": 90,
+            "facilityCode": 390,
+            "facilityGroupCode": 70,
             "description": {
-                "content": "Jet ski"
+                "content": "Check-out hour"
             },
             "order": 1,
-            "indLogic": true,
-            "indFee": true
+            "timeFrom": "12:00:00",
+            "timeTo": "12:00:00"
         }, {
-            "facilityCode": 225,
-            "facilityGroupCode": 71,
-            "description": {
-                "content": "Smoking area"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 70,
+            "facilityCode": 100,
             "facilityGroupCode": 10,
             "description": {
-                "content": "Total number of rooms"
+                "content": "Suites"
             },
             "order": 1,
-            "indYesOrNo": false,
-            "number": 430
+            "number": 5
         }, {
-            "facilityCode": 90,
-            "facilityGroupCode": 80,
+            "facilityCode": 50,
+            "facilityGroupCode": 10,
             "description": {
-                "content": "À la carte dinner"
+                "content": "Number of floors (main building)"
             },
             "order": 1,
-            "indLogic": true
+            "number": 2
         }, {
             "facilityCode": 220,
             "facilityGroupCode": 71,
@@ -921,15 +969,6 @@
             "order": 1,
             "indLogic": true
         }, {
-            "facilityCode": 350,
-            "facilityGroupCode": 90,
-            "description": {
-                "content": "Billiards"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": true
-        }, {
             "facilityCode": 120,
             "facilityGroupCode": 74,
             "description": {
@@ -939,63 +978,37 @@
             "indLogic": true,
             "indFee": false
         }, {
-            "facilityCode": 160,
-            "facilityGroupCode": 90,
+            "facilityCode": 90,
+            "facilityGroupCode": 10,
             "description": {
-                "content": "Banana boating"
+                "content": "Double rooms"
             },
             "order": 1,
-            "indLogic": true,
-            "indFee": true
+            "number": 79
         }, {
-            "facilityCode": 170,
-            "facilityGroupCode": 72,
+            "facilityCode": 30,
+            "facilityGroupCode": 10,
             "description": {
-                "content": "Conference room"
+                "content": "Year of most recent renovation"
             },
             "order": 1,
-            "indLogic": true
+            "number": 2003
         }, {
-            "facilityCode": 80,
+            "facilityCode": 20,
+            "facilityGroupCode": 10,
+            "description": {
+                "content": "Year of construction"
+            },
+            "order": 1,
+            "number": 1950
+        }, {
+            "facilityCode": 130,
             "facilityGroupCode": 40,
             "description": {
-                "content": "Airport"
+                "content": "Golf course"
             },
             "order": 1,
-            "distance": 4000
-        }, {
-            "facilityCode": 10,
-            "facilityGroupCode": 20,
-            "description": {
-                "content": "Hotel"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 230,
-            "facilityGroupCode": 71,
-            "description": {
-                "content": "Highchairs"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 50,
-            "facilityGroupCode": 60,
-            "description": {
-                "content": "Direct dial telephone"
-            },
-            "order": 1,
-            "indLogic": true
-        }, {
-            "facilityCode": 410,
-            "facilityGroupCode": 74,
-            "description": {
-                "content": "Hot tub"
-            },
-            "order": 1,
-            "indLogic": true,
-            "indFee": false
+            "distance": 0
         }, {
             "facilityCode": 55,
             "facilityGroupCode": 60,
@@ -1004,19 +1017,11 @@
             },
             "order": 1,
             "indLogic": true
-        }, {
-            "facilityCode": 80,
-            "facilityGroupCode": 80,
-            "description": {
-                "content": "Buffet dinner"
-            },
-            "order": 1,
-            "indLogic": true
         }],
         "terminals": [{
             "terminalCode": "ACA",
             "terminalType": "A",
-            "distance": 25,
+            "distance": 8,
             "name": {
                 "content": "Acapulco, General Juan N Álvarez Int. Airport"
             },
@@ -1025,186 +1030,75 @@
             }
         }],
         "interestPoints": [{
+            "facilityCode": 30,
+            "facilityGroupCode": 100,
+            "order": 1,
+            "poiName": "Museo Fuerte de San Diego",
+            "distance": "27000"
+        }, {
             "facilityCode": 10,
             "facilityGroupCode": 100,
             "order": 1,
-            "poiName": "PARQUE ACUATICO C.I.C.I",
-            "distance": "500"
+            "poiName": "Plaza de Toros-En temporada (Enero-Abril)",
+            "distance": "31000"
         }, {
             "facilityCode": 40,
             "facilityGroupCode": 100,
             "order": 1,
-            "poiName": "PIE DE LA CUESTA",
-            "distance": "15000"
-        }, {
-            "facilityCode": 30,
-            "facilityGroupCode": 100,
-            "order": 1,
-            "poiName": "LA QUEBRADA",
-            "distance": "10000"
+            "poiName": "Museo de las Máscaras",
+            "distance": "27000"
         }, {
             "facilityCode": 20,
             "facilityGroupCode": 100,
             "order": 1,
-            "poiName": "FUERTE DE SAN DIEGO",
-            "distance": "8000"
-        }, {
-            "facilityCode": 50,
-            "facilityGroupCode": 100,
-            "order": 1,
-            "poiName": "ISLA DE LA ROQUETA",
-            "distance": "10500"
+            "poiName": "La Quebrada",
+            "distance": "30000"
         }],
         "images": [{
             "type": {
-                "code": "HAB",
-                "description": {
-                    "content": "Room"
-                }
-            },
-            "path": "00/005294/005294a_hb_ro_005.jpg",
-            "roomCode": "TPL.ST",
-            "roomType": "TPL",
-            "characteristicCode": "ST",
-            "order": 5
-        }, {
-            "type": {
                 "code": "RES",
                 "description": {
                     "content": "Restaurant"
                 }
             },
-            "path": "00/005294/005294a_hb_r_003.jpg",
-            "order": 3
-        }, {
-            "type": {
-                "code": "DEP",
-                "description": {
-                    "content": "Sports and Entertainment"
-                }
-            },
-            "path": "00/005294/005294a_hb_f_011.jpg",
-            "order": 11
-        }, {
-            "type": {
-                "code": "HAB",
-                "description": {
-                    "content": "Room"
-                }
-            },
-            "path": "00/005294/005294a_hb_ro_004.jpg",
-            "roomCode": "QUA.ST",
-            "roomType": "QUA",
-            "characteristicCode": "ST",
+            "path": "00/006882/006882a_hb_r_004.jpg",
             "order": 4
         }, {
             "type": {
-                "code": "DEP",
-                "description": {
-                    "content": "Sports and Entertainment"
-                }
-            },
-            "path": "00/005294/005294a_hb_f_012.jpg",
-            "order": 12
-        }, {
-            "type": {
-                "code": "RES",
-                "description": {
-                    "content": "Restaurant"
-                }
-            },
-            "path": "00/005294/005294a_hb_r_009.jpg",
-            "order": 9
-        }, {
-            "type": {
-                "code": "RES",
-                "description": {
-                    "content": "Restaurant"
-                }
-            },
-            "path": "00/005294/005294a_hb_r_005.jpg",
-            "order": 5
-        }, {
-            "type": {
-                "code": "RES",
-                "description": {
-                    "content": "Restaurant"
-                }
-            },
-            "path": "00/005294/005294a_hb_r_008.jpg",
-            "order": 8
-        }, {
-            "type": {
                 "code": "HAB",
                 "description": {
                     "content": "Room"
                 }
             },
-            "path": "00/005294/005294a_hb_ro_006.jpg",
-            "roomCode": "SGL.ST",
-            "roomType": "SGL",
-            "characteristicCode": "ST",
-            "order": 6
-        }, {
-            "type": {
-                "code": "HAB",
-                "description": {
-                    "content": "Room"
-                }
-            },
-            "path": "00/005294/005294a_hb_ro_002.jpg",
-            "roomCode": "DBL.KT",
-            "roomType": "DBL",
-            "characteristicCode": "KT",
-            "order": 2
-        }, {
-            "type": {
-                "code": "HAB",
-                "description": {
-                    "content": "Room"
-                }
-            },
-            "path": "00/005294/005294a_hb_ro_003.jpg",
-            "roomCode": "DBL.ST",
-            "roomType": "DBL",
-            "characteristicCode": "ST",
-            "order": 3
-        }, {
-            "type": {
-                "code": "GEN",
-                "description": {
-                    "content": "General view"
-                }
-            },
-            "path": "00/005294/005294a_hb_a_002.jpg",
-            "order": 2
-        }, {
-            "type": {
-                "code": "BAR",
-                "description": {
-                    "content": "Bar"
-                }
-            },
-            "path": "00/005294/005294a_hb_ba_006.jpg",
-            "order": 6
-        }, {
-            "type": {
-                "code": "GEN",
-                "description": {
-                    "content": "General view"
-                }
-            },
-            "path": "00/005294/005294a_hb_a_001.jpg",
-            "order": 1
-        }, {
-            "type": {
-                "code": "BAR",
-                "description": {
-                    "content": "Bar"
-                }
-            },
-            "path": "00/005294/005294a_hb_ba_007.jpg",
+            "path": "00/006882/006882a_hb_w_007.jpg",
             "order": 7
+        }, {
+            "type": {
+                "code": "HAB",
+                "description": {
+                    "content": "Room"
+                }
+            },
+            "path": "00/006882/006882a_hb_w_006.jpg",
+            "order": 6
+        }, {
+            "type": {
+                "code": "CON",
+                "description": {
+                    "content": "Conferences"
+                }
+            },
+            "path": "00/006882/006882a_hb_k_010.jpg",
+            "order": 10
+        }, {
+            "type": {
+                "code": "CON",
+                "description": {
+                    "content": "Conferences"
+                }
+            },
+            "path": "00/006882/006882a_hb_k_011.jpg",
+            "order": 11
         }, {
             "type": {
                 "code": "COM",
@@ -1212,17 +1106,26 @@
                     "content": "Lobby"
                 }
             },
-            "path": "00/005294/005294a_hb_l_004.jpg",
-            "order": 4
+            "path": "00/006882/006882a_hb_l_008.jpg",
+            "order": 8
         }, {
             "type": {
-                "code": "BAR",
+                "code": "HAB",
                 "description": {
-                    "content": "Bar"
+                    "content": "Room"
                 }
             },
-            "path": "00/005294/005294a_hb_ba_008.jpg",
-            "order": 8
+            "path": "00/006882/006882a_hb_w_002.jpg",
+            "order": 2
+        }, {
+            "type": {
+                "code": "RES",
+                "description": {
+                    "content": "Restaurant"
+                }
+            },
+            "path": "00/006882/006882a_hb_r_005.jpg",
+            "order": 5
         }, {
             "type": {
                 "code": "GEN",
@@ -1230,207 +1133,17 @@
                     "content": "General view"
                 }
             },
-            "path": "00/005294/005294a_hb_a_003.jpg",
-            "order": 3
-        }, {
-            "type": {
-                "code": "HAB",
-                "description": {
-                    "content": "Room"
-                }
-            },
-            "path": "00/005294/005294a_hb_ro_001.jpg",
-            "roomCode": "CPL.ST",
-            "roomType": "CPL",
-            "characteristicCode": "ST",
+            "path": "00/006882/006882a_hb_a_001.jpg",
             "order": 1
         }, {
             "type": {
-                "code": "HAB",
-                "description": {
-                    "content": "Room"
-                }
-            },
-            "path": "00/005294/005294a_hb_ro_008.jpg",
-            "roomCode": "JSU.ST",
-            "roomType": "JSU",
-            "characteristicCode": "ST",
-            "order": 8
-        }, {
-            "type": {
-                "code": "HAB",
-                "description": {
-                    "content": "Room"
-                }
-            },
-            "path": "00/005294/005294a_hb_ro_007.jpg",
-            "roomCode": "JSU.ST",
-            "roomType": "JSU",
-            "characteristicCode": "ST",
-            "order": 7
-        }, {
-            "type": {
-                "code": "RES",
-                "description": {
-                    "content": "Restaurant"
-                }
-            },
-            "path": "00/005294/005294a_hb_r_010.jpg",
-            "order": 10
-        }, {
-            "type": {
-                "code": "RES",
-                "description": {
-                    "content": "Restaurant"
-                }
-            },
-            "path": "00/005294/005294a_hb_r_011.jpg",
-            "order": 11
-        }, {
-            "type": {
-                "code": "RES",
-                "description": {
-                    "content": "Restaurant"
-                }
-            },
-            "path": "00/005294/005294a_hb_r_012.jpg",
-            "order": 12
-        }, {
-            "type": {
-                "code": "DEP",
-                "description": {
-                    "content": "Sports and Entertainment"
-                }
-            },
-            "path": "00/005294/005294a_hb_f_015.jpg",
-            "order": 15
-        }, {
-            "type": {
                 "code": "PIS",
                 "description": {
                     "content": "Pool"
                 }
             },
-            "path": "00/005294/005294a_hb_p_014.jpg",
-            "order": 14
-        }, {
-            "type": {
-                "code": "DEP",
-                "description": {
-                    "content": "Sports and Entertainment"
-                }
-            },
-            "path": "00/005294/005294a_hb_f_016.jpg",
-            "order": 16
-        }, {
-            "type": {
-                "code": "PIS",
-                "description": {
-                    "content": "Pool"
-                }
-            },
-            "path": "00/005294/005294a_hb_p_015.jpg",
-            "order": 15
-        }, {
-            "type": {
-                "code": "DEP",
-                "description": {
-                    "content": "Sports and Entertainment"
-                }
-            },
-            "path": "00/005294/005294a_hb_f_013.jpg",
-            "order": 13
-        }, {
-            "type": {
-                "code": "DEP",
-                "description": {
-                    "content": "Sports and Entertainment"
-                }
-            },
-            "path": "00/005294/005294a_hb_f_014.jpg",
-            "order": 14
-        }, {
-            "type": {
-                "code": "PIS",
-                "description": {
-                    "content": "Pool"
-                }
-            },
-            "path": "00/005294/005294a_hb_p_013.jpg",
-            "order": 13
-        }, {
-            "type": {
-                "code": "DEP",
-                "description": {
-                    "content": "Sports and Entertainment"
-                }
-            },
-            "path": "00/005294/005294a_hb_f_019.jpg",
-            "order": 19
-        }, {
-            "type": {
-                "code": "CON",
-                "description": {
-                    "content": "Conferences"
-                }
-            },
-            "path": "00/005294/005294a_hb_k_014.jpg",
-            "order": 14
-        }, {
-            "type": {
-                "code": "PIS",
-                "description": {
-                    "content": "Pool"
-                }
-            },
-            "path": "00/005294/005294a_hb_p_010.jpg",
-            "order": 10
-        }, {
-            "type": {
-                "code": "PIS",
-                "description": {
-                    "content": "Pool"
-                }
-            },
-            "path": "00/005294/005294a_hb_p_011.jpg",
-            "order": 11
-        }, {
-            "type": {
-                "code": "DEP",
-                "description": {
-                    "content": "Sports and Entertainment"
-                }
-            },
-            "path": "00/005294/005294a_hb_f_017.jpg",
-            "order": 17
-        }, {
-            "type": {
-                "code": "CON",
-                "description": {
-                    "content": "Conferences"
-                }
-            },
-            "path": "00/005294/005294a_hb_k_012.jpg",
-            "order": 12
-        }, {
-            "type": {
-                "code": "DEP",
-                "description": {
-                    "content": "Sports and Entertainment"
-                }
-            },
-            "path": "00/005294/005294a_hb_f_018.jpg",
-            "order": 18
-        }, {
-            "type": {
-                "code": "CON",
-                "description": {
-                    "content": "Conferences"
-                }
-            },
-            "path": "00/005294/005294a_hb_k_013.jpg",
-            "order": 13
-        }],
-        "web": "www.hotelcopacabana.com"
+            "path": "00/006882/006882a_hb_p_009.jpg",
+            "order": 9
+        }]
     }
 }

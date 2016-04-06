@@ -50,21 +50,23 @@
                 = fa_icon "phone"
                 815-815-8815
 
-  .container
-    .search-box-container
-      %form#destination-form{ action: "/hotels" }
-        .row
-          .col-sm-10
-            %select.destinations-select{ name: 'destination', placeholder: "Where do you want to go?" }
-              %option
-              - @destinations['destinations'].each do |destination|
-                - option_value = destination['countryCode'] + "-" + destination['code']
-                %option{ value: option_value }
-                  = destination['name']['content']
-                - if destination['zones']
-                  - destination['zones'].each do |zone|
-                    %option{ value: option_value + "-" + zone['zoneCode'].to_s }
-                      = destination['name']['content'] + " " + zone['name']
-          .col-sm-2
-            %button.btn.btn-block.btn-warning
-              Buscar
+  - if @destinations.present?
+    .container
+      .search-box-container
+        %form#destination-form{ action: "/hotels" }
+          .row
+            .col-sm-10
+              %select.destinations-select{ name: 'destination', placeholder: "Where do you want to go?" }
+                %option
+                - @destinations['destinations'].each do |destination|
+                  - option_value = destination['countryCode'] + "-" + destination['code']
+                  %option{ value: option_value }
+                    = destination['name']['content']
+                  - if destination['zones']
+                    - destination['zones'].each do |zone|
+                      %option{ value: option_value + "-" + zone['zoneCode'].to_s }
+                        = destination['name']['content'] + " " + zone['name']
+            .col-sm-2
+              %button.btn.btn-block.btn-warning
+                Buscar
+

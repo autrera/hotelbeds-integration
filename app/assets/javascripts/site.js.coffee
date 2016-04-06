@@ -7,11 +7,17 @@ ready = () ->
       return
 
   $('.owl-carousel').owlCarousel
-    stagePadding: 50
+    stagePadding: 10
     loop: true
-    margin: 10
     items: 1
     lazyLoad: true
+
+  $('select[name=number_of_rooms]').on 'change', (event) =>
+    $('.room_row').addClass 'hide'
+    value = $(event.target).val()
+    for i in [0..value]
+      $('.room_' + i + '_row').removeClass 'hide'
+    return
 
   return
 

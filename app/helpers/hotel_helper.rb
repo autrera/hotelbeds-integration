@@ -3,10 +3,10 @@ module HotelHelper
     if hotel.has_key? "images"
       hotel["images"].each do |image|
         if image["imageTypeCode"] == "GEN" && image['order'] == 1
-          return "http://photos.hotelbeds.com/giata/small/" + image["path"]
+          return "http://photos.hotelbeds.com/giata/" + image["path"]
         end
       end
-      return "http://photos.hotelbeds.com/giata/small/" + hotel["images"][0]["path"]
+      return "http://photos.hotelbeds.com/giata/" + hotel["images"][0]["path"]
     end
     # Return default missing image
     return asset_path("logo-neander-travel.png")
@@ -15,7 +15,7 @@ module HotelHelper
   def room_image(room_code, hotel_images)
     hotel_images.each do |image|
       if image['roomCode'] == room_code
-        return "http://photos.hotelbeds.com/giata/small/" + image['path']
+        return "http://photos.hotelbeds.com/giata/" + image['path']
       end
     end
     return asset_path("logo-neander-travel.png")
@@ -27,6 +27,7 @@ module HotelHelper
         return room['roomFacilities']
       end
     end
+    return []
   end
 
   def full_destination(country_code, destination_code, zone_code)
@@ -84,13 +85,6 @@ module HotelHelper
     grouped_facilities[2] = facilities[(2 * factor)..(3 * factor - 1)]
     grouped_facilities[3] = facilities[(3 * factor)..facilities.length]
 
-    Rails.logger.info "Factor: #{factor.inspect}"
-    Rails.logger.info "Facilidades: #{facilities.length}"
-    Rails.logger.info "Grupo 1: #{grouped_facilities[0].length}"
-    Rails.logger.info "Grupo 2: #{grouped_facilities[1].length}"
-    Rails.logger.info "Grupo 3: #{grouped_facilities[2].length}"
-    Rails.logger.info "Grupo 4: #{grouped_facilities[3].length}"
-
     return grouped_facilities
   end
 
@@ -102,13 +96,16 @@ module HotelHelper
     # grouped_items[2] = items[(2 * factor)..(3 * factor - 1)]
     grouped_items[2] = items[(2 * factor)..items.length]
 
-    Rails.logger.info "Factor: #{factor.inspect}"
-    Rails.logger.info "Items: #{items.length}"
-    Rails.logger.info "Grupo 1: #{grouped_items[0].length}"
-    Rails.logger.info "Grupo 2: #{grouped_items[1].length}"
-    Rails.logger.info "Grupo 3: #{grouped_items[2].length}"
-
     return grouped_items
+  end
+
+  def extract_hotel_availability(hotel_code, hotels_availability_list)
+    hotels_availability_list.each do |hotel_availability|
+      if hotel_availability['code'] == hotel_code
+        return hotel_availability
+      end
+    end
+    return nil
   end
 
 end

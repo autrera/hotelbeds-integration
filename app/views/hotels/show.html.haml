@@ -15,15 +15,24 @@
       .col-sm-12
         %p= "#{hotel_content['address']['content']}, #{hotel['destinationName']}"
 
-    .images
+    .links
+      .row
+        .col-sm-12
+          .btn-group.btn-group-justified
+            %a.btn.btn-default{ href: "#hotel-images" } Photos
+            %a.btn.btn-default{ href: "#hotel-about" } About
+            %a.btn.btn-default{ href: "#hotel-rooms" } Rooms
+            %a.btn.btn-default{ href: "#hotel-facilities" } Facilities
+
+    #hotel-images.images
       .row
         .col-sm-12
           .owl-carousel
             - hotel_content['images'].each do |image|
               .item
-                %img.owl-lazy{ data: { src: "http://photos.hotelbeds.com/giata/small/" + image['path'] } }
+                %img.image.owl-lazy{ data: { src: "http://photos.hotelbeds.com/giata/bigger/" + image['path'] } }
 
-    .about
+    #hotel-about.about
       .row
         .col-sm-12
           %h2.title
@@ -33,7 +42,7 @@
           %p
             = hotel_content['description']['content']
 
-    .rooms
+    #hotel-rooms.rooms
       .row
         .col-sm-12
           %h2.title
@@ -89,10 +98,12 @@
                       .price
                         $
                         = calculated_rates['client_total']
-                      .btn.btn-success.btn-mini.pull-right
-                        Seleccionar
+                      %form{ action: new_reservation_path, method: "GET" }
+                        %input{ type: "hidden", name: "rateKey", value: "#{rate['rateKey']}" }
+                        %button.btn.btn-warning.btn-mini.pull-right
+                          Reservar
 
-    .facilities
+    #hotel-facilities.facilities
       .row
         .col-sm-12
           %h2.title

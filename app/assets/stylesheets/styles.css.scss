@@ -29,7 +29,6 @@ $alizarin: #E74C3C;
 $pome_granate: #C0392B;
 
 $clouds: #ECF0F1;
-// $clouds: #F5F5F5;
 $silver: #BDC3C7;
 
 $concrete: #95A5A6;
@@ -175,6 +174,18 @@ span.star-rating.star-5EST {
   }
 }
 
+.specific-search-form
+{
+  text-align: center;
+  margin-bottom: 27px;
+  select
+  {
+    text-align: right;
+    display: block;
+    width: 100%;
+  }
+}
+
 .hotel-index
 {
   margin-bottom: 12px;
@@ -188,13 +199,30 @@ span.star-rating.star-5EST {
       height: 100%;
     }
   }
+  .price
+  {
+    color: $peter_river;
+    text-align: center;
+  }
 }
 
 .hotel-show
 {
+  .links
+  {
+    margin-bottom: 16px;
+  }
   .images
   {
     margin-bottom: 37px;
+    .item
+    {
+      height: 400px;
+      .image
+      {
+        height: 100%;
+      }
+    }
   }
   .about
   {
@@ -213,7 +241,7 @@ span.star-rating.star-5EST {
     }
     .room
     {
-      margin-bottom: 28px;
+      margin-bottom: 50px;
       .name
       {
       }
@@ -231,7 +259,6 @@ span.star-rating.star-5EST {
       .facilities
       {
         font-size: 12px;
-        // color: $highlight_ligth;
         .facility
         {
           .fee
@@ -243,7 +270,7 @@ span.star-rating.star-5EST {
       }
       .rate
       {
-        margin-bottom: 20px;
+        padding: 12px;
         .board-name
         {
         }
@@ -270,6 +297,10 @@ span.star-rating.star-5EST {
           text-align: right;
           color: $belize_hole;
           font-size: 21px;
+        }
+        &:nth-child(even)
+        {
+          background: $clouds;
         }
       }
     }

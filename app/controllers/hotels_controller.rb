@@ -11,6 +11,9 @@ class HotelsController < ApplicationController
     hotels_file = File.read(Rails.root + "app/assets/jsons/hotels_content.json")
     @hotels = JSON.parse hotels_file
 
+    hotels_availability_file = File.read(Rails.root + "app/assets/jsons/hotels_availability.json")
+    @hotels_availability = JSON.parse hotels_availability_file
+
     # hotels_content_file = File.read(Rails.root + "app/assets/jsons/hotels_content.json")
     # @hotels_content = JSON.parse hotels_file
 

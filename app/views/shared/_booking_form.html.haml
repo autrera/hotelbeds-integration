@@ -1,0 +1,37 @@
+%form.specific-search-form{ action: "" }
+  - rooms_numbers = [1, 2, 3, 4]
+  .row
+    .col-sm-2
+      Habitaciones:
+      %select{ name: "number_of_rooms" }
+        - rooms_numbers.each do |room_number|
+          %option= room_number
+
+    .col-sm-8
+      - adults_numbers = [1, 2, 3, 4]
+      - children_possibilities = [0, 1, 2, 3, 4]
+      - children_numbers = [1, 2, 3, 4]
+      - child_ages = (0..17).to_a
+      - rooms_numbers.each do |room_number|
+        - hide_class = room_number == 1 ? "" : "hide"
+        .row{ class: "room_row room_#{room_number}_row #{hide_class}" }
+          .col-sm-2
+            Adults
+            %select{ name: "room_#{room_number}_adults" }
+              - adults_numbers.each do |adult_number|
+                %option{ value: adult_number }= adult_number
+          .col-sm-2
+            Children
+            %select{ name: "room_#{room_number}_children" }
+              - children_possibilities.each do |child_possibility|
+                %option{ value: child_possibility }= child_possibility
+          - children_numbers.each do |child_number|
+            .col-sm-2.hide{ class: "room_#{room_number}_child_#{child_number}_age" }
+              Age
+              %select{ name: "room_#{room_number}_child_#{child_number}_age" }
+                - child_ages.each do |child_age|
+                  %option= child_age
+    .col-sm-2
+      %button.btn.btn-block.btn-warning
+        Buscar
+

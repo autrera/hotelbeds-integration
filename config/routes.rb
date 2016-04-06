@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   resources :hotels
   resources :destinations
+  resources :reservations
+
+  post 'hotels/:id' => 'hotels#show'
 
   root 'welcome#index'
 
