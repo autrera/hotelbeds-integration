@@ -55,7 +55,7 @@
       .search-box-container
         %form#destination-form{ action: "/hotels" }
           .row
-            .col-sm-10
+            .col-sm-6
               %select.destinations-select{ name: 'destination', placeholder: "Where do you want to go?" }
                 %option
                 - @destinations['destinations'].each do |destination|
@@ -66,6 +66,23 @@
                     - destination['zones'].each do |zone|
                       %option{ value: option_value + "-" + zone['zoneCode'].to_s }
                         = destination['name']['content'] + " " + zone['name']
+            .col-sm-2
+              - arrival_date = Date.today + 3.days
+              %input#start-date{ type: 'hidden', value: arrival_date.strftime('%m-%d-%Y') }
+              %input#end-date{ type: 'hidden', value: (Date.today + 365.days).strftime('%m-%d-%Y') }
+              %input.form-control{ name: 'check_in', type: 'text', value: params['check_in'] || arrival_date.strftime('%m/%d/%Y') }
+            .col-sm-2
+              %select.number-of-nights.form-control{ name: 'number_of_nights' }
+                - default_number_of_night = params['number_of_nights'] != nil ? params['number_of_nights'].to_i : 2
+                - (1..30).to_a.each do |number_of_night|
+                  - if number_of_night == default_number_of_night
+                    %option{ selected: true, value: number_of_night }
+                      = number_of_night
+                      nights
+                  - else
+                    %option{ value: number_of_night }
+                      = number_of_night
+                      nights
             .col-sm-2
               %button.btn.btn-block.btn-warning
                 Buscar

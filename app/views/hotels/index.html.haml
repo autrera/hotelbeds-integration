@@ -1,20 +1,23 @@
+= render 'shared/booking_form'
+
 %h1= "Hoteles en #{full_destination(@country_code, @destination_code, @zone_code)}"
 %br
-= render 'shared/booking_form'
+
 .hotels
   - @hotels['hotels'].each do |hotel|
     - hotel_availability = extract_hotel_availability(hotel['code'], @hotels_availability['hotels']['hotels'])
     - next if hotel_availability == nil
+    - hotel_show_link = hotel_link(hotel) + "?" + request.query_parameters.to_query
     .hotel-index
       .row
         .col-sm-2
-          %a.image-container{ href: hotel_link(hotel) }
+          %a.image-container{ href: hotel_show_link }
             %img{ src: hotel_image(hotel) }
         .col-sm-8
           .row
             .col-sm-12
               %h2
-                %a{ href: hotel_link(hotel) }= hotel["name"]["content"]
+                %a{ href: hotel_show_link }= hotel["name"]["content"]
                 %span.star-rating{ class: "star-" + hotel["categoryCode"] }
                   &nbsp;
           .row
@@ -34,6 +37,6 @@
                 = hotel_availability['minRate']
           .row
             .col-sm-12
-              %a.btn.btn-block.btn-warning{ href: hotel_link(hotel) }
+              %a.btn.btn-block.btn-warning{ href: hotel_show_link }
                 Ver Hotel
                 = fa_icon "angle-right"
