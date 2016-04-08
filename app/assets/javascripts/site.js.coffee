@@ -1,12 +1,6 @@
 ready = () ->
 
-  # $select_number_of_nights = $('.number-of-nights').selectize
-  #   openOnFocus: true
-  #   onChange: (value) ->
-  #     console.log value
-  #     return
-
-  $select = $('.destinations-select').selectize
+  @select = $('.destinations-select').selectize
     openOnFocus: false
     onChange: (value) ->
       # $('#destination-form').submit()
@@ -21,7 +15,7 @@ ready = () ->
     # format: 'dd/mm/yyyy'
     # format: 'MM d yyyy'
 
-  $('input[name=check_in]').datepicker(datepicker_options).on 'changeDate', (e)->
+  $('input[name=check_in]').datepicker(datepicker_options).on 'changeDate', (e) ->
     return
 
   $('.owl-carousel').owlCarousel
@@ -46,6 +40,15 @@ ready = () ->
     if value > 0
       for i in [1..value]
         $('.room_' + room_number + '_child_' + i + '_age').removeClass 'hide'
+    return
+
+  $('#destination-form button').on 'click', (event) =>
+    event.preventDefault()
+    if @select.val() != ""
+      $('#destination-form').submit()
+    else
+      alert("Enter a destination, please.")
+      return
     return
 
   if $('select[name=number_of_rooms]').length > 0

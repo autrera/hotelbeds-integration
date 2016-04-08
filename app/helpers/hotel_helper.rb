@@ -39,11 +39,13 @@ module HotelHelper
       if destination['code'] == destination_code && destination['countryCode'] == country_code
         if zone_code == nil
           full_destination_string = "#{destination['name']['content']}"
+          Rails.logger.info "#{full_destination_string.inspect}"
         else
           zone_code = zone_code.to_i
           destination['zones'].each do |zone|
             if zone['zoneCode'] == zone_code
               full_destination_string = "#{destination['name']['content']}, #{zone['name']}"
+              Rails.logger.info "#{full_destination_string.inspect}"
               break
             end
           end

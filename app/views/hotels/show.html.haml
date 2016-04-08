@@ -98,10 +98,9 @@
                       .price
                         $
                         = calculated_rates['client_total']
-                      %form{ action: new_reservation_path, method: "GET" }
-                        %input{ type: "hidden", name: "rateKey", value: "#{rate['rateKey']}" }
-                        %button.btn.btn-warning.btn-mini.pull-right
-                          Reservar
+                      - new_reservation_link = new_reservation_path + "?rateKey=" + URI.encode(rate['rateKey']) + "&" + request.query_parameters.to_query
+                      %a.btn.btn-warning.btn-mini.pull-right{ href: new_reservation_link }
+                        Reservar
 
     #hotel-facilities.facilities
       .row

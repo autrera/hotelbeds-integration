@@ -1,49 +1,53 @@
-%form.specific-search-form{ action: "/hotels" }
-  %input{ type: 'hidden', name: 'destination', value: params['destination'] }
-  - rooms_numbers = [1, 2, 3, 4]
-  .row
-    .col-sm-2
+/ %form.specific-search-form{ action: "/hotels" }
+/ %input{ type: 'hidden', name: 'destination', value: params['destination'] }
+- rooms_numbers = [1, 2, 3, 4]
+.row
+  .col-sm-2
+    %label
       Habitaciones:
-      %select.form-control{ name: "number_of_rooms" }
-        - rooms_numbers.each do |room_number|
-          - if room_number == params['number_of_rooms'].to_i
-            %option{ selected: true }= room_number
-          - else
-            %option= room_number
-
-    .col-sm-8
-      - adults_numbers = [1, 2, 3, 4]
-      - children_possibilities = [0, 1, 2, 3, 4]
-      - children_numbers = [1, 2, 3, 4]
-      - child_ages = (0..17).to_a
+    %select.form-control{ name: "number_of_rooms" }
       - rooms_numbers.each do |room_number|
-        - hide_class = room_number == 1 ? "" : "hide"
-        .row{ class: "room_row room_#{room_number}_row #{hide_class}" }
-          .col-sm-2
+        - if room_number == params['number_of_rooms'].to_i
+          %option{ selected: true }= room_number
+        - else
+          %option= room_number
+
+  .col-sm-10
+    - adults_numbers = [1, 2, 3, 4]
+    - children_possibilities = [0, 1, 2, 3, 4]
+    - children_numbers = [1, 2, 3, 4]
+    - child_ages = (0..17).to_a
+    - rooms_numbers.each do |room_number|
+      - hide_class = room_number == 1 ? "" : "hide"
+      .row{ class: "room_row room_#{room_number}_row #{hide_class}" }
+        .col-sm-2
+          %label
             Adults
-            %select.form-control{ name: "room_#{room_number}_adults" }
-              - adults_numbers.each do |adult_number|
-                - if adult_number == params["room_#{room_number}_adults"].to_i
-                  %option{ value: adult_number, selected: true }= adult_number
-                - else
-                  %option{ value: adult_number }= adult_number
-          .col-sm-2
+          %select.form-control{ name: "room_#{room_number}_adults" }
+            - adults_numbers.each do |adult_number|
+              - if adult_number == params["room_#{room_number}_adults"].to_i
+                %option{ value: adult_number, selected: true }= adult_number
+              - else
+                %option{ value: adult_number }= adult_number
+        .col-sm-2
+          %label
             Children
-            %select.form-control.children_in_room{ name: "room_#{room_number}_children" }
-              - children_possibilities.each do |child_possibility|
-                - if child_possibility == params["room_#{room_number}_children"].to_i
-                  %option{ value: child_possibility, selected: true }= child_possibility
-                - else
-                  %option{ value: child_possibility }= child_possibility
-          - children_numbers.each do |child_number|
-            %div{ class: "room_#{room_number}_child_#{child_number}_age col-sm-2 hide" }
+          %select.form-control.children_in_room{ name: "room_#{room_number}_children" }
+            - children_possibilities.each do |child_possibility|
+              - if child_possibility == params["room_#{room_number}_children"].to_i
+                %option{ value: child_possibility, selected: true }= child_possibility
+              - else
+                %option{ value: child_possibility }= child_possibility
+        - children_numbers.each do |child_number|
+          %div{ class: "room_#{room_number}_child_#{child_number}_age col-sm-2 hide" }
+            %label
               Age
-              %select.form-control{ name: "room_#{room_number}_child_#{child_number}_age" }
-                - child_ages.each do |child_age|
-                  - if child_age == params["room_#{room_number}_child_#{child_number}_age"].to_i
-                    %option{ selected: true }= child_age
-                  - else
-                    %option= child_age
-    .col-sm-2
-      %button.btn.btn-block.btn-warning
-        Buscar
+            %select.form-control{ name: "room_#{room_number}_child_#{child_number}_age" }
+              - child_ages.each do |child_age|
+                - if child_age == params["room_#{room_number}_child_#{child_number}_age"].to_i
+                  %option{ selected: true }= child_age
+                - else
+                  %option= child_age
+  / .col-sm-2
+  /   %button.btn.btn-block.btn-warning
+  /     Buscar

@@ -1,0 +1,160 @@
+.row
+  .col-sm-12
+    %h1 Reservation Form
+.row
+  .col-sm-8
+    %form{  }
+
+      .panel.panel-default
+        .panel-heading
+          Reservation Holder
+        .panel-body
+          .row
+            .col-sm-6
+              .form-group
+                %label Name
+                %input.form-control
+            .col-sm-6
+              .form-group
+                %label Surname
+                %input.form-control
+          .row
+            .col-sm-6
+              .form-group
+                %label Email
+                %input.form-control
+            .col-sm-6
+              .form-group
+                %label Phone Number
+                %input.form-control
+
+      .panel.panel-default
+        .panel-heading
+          Pax Information
+        .panel-body
+
+          - adult_age_range = (18..99).to_a
+          - (1..params['number_of_rooms'].to_i).to_a.each do |room_number|
+
+            .panel.panel-primary
+              .panel-heading
+                = "Room ##{room_number}"
+              .panel-body
+                %table.table
+                  %tr
+                    %th Adult #
+                    %th Name
+                    %th Surname
+                    %th Age
+                  - (1..params["room_#{room_number}_adults"].to_i).to_a.each do |adult_number|
+                    %tr
+                      %td
+                        = adult_number
+                      %td
+                        %input.form-control
+                      %td
+                        %input.form-control
+                      %td
+                        %select.form-control
+                          - adult_age_range.each do |adult_age_number|
+                            %option= adult_age_number
+                      / .col-sm-3
+                      /   %label
+                      /     = "Adult ##{adult_number}"
+                      / .col-sm-3
+                      /   .form-group
+                      /     %label Name
+                      /     %input.form-control
+                      / .col-sm-3
+                      /   .form-group
+                      /     %label Surname
+                      /     %input.form-control
+                      / .col-sm-3
+                      /   .form-group
+                      /     %label Age
+                      /     %select.form-control
+                      /       - adult_age_range.each do |adult_age_number|
+                      /         %option= adult_age_number
+
+                  - if params["room_#{room_number}_children"] != nil
+                    %table.table
+                      %tr
+                        %th Child #
+                        %th Name
+                        %th Surname
+                        %th Age
+                      - (1..params["room_#{room_number}_children"].to_i).to_a.each do |child_number|
+                        %tr
+                          %td
+                            = child_number
+                          %td
+                            %input.form-control
+                          %td
+                            %input.form-control
+                          %td
+                            %select.form-control
+                              %option= params["room_#{room_number}_child_#{child_number}_age"]
+                        / .row
+                        /   .col-sm-3
+                        /     %label
+                        /       = "Child ##{child_number}"
+                        /   .col-sm-3
+                        /     .form-group
+                        /       %label Name
+                        /       %input.form-control
+                        /   .col-sm-3
+                        /     .form-group
+                        /       %label Surname
+                        /       %input.form-control
+                        /   .col-sm-3
+                        /     .form-group
+                        /       %label Age
+                        /       %select.form-control
+                        /         %option= params["room_#{room_number}_child_#{child_number}_age"]
+
+      .panel.panel-default
+        .panel-heading
+          Payment Information
+        .panel-body
+          .row
+            .col-sm-6
+              .form-group
+                %label Holder name:
+                %input.form-control
+            .col-sm-6
+              .form-group
+                %label Card type:
+                %select.form-control
+                  %option VISA
+                  %option AMEX
+                  %option MAESTRO
+          .row
+            .col-sm-6
+              .form-group
+                %label Card number:
+                %input.form-control
+            .col-sm-6
+              .form-group
+                %label Expirity date:
+                .row
+                  .col-sm-6
+                    %select.form-control
+                      - (1..12).to_a.each do |month_number|
+                        %option= month_number
+                  .col-sm-6
+                    %select.form-control
+                      - (2016..2025).to_a.each do |year_number|
+                        %option= year_number
+          .row
+            .col-sm-6
+              .form-group
+                %label Card CVC:
+                %input.form-control
+
+  .col-sm-4
+    .row
+      .col-sm-12
+        .panel.panel-warning
+          .panel-heading
+            Reservation Details
+          .panel-body

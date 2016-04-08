@@ -60,12 +60,21 @@
                 %option
                 - @destinations['destinations'].each do |destination|
                   - option_value = destination['countryCode'] + "-" + destination['code']
-                  %option{ value: option_value }
-                    = destination['name']['content']
+                  - if option_value == params['destination']
+                    %option{ value: option_value, selected: true }
+                      = destination['name']['content']
+                  - else
+                    %option{ value: option_value }
+                      = destination['name']['content']
                   - if destination['zones']
                     - destination['zones'].each do |zone|
-                      %option{ value: option_value + "-" + zone['zoneCode'].to_s }
-                        = destination['name']['content'] + " " + zone['name']
+                      - option_value_with_zone = option_value + "-" + zone['zoneCode'].to_s
+                      - if option_value_with_zone == params['destination']
+                        %option{ value: option_value_with_zone, selected: true }
+                          = destination['name']['content'] + " " + zone['name']
+                      - else
+                        %option{ value: option_value_with_zone }
+                          = destination['name']['content'] + " " + zone['name']
             .col-sm-2
               - arrival_date = Date.today + 3.days
               %input#start-date{ type: 'hidden', value: arrival_date.strftime('%m-%d-%Y') }
@@ -87,3 +96,4 @@
               %button.btn.btn-block.btn-warning
                 Buscar
 
+          = render 'shared/booking_form'

@@ -1,8 +1,5 @@
-= render 'shared/booking_form'
-
 %h1= "Hoteles en #{full_destination(@country_code, @destination_code, @zone_code)}"
 %br
-
 .hotels
   - @hotels['hotels'].each do |hotel|
     - hotel_availability = extract_hotel_availability(hotel['code'], @hotels_availability['hotels']['hotels'])
