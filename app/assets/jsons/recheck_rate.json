@@ -1,0 +1,77 @@
+{
+    "auditData": {
+        "processTime": "38",
+        "timestamp": "2016-04-11 18:30:46.247",
+        "requestHost": "23.23.79.233",
+        "serverId": "sa37AUX3ROLBLIS.env",
+        "environment": "[int]",
+        "release": "2cb1bad878d2195c9b508e2007ef96616007dacb",
+        "internal": "4whec3tnzq9abhrx2ku9n78t|UK|03|HA|1|6|0|1|6|N|||||||||1"
+    },
+    "hotel": {
+        "checkIn": "2016-06-08",
+        "checkOut": "2016-06-10",
+        "code": 6882,
+        "name": "Pierre Mundo Imperial Riviera Diamante Acapulco",
+        "categoryCode": "5EST",
+        "categoryName": "5 STARS",
+        "destinationCode": "ACA",
+        "destinationName": "Acapulco",
+        "zoneCode": 10,
+        "zoneName": "Zona Diamante",
+        "latitude": "16.7918974504022",
+        "longitude": "-99.8225596477278",
+        "rooms": [{
+            "code": "DBL.SU",
+            "name": "DOUBLE SUPERIOR",
+            "rates": [{
+                "rateKey": "20160608|20160610|W|71|6882|DBL.SU|CGW- TODOSRO1|RO||1~2~1|8|N@-1872166916",
+                "rateClass": "NOR",
+                "rateType": "BOOKABLE",
+                "net": "187.58",
+                "rateComments": "Children between 0 - 17 are allowed in parents bed.\n************************\n\nAdd values:\nBW Nov 11-18,2015\nTW: JAN 1 to Dec  25, 2016. \nBlack out:  Jan 02, 2016 ; Feb 25 - 27, Mar 09-11, Mar 24-26, Apr 17-25 , 2016. \nAdditionally enjoy 20% discount in our SPA, 20% in the golf course, 20% and one free hour of tennis.\nThe Internet is included with basic service in public areas and from category deluxe ocean view in Pirncess Mundo Imperial and superior ocean view in Pierre Mundo Imperial. The Spa treatments discount is per person and applies massages applied 60 or 90 minutes.\nThe discount is applicable for golf green fees at the golf course subject to availability and prior reservation.\nThe discount does not apply in shops workshops Ballesteros and Daniel Espinosa Jewelry.\nThe free hour of tennis is during the day and is subject to availability at time of booking.\n  ",
+                "paymentType": "AT_WEB",
+                "packaging": false,
+                "boardCode": "RO",
+                "boardName": "ROOM ONLY",
+                "cancellationPolicies": [{
+                    "amount": "93.79",
+                    "from": "2016-06-04T23:59:00-05:00"
+                }],
+                "taxes": {
+                    "taxes": [{
+                        "included": true,
+                        "percent": "19.00"
+                    }],
+                    "allIncluded": true
+                },
+                "rateBreakDown": {
+                    "rateDiscounts": [{
+                        "code": "EB",
+                        "name": "EARLY BOOKING",
+                        "amount": "-46.90"
+                    }, {
+                        "code": "DN",
+                        "name": "Child discount",
+                        "amount": "-117.24"
+                    }]
+                },
+                "rooms": 1,
+                "adults": 2,
+                "children": 1,
+                "childrenAges": "8",
+                "offers": [{
+                    "code": "9001",
+                    "name": "Child discount",
+                    "amount": "-117.24"
+                }, {
+                    "code": "9002",
+                    "name": "Early Booking discount",
+                    "amount": "-46.90"
+                }]
+            }]
+        }],
+        "totalNet": "187.58",
+        "currency": "USD"
+    }
+}
