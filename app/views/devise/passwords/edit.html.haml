@@ -1,0 +1,31 @@
+.row.message
+  .col-sm-12
+    = form_for(resource, as: resource_name, url: password_path(resource_name), html: { class: 'form-horizontal', autocomplete: 'off', method: :put }) do |f|
+      = f.hidden_field :reset_password_token
+      .row
+        .col-sm-12
+          %p.alert.alert-warning Ingresa tu nueva contraseña. (Mínimo 8 carácteres)
+      .row
+        .col-sm-12
+          - if devise_error_messages!.present?
+            .alert.alert-danger
+              = devise_error_messages!
+      .row
+        .col-sm-12
+          = f.password_field :password, autofocus: true, autocomplete: "off", class: 'form-control', placeholder: 'Contraseña'
+      .row
+        .col-sm-12
+          = f.password_field :password_confirmation, autofocus: true, autocomplete: "off", class: 'form-control', placeholder: 'Confirmar contraseña'
+      .row
+        .col-sm-12
+          %button.btn.btn-primary.btn-block{type: 'submit'}
+            %i.fa.fa-check
+
+%br
+
+.row
+  .col-sm-12
+    .clearfix
+      .pull-right
+        %small
+          = link_to "Iniciar Sesión", new_session_path(resource_name)

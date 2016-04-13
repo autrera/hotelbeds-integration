@@ -1,0 +1,18 @@
+.container
+  .row
+    .col-sm-12
+      = render 'shared/dashboard/logo'
+  .row
+    .col-sm-12
+      .btn-group.btn-group-justified.btn-group-raised
+        %a.btn{ href: admin_reservations_path }
+          Reservaciones
+        %a.btn{ href: admin_clients_path }
+          Clientes
+        %a.btn{ href: admin_agents_path }
+          Agentes
+        %a.btn{ href: admin_administrators_path }
+          Administradores
+        = link_to destroy_admin_administrator_session_path, :method => :delete, class: "btn", :data => { confirm: "¿Deseas salir del sistema?" } do
+          = fa_icon 'sign-out'
+          %span.title SALIR

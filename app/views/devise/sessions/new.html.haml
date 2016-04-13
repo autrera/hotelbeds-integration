@@ -1,0 +1,29 @@
+.row
+  .col-sm-12
+
+    = form_for resource, as: resource_name, url: session_path(resource_name), autocomplete: 'off', class: 'bs-component' do |f|
+
+      .form-group.has_info.label-floating
+        = f.label :email, "User", class: "control-label"
+        = f.email_field :email, class: 'form-control'
+        %span.material-input
+
+      .form-group.has_info.label-floating
+        = f.label :password, "Password", class: "control-label"
+        = f.password_field :password, autocomplete: "off", class: 'form-control'
+        %span.material-input
+
+      .row
+        .col-sm-12
+          %button.btn.btn-info.btn-block.btn-lg.btn-raised{ type: 'submit' }
+            %i.fa.fa-check
+
+%br
+
+.row
+  .col-sm-12
+    .clearfix
+      .pull-right
+        %small
+          - if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations'
+            = link_to '¿Olvidaste tu contraseña?', new_password_path(resource_name)

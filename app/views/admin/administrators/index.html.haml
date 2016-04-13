@@ -1,0 +1,23 @@
+.row
+  .col-sm-12
+    .panel.panel-info
+      .panel-heading
+        .panel-title
+          Administradores
+      .panel-body
+        %table.table.table-striped.table-hover
+          %tr
+            %th Nombre
+            %th Email
+            %th.text-center
+              Acciones
+          - @admins.each do |admin|
+            %tr
+              %td= admin.name
+              %td= admin.email
+              %td.text-center
+                = link_to edit_admin_administrator_path(admin), class: "btn btn-xs btn-primary btn-raised" do
+                  Editar
+                = link_to admin_administrator_path(admin), :method => :delete, class: "btn btn-xs btn-danger btn-raised", :data => { confirm: "¿Deseas eliminar al usuario?" } do
+                  Eliminar
+

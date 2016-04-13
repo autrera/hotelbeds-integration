@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require selectize
-//= require owl.carousel
-//= require bootstrap-datepicker.min
-//= require site
+//= require material
+//= require ripples
+//= require admin
