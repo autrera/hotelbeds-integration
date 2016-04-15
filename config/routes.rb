@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :agents
+  devise_for :clients
   resources :hotels
   resources :destinations
   resources :reservations
@@ -13,10 +15,27 @@ Rails.application.routes.draw do
 
     devise_for :administrators, controllers: { sessions: 'admin/sessions' }
 
-    resources :reservations
+    resources :reservations, only: [:index, :show]
     resources :clients
     resources :agents
     resources :administrators
+  end
+
+  namespace :agent do
+    root to: redirect('/agent/reservations')
+
+    devise_for :agents, controllers: { sessions: 'agent/sessions' }
+
+    resources :reservations, only: [:index, :show]
+    resources :clients
+  end
+
+  namespace :client do
+    root to: redirect('/client/reservations')
+
+    devise_for :clients, controllers: { sessions: 'client/sessions' }
+
+    resources :reservations, only: [:index, :show]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

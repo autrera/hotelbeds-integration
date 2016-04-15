@@ -1,7 +1,7 @@
 %h1= "Hoteles en #{full_destination(@country_code, @destination_code, @zone_code)}"
 %br
 .hotels
-  - @hotels['hotels'].each do |hotel|
+  - @hotels_content['hotels'].each do |hotel|
     - hotel_availability = extract_hotel_availability(hotel['code'], @hotels_availability['hotels']['hotels'])
     - next if hotel_availability == nil
     - hotel_show_link = hotel_link(hotel) + "?" + request.query_parameters.to_query

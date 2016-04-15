@@ -3,12 +3,12 @@
 
     = form_for resource, as: resource_name, url: session_path(resource_name), autocomplete: 'off', class: 'bs-component' do |f|
 
-      .form-group.has_info.label-floating
+      .form-group.label-floating
         = f.label :email, "User", class: "control-label"
         = f.email_field :email, class: 'form-control'
         %span.material-input
 
-      .form-group.has_info.label-floating
+      .form-group.label-floating
         = f.label :password, "Password", class: "control-label"
         = f.password_field :password, autocomplete: "off", class: 'form-control'
         %span.material-input

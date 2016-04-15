@@ -4,12 +4,15 @@
       .row
         .col-sm-12
           %p.alert.alert-warning Ingresa tu correo para que podamos enviarte las instrucciones para recuperar tu cuenta
+
+      .form-group.has_info.label-floating
+        = f.label :email, "Email", class: "control-label"
+        = f.email_field :email, class: 'form-control'
+        %span.material-input
+
       .row
         .col-sm-12
-          = f.email_field :email, autofocus: true, placeholder: 'Email', class: 'form-control'
-      .row
-        .col-sm-12
-          %button.btn.btn-primary.btn-block{ type: 'submit' }
+          %button.btn.btn-info.btn-raised.btn-block{ type: 'submit' }
             %i.fa.fa-check
 
 %br

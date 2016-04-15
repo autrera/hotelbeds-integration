@@ -10,15 +10,20 @@
           - if devise_error_messages!.present?
             .alert.alert-danger
               = devise_error_messages!
+
+      .form-group.has_info.label-floating
+        = f.label :password, "Contraseña", class: "control-label"
+        = f.password_field :password, autocomplete: "off", class: 'form-control'
+        %span.material-input
+
+      .form-group.has_info.label-floating
+        = f.label :password_confirmation, "Confirmar contraseña", class: "control-label"
+        = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
+        %span.material-input
+
       .row
         .col-sm-12
-          = f.password_field :password, autofocus: true, autocomplete: "off", class: 'form-control', placeholder: 'Contraseña'
-      .row
-        .col-sm-12
-          = f.password_field :password_confirmation, autofocus: true, autocomplete: "off", class: 'form-control', placeholder: 'Confirmar contraseña'
-      .row
-        .col-sm-12
-          %button.btn.btn-primary.btn-block{type: 'submit'}
+          %button.btn.btn-info.btn-raised.btn-block{ type: 'submit' }
             %i.fa.fa-check
 
 %br
