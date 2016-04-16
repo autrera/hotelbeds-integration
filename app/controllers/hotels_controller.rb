@@ -47,7 +47,7 @@ class HotelsController < ApplicationController
     content_request.on_complete do |response|
       if response.success?
         @hotels_content = JSON.parse response.body
-        # Rails.logger.info "Hotels Content: #{response.body.inspect}"
+        Rails.logger.info "Hotels Content: #{response.body.inspect}"
       else
         Rails.logger.info response.body.inspect
       end
@@ -56,7 +56,7 @@ class HotelsController < ApplicationController
     hydra = Typhoeus::Hydra.hydra
     hydra.queue availability_request
     hydra.queue content_request
-    # hydra.run
+    hydra.run
 
     if @hotels_content != nil && @hotels_availability != nil
       # Redirect to error page or sth
