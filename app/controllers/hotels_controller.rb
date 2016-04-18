@@ -73,10 +73,58 @@ class HotelsController < ApplicationController
     destinations_file = File.read(Rails.root + "app/assets/jsons/destinations.json")
     @destinations = JSON.parse destinations_file
 
-    hotel_file = File.read(Rails.root + "app/assets/jsons/hotel_availability.json")
-    @hotel = JSON.parse hotel_file
+    signature = generate_signature
+    availability_request_hash = generate_availability_request_hash(params)
+    availability_request_hash.except! "destination"
+    availability_request_hash["hotels"] = {
+      hotel: [@hotel_code]
+    }
+    Rails.logger.info "Availability Hash #{availability_request_hash.inspect}"
+    # content_request_hash = generate_content_request_hash(params)
 
-    hotel_content_file = File.read(Rails.root + "app/assets/jsons/hotel_content.json")
-    @hotel_content = JSON.parse hotel_content_file
+    availability_request = Typhoeus::Request.new(
+      "https://api.test.hotelbeds.com/hotel-api/1.0/hotels",
+      method: :post,
+      body: JSON.generate(availability_request_hash),
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+    )
+    availability_request.on_complete do |response|
+      if response.success?
+        @hotel_availability = JSON.parse response.body
+        Rails.logger.info "Hotels Availability: #{response.body.inspect}"
+      else
+        Rails.logger.info response.body.inspect
+      end
+    end
+
+    content_request = Typhoeus::Request.new(
+      "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels/#{@hotel_code}",
+      method: :get,
+      # params: content_request_hash,
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+    )
+    content_request.on_complete do |response|
+      if response.success?
+        @hotel_content = JSON.parse response.body
+        Rails.logger.info "Hotels Content: #{response.body.inspect}"
+      else
+        Rails.logger.info response.body.inspect
+      end
+    end
+
+    hydra = Typhoeus::Hydra.hydra
+    hydra.queue availability_request
+    hydra.queue content_request
+    hydra.run
+
+    if @hotel_content != nil && @hotel_availability != nil
+      # Redirect to error page or sth
+    end
+
+    # hotel_file = File.read(Rails.root + "app/assets/jsons/hotel_availability.json")
+    # @hotel = JSON.parse hotel_file
+
+    # hotel_content_file = File.read(Rails.root + "app/assets/jsons/hotel_content.json")
+    # @hotel_content = JSON.parse hotel_content_file
   end
 end
