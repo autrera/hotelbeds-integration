@@ -139,14 +139,15 @@
                   %dd= check_out.mjd - check_in.mjd
 
                 %table.table
-                  - @hotel['rooms'][0]['rates'][0]['offers'].each do |offer|
-                    %tr
-                      %td.text-right.text-success
-                        = offer['name']
-                        -
-                        = @hotel['currency']
-                        $
-                        = offer['amount'].to_f * -1
+                  - if @hotel['rooms'][0]['rates'][0]['offers'] != nil
+                    - @hotel['rooms'][0]['rates'][0]['offers'].each do |offer|
+                      %tr
+                        %td.text-right.text-success
+                          = offer['name']
+                          -
+                          = @hotel['currency']
+                          $
+                          = offer['amount'].to_f * -1
                   - if @hotel['rooms'][0]['rates'][0]['taxes']['allIncluded'] == true
                     %tr
                       %td.text-right

@@ -32,9 +32,9 @@ class HotelsController < ApplicationController
     availability_request.on_complete do |response|
       if response.success?
         @hotels_availability = JSON.parse response.body
-        Rails.logger.info "Hotels Availability: #{response.body.inspect}"
+        # Rails.logger.info "Hotels Availability: #{response.body.inspect}"
       else
-        Rails.logger.info response.body.inspect
+        # Rails.logger.info response.body.inspect
       end
     end
 
@@ -47,9 +47,9 @@ class HotelsController < ApplicationController
     content_request.on_complete do |response|
       if response.success?
         @hotels_content = JSON.parse response.body
-        Rails.logger.info "Hotels Content: #{response.body.inspect}"
+        # Rails.logger.info "Hotels Content: #{response.body.inspect}"
       else
-        Rails.logger.info response.body.inspect
+        # Rails.logger.info response.body.inspect
       end
     end
 
@@ -61,10 +61,6 @@ class HotelsController < ApplicationController
     if @hotels_content != nil && @hotels_availability != nil
       # Redirect to error page or sth
     end
-
-    # request.run
-    # @response = request.response
-    # @body = JSON.parse @response.body
   end
 
   def show
@@ -79,7 +75,7 @@ class HotelsController < ApplicationController
     availability_request_hash["hotels"] = {
       hotel: [@hotel_code]
     }
-    Rails.logger.info "Availability Hash #{availability_request_hash.inspect}"
+    # Rails.logger.info "Availability Hash #{availability_request_hash.inspect}"
     # content_request_hash = generate_content_request_hash(params)
 
     availability_request = Typhoeus::Request.new(
@@ -91,9 +87,9 @@ class HotelsController < ApplicationController
     availability_request.on_complete do |response|
       if response.success?
         @hotel_availability = JSON.parse response.body
-        Rails.logger.info "Hotels Availability: #{response.body.inspect}"
+        # Rails.logger.info "Hotels Availability: #{response.body.inspect}"
       else
-        Rails.logger.info response.body.inspect
+        # Rails.logger.info response.body.inspect
       end
     end
 
@@ -106,9 +102,9 @@ class HotelsController < ApplicationController
     content_request.on_complete do |response|
       if response.success?
         @hotel_content = JSON.parse response.body
-        Rails.logger.info "Hotels Content: #{response.body.inspect}"
+        # Rails.logger.info "Hotels Content: #{response.body.inspect}"
       else
-        Rails.logger.info response.body.inspect
+        # Rails.logger.info response.body.inspect
       end
     end
 
@@ -122,7 +118,7 @@ class HotelsController < ApplicationController
     end
 
     # hotel_file = File.read(Rails.root + "app/assets/jsons/hotel_availability.json")
-    # @hotel = JSON.parse hotel_file
+    # @hotel_availability = JSON.parse hotel_file
 
     # hotel_content_file = File.read(Rails.root + "app/assets/jsons/hotel_content.json")
     # @hotel_content = JSON.parse hotel_content_file

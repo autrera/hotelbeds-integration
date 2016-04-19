@@ -28,6 +28,9 @@ gem 'chosen-rails'
 gem "font-awesome-rails"
 # Use devise as the authenticator
 gem 'devise'
+# Using monetize to parse the rates
+gem 'monetize'
+gem 'money'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

@@ -36,18 +36,18 @@ class BookingStructure
         end
       end
     end
-    hash["paymentData"] = [{
-      paymentCard: {
-        cardType: @params[:card_type],
-        cardNumber: @params[:card_number],
-        expirityDate: @params[:card_expirity_month],
-        cardCVC: @params[:card_cvc]
-      },
-      contactData: {
-        email: @params[:holder_email],
-        phoneNumber: @params[:holder_phone]
-      }
-    }]
+    # hash["paymentData"] = [{
+    #   paymentCard: {
+    #     cardType: @params[:card_type],
+    #     cardNumber: @params[:card_number],
+    #     expirityDate: @params[:card_expirity_month],
+    #     cardCVC: @params[:card_cvc]
+    #   },
+    #   contactData: {
+    #     email: @params[:holder_email],
+    #     phoneNumber: @params[:holder_phone]
+    #   }
+    # }]
     return hash
   end
 end

@@ -59,15 +59,18 @@
                 .col-sm-12
                   .image-container
                     %img{ src: room_image(room['code'], hotel_content['images']) }
-              .row
-                .col-sm-12
-                  %ul.facilities
-                    - room_facilities(room['code'], hotel_content['rooms']).each do |room_facility|
-                      %li.facility
-                        = room_facility['description']['content']
-                        - if room_facility.has_key? 'indFee'
-                          %span.fee
-                            $
+              - Rails.logger.info "Hotel Content: #{hotel_content.inspect}"
+              - room_facilities = find_room_facilities(room['code'], hotel_content['rooms'])
+              - if room_facilities
+                .row
+                  .col-sm-12
+                    %ul.facilities
+                      - room_facilities.each do |room_facility|
+                        %li.facility
+                          = room_facility['description']['content']
+                          - if room_facility.has_key? 'indFee'
+                            %span.fee
+                              $
             .col-sm-9
               - room['rates'].each do |rate|
                 - calculated_rates = calculate_gross_room_rate(rate)
@@ -89,18 +92,38 @@
                       - if calculated_rates['gross'] != calculated_rates['client_total']
                         .comparison
                           .original
-                            $
-                            = calculated_rates['gross']
+                            = calculated_rates['gross'].currency.iso_code
+                            = calculated_rates['gross'].format
                           .new
-                            $
-                            = calculated_rates['client_total']
+                            = calculated_rates['client_total'].currency.iso_code
+                            = calculated_rates['client_total'].format
                     .col-sm-4
                       .price
-                        $
-                        = calculated_rates['client_total']
+                        = calculated_rates['client_total'].currency.iso_code
+                        = calculated_rates['client_total'].format
+
                       - new_reservation_link = new_reservation_path + "?rateKey=" + URI.encode(rate['rateKey']) + "&" + request.query_parameters.to_query
                       %a.btn.btn-warning.btn-mini.pull-right{ href: new_reservation_link }
                         Reservar
+
+                  - if rate['rateClass'] == 'NRF'
+                    .row
+                      .col-sm-12
+                        .cancellation
+                          This rate is non-refundable
+
+                  - else
+                    - if rate.has_key? 'cancellationPolicies'
+                      - rate['cancellationPolicies'].each do |cancellation_policy|
+                        .row
+                          .col-sm-12
+                            .cancellation
+                              Cancellation penalty fee will be of $
+                              = cancellation_policy['amount']
+                              after
+                              = Date.rfc3339(cancellation_policy['from']).strftime("%m/%d/%Y %T")
+                              %br
+                              = cancellation_policy['from']
 
     #hotel-facilities.facilities
       .row

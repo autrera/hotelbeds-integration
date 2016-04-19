@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :reservations
 
   post 'hotels/:id' => 'hotels#show'
+  get '/404' => 'welcome#not_found'
 
   root 'welcome#index'
 

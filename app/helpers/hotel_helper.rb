@@ -21,10 +21,12 @@ module HotelHelper
     return asset_path("logo-neander-travel.png")
   end
 
-  def room_facilities(room_code, hotel_rooms)
-    hotel_rooms.each do |room|
-      if room['roomCode'] == room_code
-        return room['roomFacilities']
+  def find_room_facilities(room_code, hotel_rooms)
+    if hotel_rooms != nil
+      hotel_rooms.each do |room|
+        if room['roomCode'] == room_code
+          return room['roomFacilities']
+        end
       end
     end
     return []
@@ -39,13 +41,11 @@ module HotelHelper
       if destination['code'] == destination_code && destination['countryCode'] == country_code
         if zone_code == nil
           full_destination_string = "#{destination['name']['content']}"
-          Rails.logger.info "#{full_destination_string.inspect}"
         else
           zone_code = zone_code.to_i
           destination['zones'].each do |zone|
             if zone['zoneCode'] == zone_code
               full_destination_string = "#{destination['name']['content']}, #{zone['name']}"
-              Rails.logger.info "#{full_destination_string.inspect}"
               break
             end
           end
@@ -62,21 +62,24 @@ module HotelHelper
 
   def calculate_gross_room_rate(rate)
     if rate.has_key? 'hotelMandatory'
-      rate_in_cents = rate['sellingRate'].to_f * 100
+      # rate_in_cents = rate['sellingRate'].to_f * 100
+      rate_in_cents = Monetize.parse(rate['sellingRate'])
     else
-      rate_in_cents = rate['net'].to_f * 100 # * 1.25
+      # rate_in_cents = rate['net'].to_f * 100 # * 1.25
+      rate_in_cents = Monetize.parse(rate['net']) # * 1.25
     end
 
-    discount_in_cents = 0.00
+    discount_in_cents = Money.new(0, "USD")
     if rate.has_key? 'offers'
       rate['offers'].each do |offer|
-        discount_in_cents += offer['amount'].to_f * (-1) * 100
+        # discount_in_cents += offer['amount'].to_f * (-1) * 100
+        discount_in_cents += Monetize.parse(offer['amount'].delete("-"))
       end
     end
 
     gross_rate_in_cents = rate_in_cents + discount_in_cents
 
-    return { "gross" => gross_rate_in_cents / 100, "client_total" => rate_in_cents / 100 }
+    return { "gross" => gross_rate_in_cents, "client_total" => rate_in_cents }
   end
 
   def group_facilities(facilities)

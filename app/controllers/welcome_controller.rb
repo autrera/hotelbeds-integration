@@ -9,4 +9,7 @@ class WelcomeController < ApplicationController
     boards_file = File.read(Rails.root + "app/assets/jsons/boards.json")
     @boards = JSON.parse boards_file
   end
+
+  def not_found
+  end
 end
