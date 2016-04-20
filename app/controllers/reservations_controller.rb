@@ -38,9 +38,27 @@ class ReservationsController < ApplicationController
     @response = request.response
     @body = JSON.parse @response.body
 
-    Rails.logger.info "Response: #{@body.inspect}"
-    # respond_to do |format|
-    #   format.html { render json: JSON.generate(json_structure) }
+    Rails.logger.info "Respuesta: #{@body.inspect}"
+
+    # if @body['booking']['status'] == "CONFIRMED"
+    #   # Send client email
+    #   # Send agents email
+    #   redirect_to confirmation_reservations_path success: true
+    # else
+    #   redirect_to confirmation_reservations_path error: true
     # end
+
+    respond_to do |format|
+      format.html { render json: json_structure }
+    end
   end
+
+  def confirmation
+    unless params[:error] == 'true'
+      render 'success'
+    else
+      render 'error'
+    end
+  end
+
 end

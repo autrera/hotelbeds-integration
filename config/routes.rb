@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   devise_for :clients
   resources :hotels
   resources :destinations
-  resources :reservations
+  resources :reservations, only: [:new, :create] do
+    collection do
+      get 'confirmation'
+    end
+  end
+
 
   post 'hotels/:id' => 'hotels#show'
   get '/404' => 'welcome#not_found'

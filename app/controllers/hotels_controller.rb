@@ -14,7 +14,7 @@ class HotelsController < ApplicationController
     content_request_hash = generate_content_request_hash(params)
 
     # respond_to do |format|
-    #   format.html { render json: JSON.generate(hash_structure) }
+    #   format.html { render json: JSON.generate(availability_request_hash) }
     # end
 
     # hotels_availability_file = File.read(Rails.root + "app/assets/jsons/hotels_availability.json")
@@ -34,7 +34,7 @@ class HotelsController < ApplicationController
         @hotels_availability = JSON.parse response.body
         # Rails.logger.info "Hotels Availability: #{response.body.inspect}"
       else
-        # Rails.logger.info response.body.inspect
+        Rails.logger.info response.body.inspect
       end
     end
 
@@ -49,7 +49,7 @@ class HotelsController < ApplicationController
         @hotels_content = JSON.parse response.body
         # Rails.logger.info "Hotels Content: #{response.body.inspect}"
       else
-        # Rails.logger.info response.body.inspect
+        Rails.logger.info response.body.inspect
       end
     end
 

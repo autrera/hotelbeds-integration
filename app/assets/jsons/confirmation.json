@@ -1,0 +1,76 @@
+{
+  "auditData": {
+    "processTime": "3074",
+    "timestamp": "2016-04-20 18:47:09.678",
+    "requestHost": "187.150.202.33",
+    "serverId": "sa3RKSJACHXE79K.env",
+    "environment": "[int]",
+    "release": "2cb1bad878d2195c9b508e2007ef96616007dacb",
+    "internal": "4whec3tnzq9abhrx2ku9n78t|UK|null|null|null|null|0|0|0|N||null|null|null|null|null||||1"
+  },
+  "booking": {
+    "reference": "69-2025694",
+    "clientReference": "TEST TEST",
+    "creationDate": "2016-04-20",
+    "status": "CONFIRMED",
+    "holder": {
+      "name": "HOLDER NAME",
+      "surname": "HOLDER SURNAME"
+    },
+    "hotel": {
+      "checkIn": "2016-04-23",
+      "checkOut": "2016-04-25",
+      "code": 3677,
+      "name": "Yalmakan Hotel",
+      "categoryCode": "4EST",
+      "categoryName": "4 STARS",
+      "destinationCode": "CUN",
+      "destinationName": "Cancun (and vicinity)",
+      "zoneCode": 10,
+      "zoneName": "Hotel Zone / Zona Hotelera",
+      "latitude": "21.045689",
+      "longitude": "-86.782652",
+      "rooms": [
+        {
+          "status": "CONFIRMED",
+          "code": "DBL.ST",
+          "name": "DOUBLE STANDARD",
+          "paxes": [
+            {
+              "roomId": 1,
+              "type": "AD",
+              "name": "ADULT NAME"
+            }
+          ],
+          "rates": [
+            {
+              "rateClass": "NOR",
+              "net": "261.14",
+              "paymentType": "AT_WEB",
+              "packaging": false,
+              "boardCode": "RO",
+              "boardName": "ROOM ONLY",
+              "cancellationPolicies": [
+                {
+                  "amount": "130.57",
+                  "from": "2016-04-20T23:59:00-04:00"
+                }
+              ],
+              "rooms": 1
+            }
+          ]
+        }
+      ],
+      "totalNet": "261.14",
+      "currency": "USD",
+      "supplier": {
+        "name": "HOTELBEDS SPAIN, S.L.U.",
+        "vatNumber": "ESB28916765"
+      }
+    },
+    "totalSellingRate": 261.14,
+    "totalNet": 261.14,
+    "pendingAmount": 261.14,
+    "currency": "USD"
+  }
+}

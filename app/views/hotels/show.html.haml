@@ -118,12 +118,11 @@
                         .row
                           .col-sm-12
                             .cancellation
-                              Cancellation penalty fee will be of $
-                              = cancellation_policy['amount']
+                              Cancellation penalty fee will be of
+                              = calculated_rates['client_total'].currency.iso_code
+                              = "$#{cancellation_policy['amount']}"
                               after
-                              = Date.rfc3339(cancellation_policy['from']).strftime("%m/%d/%Y %T")
-                              %br
-                              = cancellation_policy['from']
+                              = DateTime.iso8601(cancellation_policy['from']).strftime("%m/%d/%Y %T %Z")
 
     #hotel-facilities.facilities
       .row

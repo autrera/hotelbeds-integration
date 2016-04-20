@@ -172,6 +172,7 @@ span.star-rating.star-5EST {
 
 .hotels-by-board
 {
+  margin-bottom: 89px;
   .title
   {
     color: $belize_hole;
@@ -331,6 +332,7 @@ span.star-rating.star-5EST {
   .facilities
   {
     font-size: 12px;
+    margin-bottom: 37px;
     .title
     {
       margin-bottom: 12px;
@@ -367,4 +369,10 @@ span.star-rating.star-5EST {
   {
     font-weight: normal;
   }
+}
+
+.footer
+{
+  background: $belize_hole;
+  height: 200px;
 }
