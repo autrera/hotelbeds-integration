@@ -102,7 +102,8 @@
                         = calculated_rates['client_total'].currency.iso_code
                         = calculated_rates['client_total'].format
 
-                      - new_reservation_link = new_reservation_path + "?rateKey=" + URI.encode(rate['rateKey']) + "&" + request.query_parameters.to_query
+                      - room_specifics = { hotel_code: @hotel_code, room_code: room["code"], board_code: rate["boardCode"] }
+                      - new_reservation_link = new_reservation_path + "?" + room_specifics.to_query + "&" + request.query_parameters.to_query
                       %a.btn.btn-warning.btn-mini.pull-right{ href: new_reservation_link }
                         Reservar
 

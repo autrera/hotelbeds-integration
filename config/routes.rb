@@ -10,7 +10,6 @@ Rails.application.routes.draw do
     end
   end
 
-
   post 'hotels/:id' => 'hotels#show'
   get '/404' => 'welcome#not_found'
 
