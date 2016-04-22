@@ -1,6 +1,14 @@
 body
 {
   background: #fafafa;
+  color: $text;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+th
+{
+  font-weight: normal;
 }
 
 .btn.btn-raised.btn-info,
@@ -17,4 +25,16 @@ body
 .alert.alert-warning
 {
   background: #ff9800;
+}
+
+.reservations
+{
+  .confirmed
+  {
+    color: $grass;
+  }
+  .cancelled
+  {
+    color: $alizarin;
+  }
 }

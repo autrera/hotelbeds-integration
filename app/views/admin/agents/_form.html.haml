@@ -1,0 +1,39 @@
+= form_for [:admin, @agent], html: {autocomplete: 'off', class: 'form-horizontal'} do |f|
+  - if @agent.errors.any?
+    .alert.alert-danger
+      %p.bold= "#{pluralize(@agent.errors.count, "error")} prohibited this agent from being saved:"
+      %ul
+        - @agent.errors.full_messages.each do |msg|
+          %li= msg
+
+  .section
+
+    %h3.section-header
+      Datos
+
+    .form-group
+      = f.label :name_es, 'Nombre en Español:', class: 'col-sm-3 control-label'
+      .col-sm-8
+        = f.text_field :name_es, class: 'form-control'
+
+    .form-group
+      = f.label :name_en, 'Nombre en Inglés:', class: 'col-sm-3 control-label'
+      .col-sm-8
+        = f.text_field :name_en, class: 'form-control'
+
+  .section
+
+    %h3.section-header
+      Descripciones
+
+    .form-group
+      = f.label :description_es, 'Descripción en Español:', class: 'col-sm-3 control-label'
+      .col-sm-8
+        = f.text_field :description_es, class: 'form-control'
+
+    .form-group
+      = f.label :description_en, 'Descripción en Inglés:', class: 'col-sm-3 control-label'
+      .col-sm-8
+        = f.text_field :description_en, class: 'form-control'
+
+  = render partial: 'shared/form_actions', locals: { form: f, resource_path: administration_activities_path }

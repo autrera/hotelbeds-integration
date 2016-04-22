@@ -1,8 +1,64 @@
-.row
-  .col-sm-12
-    .panel.panel-info
-      .panel-heading
-        .panel-title
-          Reservaciones
-      .panel-body
+.reservations
+  .row
+    .col-sm-12
+      .panel.panel-info
+        .panel-heading
+          .panel-title
+            Reservaciones
+        .panel-body
 
+          = hidden_field_tag 'max-date', Date.today.strftime('%m/%d/%Y')
+          %form{ method: 'get', action: agent_reservations_path }
+            .row.input-daterange
+              .col-sm-5
+                .form-group.label-floating
+                  %label.control-label{ for: 'start_date' }
+                    Desde:
+                  %input.form-control{ id: 'start_date', name: 'start_date', value: params[:start_date] || (Date.today - 30.days).strftime('%m/%d/%Y'), type: 'text' }
+              .col-sm-5
+                .form-group.label-floating
+                  %label.control-label{ for: 'end_date' }
+                    Hasta:
+                  %input.form-control{ id: 'end_date', name: 'end_date', value: params[:end_date] || Date.today.strftime('%m/%d/%Y'), type: 'text' }
+              .col-sm-2
+                %button.btn.btn-primary.btn-raised{ type: 'submit' }
+                  Buscar
+
+          - if @reservations != nil
+            %table.table.table-striped
+              %tr
+                %th Hotel
+                %th.text-center Destination
+                %th.text-center Check In/Out
+                %th.text-center Created
+                %th.text-center Status
+                %th.text-center Details
+              - @reservations['bookings'].each do |reservation|
+                %tr
+                  %td
+                    = reservation['hotel']['name']
+                  %td.text-center
+                    = reservation['hotel']['destinationCode']
+                  %td.text-center
+                    = Date.strptime(reservation['hotel']['checkIn'], '%F').strftime('%m/%d/%Y')
+                    %br
+                    = Date.strptime(reservation['hotel']['checkOut'], '%F').strftime('%m/%d/%Y')
+                  %td.text-center
+                    = Date.strptime(reservation['creationDate'], '%F').strftime('%m/%d/%Y')
+                  %td.text-center{ class: "#{reservation['status'].downcase}" }
+                    = reservation['status']
+                  %td.text-center
+                    %a.btn.btn-primary.btn-xs{ href: agent_reservation_path(reservation['reference']) }
+                      Detalles
+
+            %nav
+              %ul.pagination
+                - pagination_links = generate_pagination_links_list(params[:start_date], params[:end_date], @reservations['total'].to_i)
+                - pagination_links.each_with_index do |link, index|
+                  %li
+                    %a{ href: link }
+                      = index + 1
+
+          - else
+            .text-danger.text-center
+              No se encontraron reservaciones

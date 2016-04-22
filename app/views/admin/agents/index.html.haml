@@ -3,6 +3,28 @@
     .panel.panel-info
       .panel-heading
         .panel-title
-          Agents
+          Agentes
       .panel-body
+        .row
+          .col-sm-2.col-sm-offset-10
+            %a.btn.btn-primary.btn-raised.btn-xs.btn-block{ href: new_admin_agent_path }
+              +Nuevo
+
+        .row
+          .col-sm-12
+            %table.table.table-striped.table-hover
+              %tr
+                %th Nombre
+                %th Email
+                %th.text-center
+                  Acciones
+              - @agents.each do |agent|
+                %tr
+                  %td= agent.name
+                  %td= agent.email
+                  %td.text-center
+                    = link_to edit_agent_agent_path(agent), class: "btn btn-xs btn-primary btn-raised" do
+                      Editar
+                    = link_to agent_agent_path(agent), :method => :delete, class: "btn btn-xs btn-danger btn-raised", :data => { confirm: "¿Deseas eliminar al agente?" } do
+                      Eliminar
 

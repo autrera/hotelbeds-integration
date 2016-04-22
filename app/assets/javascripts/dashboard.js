@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require material
 //= require ripples
+//= require bootstrap-datepicker.min
 //= require admin
