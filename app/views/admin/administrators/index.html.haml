@@ -5,6 +5,11 @@
         .panel-title
           Administradores
       .panel-body
+        .row
+          .col-sm-2.col-sm-offset-10
+            %a.btn.btn-primary.btn-raised.pull-right{ href: new_admin_administrator_path }
+              +Nuevo
+
         %table.table.table-striped.table-hover
           %tr
             %th Nombre

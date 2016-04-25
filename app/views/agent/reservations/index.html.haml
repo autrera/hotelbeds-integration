@@ -51,7 +51,7 @@
                     %a.btn.btn-primary.btn-xs{ href: agent_reservation_path(reservation['reference']) }
                       Detalles
 
-            %nav
+            %nav.pull-right
               %ul.pagination
                 - pagination_links = generate_pagination_links_list(params[:start_date], params[:end_date], @reservations['total'].to_i)
                 - pagination_links.each_with_index do |link, index|

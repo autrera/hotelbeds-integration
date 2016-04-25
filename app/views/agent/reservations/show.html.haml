@@ -1,0 +1,114 @@
+.panel.panel-info
+  .panel-heading
+    .panel-title
+      Reservación |
+      = @reservation['reference']
+  .panel-body
+    .reservation
+      .row
+        .col-sm-3
+          .row
+            .col-sm-12
+              .group
+                %label Creación:
+                = Date.strptime(@reservation['creationDate'], "%Y-%m-%d").strftime("%m/%d/%Y")
+          .row
+            .col-sm-12
+              .group{ class: "#{@reservation['status'].downcase}" }
+                %label Status:
+                = @reservation['status']
+
+        .col-sm-3
+          .row
+            .col-sm-12
+              .group
+                %label Check-in:
+                = Date.strptime(@reservation['hotel']['checkIn'], "%Y-%m-%d").strftime("%m/%d/%Y")
+          .row
+            .col-sm-12
+              .group
+                %label Check-out:
+                = Date.strptime(@reservation['hotel']['checkOut'], "%Y-%m-%d").strftime("%m/%d/%Y")
+
+        .col-sm-6
+          .row
+            .col-sm-12
+              .group
+                %label Hotel:
+                = @reservation['hotel']['name']
+          .row
+            .col-sm-12
+              .group
+                %label Destination:
+                = "#{@reservation['hotel']['destinationName']},"
+                = @reservation['hotel']['zoneName']
+
+      .row
+        .col-sm-12
+          .group
+            %br
+            %label A Nombre:
+            = @reservation['holder']['name']
+            = @reservation['holder']['surname']
+
+      .panel.panel-primary
+        .panel-heading
+          Habitaciones
+        .panel-body
+          .row
+            .col-sm-12
+              - @reservation['hotel']['rooms'].each do |room|
+                .room
+                  .row
+                    .col-sm-8
+                      = room['code']
+                      |
+                      = room['name']
+                    .col-sm-4.text-right.text-success
+                      - room['rates'].each do |rate|
+                        = @reservation['hotel']['currency']
+                        $
+                        = rate['net']
+
+                  .row
+                    .col-sm-8
+                      %ul
+                        - room['paxes'].each do |pax|
+                          %li
+                            - if pax['type'] == "AD"
+                              Adulto:
+                            - else
+                              Menor:
+                            = pax['name']
+                            = pax['surname']
+                            - if pax['type'] != "AD"
+                              = pax['age']
+                              años
+
+                  .row
+                    .col-sm-8
+                      - room['rates'].each do |rate|
+                        - rate['cancellationPolicies'].each do |cancellation_policy|
+                          .text-danger
+                            Cancelación:
+                            = @reservation['hotel']['currency']
+                            $
+                            = cancellation_policy['amount']
+                            = DateTime.iso8601(cancellation_policy['from']).strftime("%m/%d/%y %t %z")
+
+      .row
+        .col-sm-3.col-sm-offset-9
+          .group
+            %label Client Total:
+            = @reservation['currency']
+            $
+          .group
+            %label Supplier Total:
+            = @reservation['currency']
+            $
+            = @reservation['totalSellingRate']
+          .group
+            %label Pending:
+            = @reservation['currency']
+            $
+            = @reservation['pendingAmount']

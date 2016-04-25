@@ -38,3 +38,29 @@ th
     color: $alizarin;
   }
 }
+
+.reservation
+{
+  .confirmed
+  {
+    color: $grass;
+  }
+  .cancelled
+  {
+    color: $alizarin;
+  }
+  .room
+  {
+    padding: 12px 0;
+    &:nth-child(even)
+    {
+      background: $clouds;
+    }
+  }
+  label
+  {
+    font-size: 12px;
+    display: inline-block;
+    width: 80px;
+  }
+}

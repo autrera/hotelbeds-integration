@@ -33,4 +33,21 @@ class Agent::ReservationsController < AgentController
     @reservations = reservations_body['bookings']
   end
 
+  def show
+    signature = generate_signature
+
+    reservation_request = Typhoeus::Request.new(
+      "https://api.test.hotelbeds.com/hotel-api/1.0/bookings/#{params[:id]}",
+      method: :get,
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+    )
+    reservation_request.run
+    response = reservation_request.response
+    reservation_body = JSON.parse response.body
+
+    # Rails.logger.info "Response: #{response.body.inspect}"
+
+    @reservation = reservation_body['booking']
+  end
+
 end

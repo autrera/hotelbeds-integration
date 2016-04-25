@@ -1,9 +1,9 @@
-= form_for [:admin, @agent], html: {autocomplete: 'off', class: 'form-horizontal'} do |f|
-  - if @agent.errors.any?
+= form_for [:admin, @admin], html: {autocomplete: 'off', class: 'form-horizontal'} do |f|
+  - if @admin.errors.any?
     .alert.alert-danger
-      %p.bold= "#{pluralize(@agent.errors.count, "error")} prohibited this agent from being saved:"
+      %p.bold= "#{pluralize(@admin.errors.count, "error")} prohibited this admin from being saved:"
       %ul
-        - @agent.errors.full_messages.each do |msg|
+        - @admin.errors.full_messages.each do |msg|
           %li= msg
 
   .row
@@ -12,10 +12,6 @@
       .form-group
         = f.label :name, 'Nombre', class: 'control-label'
         = f.text_field :name, class: 'form-control'
-
-      .form-group
-        = f.label :surname, 'Apellido', class: 'control-label'
-        = f.text_field :surname, class: 'form-control'
 
       .form-group
         = f.label :email, 'Correo', class: 'control-label'
@@ -33,7 +29,7 @@
     .col-sm-6.col-sm-offset-3
       %button.btn.btn-primary.btn-raised.pull-right{ type: "submit" }
         Guardar
-      %a.btn.btn-warning.btn-raised.pull-right{ href: admin_agents_path }
+      %a.btn.btn-warning.btn-raised.pull-right{ href: admin_administrators_path }
         Cancelar
 
   / = render partial: 'shared/form_actions', locals: { form: f, resource_path: administration_activities_path }
