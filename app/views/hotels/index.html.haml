@@ -8,13 +8,13 @@
     .hotel-index
       .row
         .col-sm-2
-          %a.image-container{ href: hotel_show_link }
+          %a.with-loader.image-container{ href: hotel_show_link }
             %img{ src: hotel_image(hotel) }
         .col-sm-8
           .row
             .col-sm-12
               %h2
-                %a{ href: hotel_show_link }= hotel["name"]["content"]
+                %a.with-loader{ href: hotel_show_link }= hotel["name"]["content"]
                 %span.star-rating{ class: "star-" + hotel["categoryCode"] }
                   &nbsp;
           .row
@@ -34,6 +34,6 @@
                 = hotel_availability['minRate']
           .row
             .col-sm-12
-              %a.btn.btn-block.btn-warning{ href: hotel_show_link }
+              %a.with-loader.btn.btn-block.btn-warning{ href: hotel_show_link }
                 Ver Hotel
                 = fa_icon "angle-right"

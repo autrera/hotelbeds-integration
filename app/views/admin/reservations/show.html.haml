@@ -88,16 +88,19 @@
                   .row
                     .col-sm-8
                       - room['rates'].each do |rate|
-                        - rate['cancellationPolicies'].each do |cancellation_policy|
-                          .text-danger
-                            Cancelación:
-                            = @reservation['hotel']['currency']
-                            $
-                            = cancellation_policy['amount']
-                            = DateTime.iso8601(cancellation_policy['from']).strftime("%m/%d/%y %t %z")
+                        - if rate.has_key? 'cancellationPolicies'
+                          - rate['cancellationPolicies'].each do |cancellation_policy|
+                            .text-danger
+                              Cancelación:
+                              = @reservation['hotel']['currency']
+                              $
+                              = cancellation_policy['amount']
+                              = DateTime.iso8601(cancellation_policy['from']).strftime("%m/%d/%y %t %z")
 
       .row
-        .col-sm-3.col-sm-offset-9
+        .col-sm-2
+          = link_to 'Cancelar', { action: :cancel, id: @reservation['reference'] },  method: :delete, class: "btn btn-raised btn-danger", data: { confirm: "Seguro que deseas cancelar la reservación #{@reservation['reference']}?" }
+        .col-sm-3.col-sm-offset-7
           .group
             %label Client Total:
             = @reservation['currency']

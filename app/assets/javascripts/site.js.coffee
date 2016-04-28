@@ -1,5 +1,16 @@
 ready = () ->
 
+  showLoader = () ->
+    $('.loader').removeClass 'hidden'
+    return
+
+  $('a.with-loader').on 'click', (event) ->
+    showLoader()
+    return
+
+  $('form').on 'submit', () ->
+    showLoader()
+
   @select = $('.destinations-select').selectize
     openOnFocus: false
     onChange: (value) ->

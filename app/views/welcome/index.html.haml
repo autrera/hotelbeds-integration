@@ -1,50 +1,83 @@
+- checkin_default = (Date.today + 3.days).strftime("%m/%d/%Y")
+- booking_defaults = "&check_in=#{checkin_default}&number_of_nights=2&number_of_rooms=1&room_1_adults=1&room_1_children=0&room_1_child_1_age=0&room_1_child_2_age=0&room_1_child_3_age=0&room_1_child_4_age=0&room_2_adults=1&room_2_children=0&room_2_child_1_age=0&room_2_child_2_age=0&room_2_child_3_age=0&room_2_child_4_age=0&room_3_adults=1&room_3_children=0&room_3_child_1_age=0&room_3_child_2_age=0&room_3_child_3_age=0&room_3_child_4_age=0&room_4_adults=1&room_4_children=0&room_4_child_1_age=0&room_4_child_2_age=0&room_4_child_3_age=0&room_4_child_4_age=0"
 .recommended-destinations
   .row
     .col-sm-12
       %h2.title
-        Recommended Destinations
+        Recommended destinations in México
   .row
     .col-sm-12
       .row
-        - checkin_default = (Date.today + 3.days).strftime("%m/%d/%Y")
-        - booking_defaults = "&check_in=#{checkin_default}&number_of_nights=2&number_of_rooms=1&room_1_adults=1&room_1_children=0&room_1_child_1_age=0&room_1_child_2_age=0&room_1_child_3_age=0&room_1_child_4_age=0&room_2_adults=1&room_2_children=0&room_2_child_1_age=0&room_2_child_2_age=0&room_2_child_3_age=0&room_2_child_4_age=0&room_3_adults=1&room_3_children=0&room_3_child_1_age=0&room_3_child_2_age=0&room_3_child_3_age=0&room_3_child_4_age=0&room_4_adults=1&room_4_children=0&room_4_child_1_age=0&room_4_child_2_age=0&room_4_child_3_age=0&room_4_child_4_age=0"
         .col-sm-2
-          %a{ href: "/hotels?destination=MX-CUN#{booking_defaults}" }
+          %a.with-loader{ href: "/hotels?destination=MX-CUN#{booking_defaults}" }
             %img.picture{ src: asset_path("cancun.png") }
             %p.name Cancun
         .col-sm-2
-          %a{ href: "/hotels?destination=MX-ACA#{booking_defaults}" }
+          %a.with-loader{ href: "/hotels?destination=MX-ACA#{booking_defaults}" }
             %img.picture{ src: asset_path("acapulco.png") }
             %p.name Acapulco
         .col-sm-2
-          %a{ href: "/hotels?destination=MX-PVR#{booking_defaults}" }
+          %a.with-loader{ href: "/hotels?destination=MX-PVR#{booking_defaults}" }
             %img.picture{ src: asset_path("vallarta.png") }
             %p.name Puerto Vallarta
         .col-sm-2
-          %a{ href: "/hotels?destination=MX-PCM#{booking_defaults}" }
+          %a.with-loader{ href: "/hotels?destination=MX-PCM#{booking_defaults}" }
             %img.picture{ src: asset_path("playa.png") }
             %p.name Playa del Carmen
         .col-sm-2
-          %a{ href: "/hotels?destination=MX-IXT#{booking_defaults}" }
+          %a.with-loader{ href: "/hotels?destination=MX-IXT#{booking_defaults}" }
             %img.picture{ src: asset_path("ixtapa.png") }
             %p.name Ixtapa Zihuatanejo
         .col-sm-2
-          %a{ href: "/hotels?destination=MX-MDF#{booking_defaults}" }
+          %a.with-loader{ href: "/hotels?destination=MX-MDF#{booking_defaults}" }
             %img.picture{ src: asset_path("ciudad_mexico.png") }
             %p.name Ciudad de Mexico
 
-.hotels-by-board
+.recommended-destinations
   .row
     .col-sm-12
       %h2.title
-        Available Boards
+        Recommended destinations in USA
   .row
-    - grouped_boards = group_items(@boards['boards'])
-    - grouped_boards.each do |grouped_board|
-      .col-sm-4
-        %ul.boards
-          - grouped_board.each do |board|
-            - if board.has_key? "description"
-              %li.board
-                %a{ href: '#' }
-                  = board['description']['content']
+    .col-sm-12
+      .row
+        .col-sm-2
+          %a.with-loader{ href: "/hotels?destination=MX-CUN#{booking_defaults}" }
+            %img.picture{ src: asset_path("cancun.png") }
+            %p.name Cancun
+        .col-sm-2
+          %a.with-loader{ href: "/hotels?destination=MX-ACA#{booking_defaults}" }
+            %img.picture{ src: asset_path("acapulco.png") }
+            %p.name Acapulco
+        .col-sm-2
+          %a.with-loader{ href: "/hotels?destination=MX-PVR#{booking_defaults}" }
+            %img.picture{ src: asset_path("vallarta.png") }
+            %p.name Puerto Vallarta
+        .col-sm-2
+          %a.with-loader{ href: "/hotels?destination=MX-PCM#{booking_defaults}" }
+            %img.picture{ src: asset_path("playa.png") }
+            %p.name Playa del Carmen
+        .col-sm-2
+          %a.with-loader{ href: "/hotels?destination=MX-IXT#{booking_defaults}" }
+            %img.picture{ src: asset_path("ixtapa.png") }
+            %p.name Ixtapa Zihuatanejo
+        .col-sm-2
+          %a.with-loader{ href: "/hotels?destination=MX-MDF#{booking_defaults}" }
+            %img.picture{ src: asset_path("ciudad_mexico.png") }
+            %p.name Ciudad de Mexico
+
+/ .hotels-by-board
+/   .row
+/     .col-sm-12
+/       %h2.title
+/         Available Boards
+/   .row
+/     - grouped_boards = group_items(@boards['boards'])
+/     - grouped_boards.each do |grouped_board|
+/       .col-sm-4
+/         %ul.boards
+/           - grouped_board.each do |board|
+/             - if board.has_key? "description"
+/               %li.board
+/                 %a{ href: '#' }
+/                   = board['description']['content']

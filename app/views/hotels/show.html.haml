@@ -104,7 +104,7 @@
 
                       - room_specifics = { hotel_code: @hotel_code, room_code: room["code"], board_code: rate["boardCode"] }
                       - new_reservation_link = new_reservation_path + "?" + room_specifics.to_query + "&" + request.query_parameters.to_query
-                      %a.btn.btn-warning.btn-mini.pull-right{ href: new_reservation_link }
+                      %a.with-loader.btn.btn-warning.btn-mini.pull-right{ href: new_reservation_link }
                         Reservar
 
                   - if rate['rateClass'] == 'NRF'

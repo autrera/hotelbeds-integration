@@ -1,2 +1,66 @@
+- checkin_default = (Date.today + 3.days).strftime("%m/%d/%Y")
+- booking_defaults = "&check_in=#{checkin_default}&number_of_nights=2&number_of_rooms=1&room_1_adults=1&room_1_children=0&room_1_child_1_age=0&room_1_child_2_age=0&room_1_child_3_age=0&room_1_child_4_age=0&room_2_adults=1&room_2_children=0&room_2_child_1_age=0&room_2_child_2_age=0&room_2_child_3_age=0&room_2_child_4_age=0&room_3_adults=1&room_3_children=0&room_3_child_1_age=0&room_3_child_2_age=0&room_3_child_3_age=0&room_3_child_4_age=0&room_4_adults=1&room_4_children=0&room_4_child_1_age=0&room_4_child_2_age=0&room_4_child_3_age=0&room_4_child_4_age=0"
 .footer
-  &nbsp;
+  .container
+    .row
+      .col-sm-4
+        %ul
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-CUN#{booking_defaults}" }
+              Hoteles en Cancun
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-ACA#{booking_defaults}" }
+              Hoteles en Acapulco
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-PVR#{booking_defaults}" }
+              Hoteles en Puerto Vallarta
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-PCM#{booking_defaults}" }
+              Hoteles en Playa del Carmen
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-IXT#{booking_defaults}" }
+              Hoteles en Ixtapa Zihuatanejo
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-MDF#{booking_defaults}" }
+              Hoteles en Ciudad de Mexico
+
+      .col-sm-4
+        %ul
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-CUN#{booking_defaults}" }
+              Hoteles en Cancun
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-ACA#{booking_defaults}" }
+              Hoteles en Acapulco
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-PVR#{booking_defaults}" }
+              Hoteles en Puerto Vallarta
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-PCM#{booking_defaults}" }
+              Hoteles en Playa del Carmen
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-IXT#{booking_defaults}" }
+              Hoteles en Ixtapa Zihuatanejo
+          %li
+            %a.with-loader{ href: "/hotels?destination=MX-MDF#{booking_defaults}" }
+              Hoteles en Ciudad de Mexico
+
+      .col-sm-4
+        .btn-group.btn-group-justified
+          %a.btn.btn-link{ href: "#" }
+            = fa_icon "facebook"
+          %a.btn.btn-link{ href: "#" }
+            = fa_icon "twitter"
+          %a.btn.btn-link{ href: "#" }
+            = fa_icon "google-plus"
+
+    .text-center.copyright
+      © Copyright 2014 by Neandertravel.com. Todos los derechs reservados.
+
+.loader.hidden
+  %img{ src: asset_path('logo-neander-travel.png'), style: 'display: block; margin: 200px auto 50px;' }
+  %h1.text-center
+    Estamos buscando las mejores tarifas para ti.
+  .spinner
+    .double-bounce1
+    .double-bounce2

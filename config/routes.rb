@@ -20,7 +20,11 @@ Rails.application.routes.draw do
 
     devise_for :administrators, controllers: { sessions: 'admin/sessions' }
 
-    resources :reservations, only: [:index, :show]
+    resources :reservations, only: [:index, :show] do
+      collection do
+        put 'cancel'
+      end
+    end
     resources :clients
     resources :agents
     resources :administrators

@@ -63,8 +63,8 @@ class Admin::ReservationsController < AdminController
     reservation_body = JSON.parse response.body
 
     # Rails.logger.info "Response: #{response.body.inspect}"
-
-    @reservation = reservation_body['booking']
+    # @reservation = reservation_body['booking']
+    redirect_to admin_reservation_path(params[:id])
   end
 
 end

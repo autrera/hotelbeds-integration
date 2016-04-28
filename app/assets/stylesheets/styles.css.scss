@@ -112,8 +112,11 @@ span.star-rating.star-5EST {
 
 .recommended-destinations
 {
-  margin-top: 89px;
-  margin-bottom: 89px;
+  &:first-child
+  {
+    margin-top: 89px;
+  }
+  margin-bottom: 28px;
   .title
   {
     color: $belize_hole;
@@ -335,8 +338,80 @@ span.star-rating.star-5EST {
   }
 }
 
+.reservation-success, .reservation-error
+{
+  margin: 50px 0;
+  .title
+  {
+    margin: 21px 0 28px;
+  }
+}
+
 .footer
 {
+  color: white;
   background: $belize_hole;
-  height: 200px;
+  padding: 50px 0;
+  .copyright
+  {
+    font-weight: normal;
+    margin: 28px 0 0;
+  }
+  a
+  {
+    color: white;
+  }
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 50px auto;
+}
+
+.loader
+{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
 }

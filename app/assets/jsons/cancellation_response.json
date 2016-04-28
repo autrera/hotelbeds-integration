@@ -1,0 +1,81 @@
+{
+    "auditData": {
+        "processTime": "1603",
+        "timestamp": "2016-04-26 19:24:37.847",
+        "requestHost": "23.23.79.237",
+        "serverId": "sa3RKSJACHXE79K.env",
+        "environment": "[int]",
+        "release": "2cb1bad878d2195c9b508e2007ef96616007dacb"
+    },
+    "booking": {
+        "reference": "318-611700",
+        "cancellationReference": "JOCVLEIENZ",
+        "clientReference": "MY BOOKING REFERENCE",
+        "creationDate": "2016-04-11",
+        "status": "CANCELLED",
+        "holder": {
+            "name": "HOLDER NAME",
+            "surname": "HOLDER SURNAME"
+        },
+        "hotel": {
+            "checkIn": "2016-06-08",
+            "checkOut": "2016-06-10",
+            "code": 84629,
+            "name": "The Luxe Manor",
+            "categoryCode": "5EST",
+            "categoryName": "5 STARS",
+            "destinationCode": "HKG",
+            "destinationName": "Hong Kong",
+            "zoneCode": 20,
+            "zoneName": "Tsim Sha Tsui",
+            "latitude": "22.300825",
+            "longitude": "114.174003",
+            "rooms": [{
+                "status": "CANCELLED",
+                "code": "DBT.ST-1",
+                "name": "Double or Twin STANDARD",
+                "paxes": [{
+                    "roomId": 1,
+                    "type": "AD"
+                }, {
+                    "roomId": 1,
+                    "type": "AD"
+                }, {
+                    "roomId": 1,
+                    "type": "CH"
+                }],
+                "rates": [{
+                    "rateClass": "NOR",
+                    "net": "428.11",
+                    "rateComments": "Extra beds on demand FEE: NO. Check-in hour 14:00 – 17:00. . \tThe rate is NOT applicable to Chinese market / passport holder, otherwise supplement fees will be charged.\n1 children between 2 to 11 are sharing beds with parents in ALL room type\n-Any name changed, adding sharer will not be accepted once booking is confirmed\n-Children who are under 11 years of age will sharing existing bed with parents\n-Free Daily Buffet Breakfast \n-Free Wired Broadband Internet and Wifi \n-Free Local Call\n",
+                    "paymentType": "AT_WEB",
+                    "packaging": false,
+                    "boardCode": "BB",
+                    "boardName": "BED AND BREAKFAST",
+                    "rateBreakDown": {
+                        "rateSupplements": [{
+                            "code": "C",
+                            "name": "UNKNOWN",
+                            "from": "2016-06-08",
+                            "to": "2016-06-09",
+                            "amount": "428.11",
+                            "nights": 1
+                        }]
+                    },
+                    "rooms": 1
+                }]
+            }],
+            "totalNet": "428.11",
+            "currency": "EUR",
+            "supplier": {
+                "name": "HOTELBEDS HONG KONG LIMITED",
+                "vatNumber": "04057491"
+            },
+            "cancellationAmount": 428.11
+        },
+        "totalSellingRate": 428.11,
+        "totalNet": 428.11,
+        "pendingAmount": 428.11,
+        "currency": "EUR"
+    }
+}
