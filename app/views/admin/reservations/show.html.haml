@@ -51,67 +51,71 @@
             = @reservation['holder']['name']
             = @reservation['holder']['surname']
 
-      .panel.panel-primary
-        .panel-heading
-          Habitaciones
-        .panel-body
-          .row
-            .col-sm-12
-              - @reservation['hotel']['rooms'].each do |room|
-                .room
-                  .row
-                    .col-sm-8
-                      = room['code']
-                      |
-                      = room['name']
-                    .col-sm-4.text-right.text-success
-                      - room['rates'].each do |rate|
+.panel.panel-primary
+  .panel-heading
+    Habitaciones
+  .panel-body
+    .row
+      .col-sm-12
+        - @reservation['hotel']['rooms'].each do |room|
+          .room
+            .row
+              .col-sm-8
+                = room['code']
+                |
+                = room['name']
+              .col-sm-4.text-right.text-success
+                - room['rates'].each do |rate|
+                  = @reservation['hotel']['currency']
+                  $
+                  = rate['net']
+
+            .row
+              .col-sm-8
+                %ul
+                  - room['paxes'].each do |pax|
+                    %li
+                      - if pax['type'] == "AD"
+                        Adulto:
+                      - else
+                        Menor:
+                      = pax['name']
+                      = pax['surname']
+                      - if pax['type'] != "AD"
+                        = pax['age']
+                        años
+
+            .row
+              .col-sm-8
+                - room['rates'].each do |rate|
+                  - if rate.has_key? 'cancellationPolicies'
+                    - rate['cancellationPolicies'].each do |cancellation_policy|
+                      .text-danger
+                        Cancelación:
                         = @reservation['hotel']['currency']
                         $
-                        = rate['net']
+                        = cancellation_policy['amount']
+                        = DateTime.iso8601(cancellation_policy['from']).strftime("%m/%d/%y %t %z")
 
-                  .row
-                    .col-sm-8
-                      %ul
-                        - room['paxes'].each do |pax|
-                          %li
-                            - if pax['type'] == "AD"
-                              Adulto:
-                            - else
-                              Menor:
-                            = pax['name']
-                            = pax['surname']
-                            - if pax['type'] != "AD"
-                              = pax['age']
-                              años
-
-                  .row
-                    .col-sm-8
-                      - room['rates'].each do |rate|
-                        - if rate.has_key? 'cancellationPolicies'
-                          - rate['cancellationPolicies'].each do |cancellation_policy|
-                            .text-danger
-                              Cancelación:
-                              = @reservation['hotel']['currency']
-                              $
-                              = cancellation_policy['amount']
-                              = DateTime.iso8601(cancellation_policy['from']).strftime("%m/%d/%y %t %z")
-
-      .row
-        .col-sm-2
-          = link_to 'Cancelar', { action: :cancel, id: @reservation['reference'] },  method: :delete, class: "btn btn-raised btn-danger", data: { confirm: "Seguro que deseas cancelar la reservación #{@reservation['reference']}?" }
-        .col-sm-3.col-sm-offset-7
-          .group
-            %label Client Total:
-            = @reservation['currency']
-            $
-          .group
-            %label Supplier Total:
-            = @reservation['currency']
-            $
-            = @reservation['totalSellingRate']
-          .group
-            %label Pending:
-            = @reservation['currency']
-            $
-            = @reservation['pendingAmount']
+.panel.panel-primary
+  .panel-heading
+    Habitaciones
+  .panel-body
+    .row
+      .col-sm-2
+        = link_to 'Cancelar', { action: :cancel, id: @reservation['reference'] },  method: :delete, class: "btn btn-raised btn-danger", data: { confirm: "Seguro que deseas cancelar la reservación #{@reservation['reference']}?" }
+      .col-sm-3.col-sm-offset-7
+        .group
+          %label Client Total:
+          = @reservation['currency']
+          $
+        .group
+          %label Supplier Total:
+          = @reservation['currency']
+          $
+          = @reservation['totalSellingRate']
+        .group
+          %label Pending:
+          = @reservation['currency']
+          $
+          = @reservation['pendingAmount']

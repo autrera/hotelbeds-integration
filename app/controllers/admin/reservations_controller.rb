@@ -45,7 +45,7 @@ class Admin::ReservationsController < AdminController
     response = reservation_request.response
     reservation_body = JSON.parse response.body
 
-    # Rails.logger.info "Response: #{response.body.inspect}"
+    Rails.logger.info "Response: #{reservation_body.inspect}"
 
     @reservation = reservation_body['booking']
   end

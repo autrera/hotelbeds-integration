@@ -75,29 +75,62 @@ class ReservationsController < ApplicationController
     booking_structure.setParams params
     json_structure = JSON.generate booking_structure.generate
 
-    request = Typhoeus::Request.new(
+    reservation_request = Typhoeus::Request.new(
       "https://api.test.hotelbeds.com/hotel-api/1.0/bookings",
       method: :post,
       body: json_structure,
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
-    request.run
-    @response = request.response
-    @body = JSON.parse @response.body
-
-    Rails.logger.info "Respuesta: #{@body.inspect}"
-
-    # if @body['booking']['status'] == "CONFIRMED"
-    #   # Send client email
-    #   # Send agents email
-    #   redirect_to confirmation_reservations_path success: true
-    # else
-    #   redirect_to confirmation_reservations_path error: true
-    # end
-
-    respond_to do |format|
-      format.html { render json: json_structure }
+    reservation_request.on_complete do |response|
+      if response.success?
+        response_body_json = JSON.parse response.body
+        @reservation = response_body_json['booking']
+        Rails.logger.info "Reservation: #{response.body.inspect}"
+      else
+        Rails.logger.info response.body.inspect
+      end
     end
+
+    content_request = Typhoeus::Request.new(
+      "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels/#{@hotel_code}",
+      method: :get,
+      # params: content_request_hash,
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+    )
+    content_request.on_complete do |response|
+      if response.success?
+        response_body_json = JSON.parse response.body
+        @hotel_content = response_body_json['hotel']
+        Rails.logger.info "Hotels Content: #{response.body.inspect}"
+      else
+        Rails.logger.info response.body.inspect
+      end
+    end
+
+    hydra = Typhoeus::Hydra.hydra
+    hydra.queue reservation_request
+    hydra.queue content_request
+    hydra.run
+
+    # reservation_request.run
+    # @response = reservation_request.response
+    # response_body_json = JSON.parse @response.body
+    # @reservation = response_body_json['booking']
+
+    Rails.logger.info "Respuesta: #{@reservation.inspect}"
+
+    if @reservation['status'] == "CONFIRMED"
+      # Send client email
+      ReservationMailer.client_confirmation(params[:holder_email], @reservation, @hotel_content).deliver
+      # Send agents email
+      redirect_to confirmation_reservations_path success: true
+    else
+      redirect_to confirmation_reservations_path error: true
+    end
+
+    # respond_to do |format|
+    #   format.html { render json: @reservation }
+    # end
   end
 
   def confirmation

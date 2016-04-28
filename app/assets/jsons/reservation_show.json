@@ -1,0 +1,90 @@
+{
+  "auditData": {
+    "processTime":"574",
+    "timestamp":"2016-04-28 19:46:55.552",
+    "requestHost":"189.149.43.49",
+    "serverId":"sa37AUX3ROLBLIS.env",
+    "environment":"[int]",
+    "release":"2cb1bad878d2195c9b508e2007ef96616007dacb"
+  },
+  "booking": {
+    "reference":"69-2025719",
+    "clientReference":"CLIENT REFERENCE",
+    "creationDate":"2016-04-28",
+    "status":"CONFIRMED",
+    "creationUser":"4whec3tnzq9abhrx2ku9n78t",
+    "holder": {
+      "name":"ALDO",
+      "surname":"UTRERA"
+    },
+    "hotel": {
+      "checkIn":"2016-05-01",
+      "checkOut":"2016-05-03",
+      "code":3677,
+      "name":"Yalmakan Hotel",
+      "categoryCode":"4EST",
+      "categoryName":"4 STARS",
+      "destinationCode":"CUN",
+      "destinationName":"Cancun (and vicinity)",
+      "zoneCode":10,
+      "zoneName":"Hotel Zone / Zona Hotelera",
+      "latitude":"21.045689",
+      "longitude":"-86.782652",
+      "rooms": [
+        {
+          "status":"CONFIRMED",
+          "code":"DBL.ST",
+          "name":"DOUBLE STANDARD",
+          "paxes": [
+            {
+              "roomId":1,
+              "type":"AD",
+              "name":"Aldo_1",
+              "surname":"Utrera_1"
+            },
+            {
+              "roomId":1,
+              "type":"AD",
+              "name":"Aldo_2",
+              "surname":"Utrera_2"
+            },
+            {
+              "roomId":1,
+              "type":"CH",
+              "age":5,
+              "name":"Aldo_3",
+              "surname":"Utrera_3"
+            }
+          ],
+          "rates": [
+            {
+              "rateClass":"NOR",
+              "net":"248.28",
+              "paymentType":"AT_WEB",
+              "packaging":false,
+              "boardCode":"AI",
+              "boardName":"ALL INCLUSIVE",
+              "cancellationPolicies": [
+                {
+                  "amount":"124.14",
+                  "from":"2016-04-27T23:59:00-04:00"
+                }
+              ],
+              "rooms":1
+            }
+          ]
+        }
+      ],
+      "totalNet":"248.28",
+      "currency":"USD",
+      "supplier": {
+        "name":"TURAVIA/HOTELBEDS",
+        "vatNumber":"CTU940107CK8"
+      }
+    },
+    "totalSellingRate":248.28,
+    "totalNet":248.28,
+    "pendingAmount":248.28,
+    "currency":"USD"
+  }
+}
