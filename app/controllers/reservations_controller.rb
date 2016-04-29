@@ -30,17 +30,20 @@ class ReservationsController < ApplicationController
       body: JSON.generate(availability_request_hash),
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
-    availability_request.on_complete do |response|
-      if response.success?
-        @hotel_availability = JSON.parse response.body
-        # Rails.logger.info "Hotels Availability: #{response.body.inspect}"
-      else
-        # Rails.logger.info response.body.inspect
-      end
-    end
+    # availability_request.on_complete do |response|
+    #   if response.success?
+    #     @hotel_availability = JSON.parse response.body
+    #     # Rails.logger.info "Hotels Availability: #{response.body.inspect}"
+    #   else
+    #     # Rails.logger.info response.body.inspect
+    #   end
+    # end
     availability_request.run
     @response = availability_request.response
     @hotel = JSON.parse @response.body
+
+    Rails.logger.info "Availability Request: #{JSON.generate(availability_request_hash)}"
+    Rails.logger.info "Hotel: #{@hotel.inspect}"
 
     rate_keys_hash = {
       rooms: []
@@ -52,20 +55,22 @@ class ReservationsController < ApplicationController
     end
 
     # respond_to do |format|
-    #   format.html { render json: @hotel }
+    #   format.html { render json: JSON.generate(rate_keys_hash) }
     # end
 
     # signature = generate_signature
 
-    request = Typhoeus::Request.new(
+    check_rates_request = Typhoeus::Request.new(
       "https://api.test.hotelbeds.com/hotel-api/1.0/checkrates",
       method: :post,
       body: JSON.generate(rate_keys_hash),
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
-    request.run
-    @response = request.response
+    check_rates_request.run
+    @response = check_rates_request.response
     @hotel = (JSON.parse @response.body)['hotel']
+
+    Rails.logger.info "Response: #{@response.body.inspect}"
   end
 
   def create

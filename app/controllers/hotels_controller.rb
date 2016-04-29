@@ -12,6 +12,9 @@ class HotelsController < ApplicationController
     signature = generate_signature
     availability_request_hash = generate_availability_request_hash(params)
     content_request_hash = generate_content_request_hash(params)
+    availability_request_hash["filter"] = {
+      paymentType: "AT_WEB"
+    }
 
     # respond_to do |format|
     #   format.html { render json: JSON.generate(availability_request_hash) }
@@ -34,7 +37,7 @@ class HotelsController < ApplicationController
         @hotels_availability = JSON.parse response.body
         # Rails.logger.info "Hotels Availability: #{response.body.inspect}"
       else
-        Rails.logger.info response.body.inspect
+        # Rails.logger.info response.body.inspect
       end
     end
 
@@ -49,7 +52,7 @@ class HotelsController < ApplicationController
         @hotels_content = JSON.parse response.body
         # Rails.logger.info "Hotels Content: #{response.body.inspect}"
       else
-        Rails.logger.info response.body.inspect
+        # Rails.logger.info response.body.inspect
       end
     end
 
@@ -75,7 +78,11 @@ class HotelsController < ApplicationController
     availability_request_hash["hotels"] = {
       hotel: [@hotel_code]
     }
-    # Rails.logger.info "Availability Hash #{availability_request_hash.inspect}"
+    availability_request_hash["filter"] = {
+      paymentType: "AT_WEB"
+    }
+
+    Rails.logger.info "Availability Hash #{JSON.generate(availability_request_hash)}"
     # content_request_hash = generate_content_request_hash(params)
 
     availability_request = Typhoeus::Request.new(
@@ -102,7 +109,7 @@ class HotelsController < ApplicationController
     content_request.on_complete do |response|
       if response.success?
         @hotel_content = JSON.parse response.body
-        # Rails.logger.info "Hotels Content: #{response.body.inspect}"
+        Rails.logger.info "Hotels Content: #{response.body}"
       else
         # Rails.logger.info response.body.inspect
       end
@@ -112,6 +119,10 @@ class HotelsController < ApplicationController
     hydra.queue availability_request
     hydra.queue content_request
     hydra.run
+
+    # respond_to do |format|
+    #   format.html { render json: @hotel_availability }
+    # end
 
     if @hotel_content != nil && @hotel_availability != nil
       # Redirect to error page or sth

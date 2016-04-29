@@ -37,10 +37,12 @@
         .col-sm-12
           %h2.title
             = hotel['name']
-      .row
-        .col-sm-12
-          %p
-            = hotel_content['description']['content']
+
+      - if hotel_content.has_key? 'description'
+        .row
+          .col-sm-12
+            %p
+              = hotel_content['description']['content']
 
     #hotel-rooms.rooms
       .row
@@ -59,7 +61,6 @@
                 .col-sm-12
                   .image-container
                     %img{ src: room_image(room['code'], hotel_content['images']) }
-              - Rails.logger.info "Hotel Content: #{hotel_content.inspect}"
               - room_facilities = find_room_facilities(room['code'], hotel_content['rooms'])
               - if room_facilities
                 .row

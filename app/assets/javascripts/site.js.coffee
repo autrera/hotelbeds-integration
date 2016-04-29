@@ -65,7 +65,7 @@ ready = () ->
   if $('select[name=number_of_rooms]').length > 0
 
     $('select[name=number_of_rooms]').trigger 'change'
-    $('select[class=children_in_room]').trigger 'change'
+    $('select.children_in_room').trigger 'change'
     return
 
   return

@@ -35,8 +35,10 @@
               %h2 Pax Information
               = hidden_field_tag :number_of_rooms, params[:number_of_rooms]
               - adult_age_range = (18..99).to_a
+              - Rails.logger.info "Number of Rooms: #{params[:number_of_rooms].inspect}"
               - (1..params['number_of_rooms'].to_i).to_a.each_with_index do |room_number, index|
-                = hidden_field_tag "room_#{room_number}_rateKey", @hotel['rooms'][0]['rates'][index]['rateKey']
+                - Rails.logger.info "Index: #{index.inspect}"
+                /= hidden_field_tag "room_#{room_number}_rateKey", @hotel['rooms'][0]['rates'][index]['rateKey']
                 = hidden_field_tag "room_#{room_number}_adults", params["room_#{room_number}_adults"]
                 = hidden_field_tag "room_#{room_number}_children", params["room_#{room_number}_children"]
 
