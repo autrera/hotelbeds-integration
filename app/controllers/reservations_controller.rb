@@ -80,6 +80,8 @@ class ReservationsController < ApplicationController
     booking_structure.setParams params
     json_structure = JSON.generate booking_structure.generate
 
+    Rails.logger.info "JSON Structure: #{json_structure}"
+
     reservation_request = Typhoeus::Request.new(
       "https://api.test.hotelbeds.com/hotel-api/1.0/bookings",
       method: :post,
@@ -92,14 +94,14 @@ class ReservationsController < ApplicationController
         @reservation = response_body_json['booking']
         Rails.logger.info "Reservation: #{response.body.inspect}"
       else
-        Rails.logger.info response.body.inspect
+        Rails.logger.info "Reservation: #{response.body.inspect}"
       end
     end
 
     content_request = Typhoeus::Request.new(
       "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels/#{@hotel_code}",
       method: :get,
-      # params: content_request_hash,
+      params: { fields: "all" },
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
     content_request.on_complete do |response|
@@ -126,16 +128,22 @@ class ReservationsController < ApplicationController
 
     if @reservation['status'] == "CONFIRMED"
       # Send client email
-      ReservationMailer.client_confirmation(params[:holder_email], @reservation, @hotel_content).deliver
+      # ReservationMailer.client_confirmation(params[:holder_email], @reservation, @hotel_content).deliver
       # Send agents email
-      redirect_to confirmation_reservations_path success: true
+      redirect_to success_reservations_path success: true
     else
-      redirect_to confirmation_reservations_path error: true
+      redirect_to error_reservations_path error: true
     end
 
     # respond_to do |format|
     #   format.html { render json: @reservation }
     # end
+  end
+
+  def success
+  end
+
+  def error
   end
 
   def confirmation

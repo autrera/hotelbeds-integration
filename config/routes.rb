@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :destinations
   resources :reservations, only: [:new, :create] do
     collection do
-      get 'confirmation'
+      get 'success'
+      get 'error'
     end
   end
 
