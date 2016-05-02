@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   post 'hotels/:id' => 'hotels#show'
-  get '/404' => 'welcome#not_found'
+  get '/not_found' => 'welcome#not_found'
 
   root 'welcome#index'
 
