@@ -6,6 +6,8 @@ class Admin::ReservationsController < AdminController
   def index
     signature = generate_signature
 
+    reference_id = params[:reservation_reference]
+
     start_date = params[:start_date] != nil ? Date.strptime(params[:start_date], '%m/%d/%Y') : (Date.today - 30.days)
     end_date = params[:end_date] != nil ? Date.strptime(params[:end_date], '%m/%d/%Y') : Date.today
 

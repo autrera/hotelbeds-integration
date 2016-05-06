@@ -62,10 +62,87 @@ ready = () ->
       return
     return
 
+  if $('#new-reservation-form').length > 0
+    Conekta.setPublishableKey('key_ERsAnyHxGz7r4R71vmPfQxw');
+
+    $("#card-form").submit (event) ->
+      $form = $(this)
+
+      # Previene hacer submit más de una vez
+      $form.find("button").prop("disabled", true)
+      Conekta.token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler)
+
+      # Previene que la información de la forma sea enviada al servidor
+      return false
+    return
+
   if $('select[name=number_of_rooms]').length > 0
 
     $('select[name=number_of_rooms]').trigger 'change'
     $('select.children_in_room').trigger 'change'
+    return
+
+  if $('#reservation-submit').length > 0
+
+    $('#reservation-submit').on 'click', (event) =>
+      event.preventDefault()
+      $('.form-control.error').removeClass 'error'
+
+      if $('input[name=holder_name]').val() == ""
+        $('input[name=holder_name]').addClass 'error'
+        return
+
+      if $('input[name=holder_surname]').val() == ""
+        $('input[name=holder_surname]').addClass 'error'
+        return
+
+      if $('input[name=holder_email]').val() == ""
+        $('input[name=holder_email]').addClass 'error'
+        return
+
+      if $('input[name=holder_phone]').val() == ""
+        $('input[name=holder_phone]').addClass 'error'
+        return
+
+      number_of_rooms = $('#number_of_rooms').val()
+      for i in [1..number_of_rooms]
+        number_of_adults = $('#room_' + i + '_adults').val()
+        number_of_children = $('#room_' + i + '_children').val()
+
+        for j in [1..number_of_adults]
+          if $('#room_' + i + '_adult_' + j + '_name').val() == ""
+            $('#room_' + i + '_adult_' + j + '_name').addClass 'error'
+            return
+
+          if $('#room_' + i + '_adult_' + j + '_surname').val() == ""
+            $('#room_' + i + '_adult_' + j + '_surname').addClass 'error'
+            return
+
+        for k in [1..number_of_children]
+          if $('#room_' + i + '_child_' + k + '_name').val() == ""
+            $('#room_' + i + '_child_' + k + '_name').addClass 'error'
+            return
+
+          if $('#room_' + i + '_child_' + k + '_surname').val() == ""
+            $('#room_' + i + '_child_' + k + '_surname').addClass 'error'
+            return
+
+      if $('input[name=card_holder_name]').val() == ""
+        $('input[name=card_holder_name]').addClass 'error'
+        return
+
+      if $('input[name=card_number]').val() == ""
+        $('input[name=card_number]').addClass 'error'
+        return
+
+      if $('input[name=card_cvc]').val() == ""
+        $('input[name=card_cvc]').addClass 'error'
+        return
+
+      $('#new-reservation-form').submit()
+
+      return
+
     return
 
   return

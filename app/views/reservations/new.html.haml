@@ -1,6 +1,8 @@
 .new-reservation
   .row
-    %form{ action: reservations_path, method: :post }
+    %form#new-reservation-form{ action: reservations_path, method: :post }
+      %span.card-errors
+
       = hidden_field_tag :authenticity_token, form_authenticity_token
       = hidden_field_tag :rateKey, params[:rateKey]
 
@@ -35,9 +37,7 @@
               %h2 Pax Information
               = hidden_field_tag :number_of_rooms, params[:number_of_rooms]
               - adult_age_range = (18..99).to_a
-              - Rails.logger.info "Number of Rooms: #{params[:number_of_rooms].inspect}"
               - (1..params['number_of_rooms'].to_i).to_a.each_with_index do |room_number, index|
-                - Rails.logger.info "Index: #{index.inspect}"
                 = hidden_field_tag "room_#{room_number}_rateKey", @hotel['rooms'][0]['rates'][index]['rateKey']
                 = hidden_field_tag "room_#{room_number}_adults", params["room_#{room_number}_adults"]
                 = hidden_field_tag "room_#{room_number}_children", params["room_#{room_number}_children"]
@@ -87,7 +87,7 @@
                 .col-sm-6
                   .form-group
                     %label Holder name:
-                    %input.form-control{ name: "card_holder_name" }
+                    %input.form-control{ name: "card_holder_name", data: { conekta: 'card[name]' }  }
                 .col-sm-6
                   .form-group
                     %label Card type:
@@ -99,24 +99,57 @@
                 .col-sm-6
                   .form-group
                     %label Card number:
-                    %input.form-control{ name: "card_number" }
+                    %input.form-control{ name: "card_number", data: { conekta: 'card[number]' }  }
                 .col-sm-6
                   .form-group
-                    %label Expirity date:
                     .row
-                      .col-sm-6
-                        %select.form-control{ name: "card_expirity_month" }
+                      .col-sm-4
+                        %label Month:
+                        %select.form-control{ name: "card_expirity_month", data: { conekta: 'card[exp_month]' }  }
                           - (1..12).to_a.each do |month_number|
                             %option= month_number
-                      .col-sm-6
-                        %select.form-control{ name: "card_expirity_year" }
+                      .col-sm-4
+                        %label Year:
+                        %select.form-control{ name: "card_expirity_year", data: { conekta: 'card[exp_year]' }  }
                           - (2016..2025).to_a.each do |year_number|
                             %option= year_number
+                      .col-sm-4
+                        .form-group
+                          %label CVC:
+                          %input.form-control{ name: "card_cvc", data: { conekta: 'card[cvc]' }  }
+
               .row
                 .col-sm-6
                   .form-group
-                    %label Card CVC:
-                    %input.form-control{ name: "card_cvc" }
+                    %label Calle:
+                    %input.form-control{ name: "", data: { conekta: 'card[address][street1]' }  }
+
+                .col-sm-6
+                  .form-group
+                    %label Colonia:
+                    %input.form-control{ name: "", data: { conekta: 'card[address][street2]' }  }
+
+              .row
+                .col-sm-6
+                  .form-group
+                    %label Ciudad:
+                    %input.form-control{ name: "", data: { conekta: 'card[address][city]' }  }
+
+                .col-sm-6
+                  .form-group
+                    %label Estado:
+                    %input.form-control{ name: "", data: { conekta: 'card[address][state]' }  }
+
+              .row
+                .col-sm-6
+                  .form-group
+                    %label CP:
+                    %input.form-control{ name: "", data: { conekta: 'card[address][zip]' }  }
+
+                .col-sm-6
+                  .form-group
+                    %label País:
+                    %input.form-control{ name: "", data: { conekta: 'card[address][country]' }  }
 
       .col-sm-5
         .row
@@ -163,5 +196,5 @@
                         = @hotel['totalNet']
                   %tr
                     %td.text-right
-                      %button.btn.btn-block.btn-warning
+                      %button#reservation-submit.btn.btn-block.btn-warning
                         Book

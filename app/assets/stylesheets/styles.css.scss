@@ -48,6 +48,10 @@ span.star-rating.star-5EST {
   width: 115px;
 }
 
+.form-control.error {
+  border: 1px solid $pome_granate;
+}
+
 .text-success
 {
   color: $action;

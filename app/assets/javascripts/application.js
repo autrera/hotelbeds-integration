@@ -16,4 +16,5 @@
 //= require selectize
 //= require owl.carousel
 //= require bootstrap-datepicker.min
+//= require conekta
 //= require site

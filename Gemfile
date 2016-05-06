@@ -31,6 +31,8 @@ gem 'devise'
 # Using monetize to parse the rates
 gem 'monetize'
 gem 'money'
+# Plataforma de pago
+gem 'conekta'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
