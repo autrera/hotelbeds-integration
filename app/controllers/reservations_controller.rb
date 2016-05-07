@@ -74,6 +74,62 @@ class ReservationsController < ApplicationController
   end
 
   def create
+    require "conekta"
+    Conekta.api_key = "key_45w4WQNv6Y4icr2uz8yVGA"
+
+    Rails.logger.info "Token: #{params[:conektaTokenId]}"
+
+    begin
+      charge = Conekta::Charge.create({
+        "amount"=> 51000,
+        "currency"=> "MXN",
+        "description"=> "Neandertravel Reservación",
+        "reference_id"=> "orden_de_id_interno",
+        "card"=> params[:conektaTokenId],  # Ej. "tok_a4Ff0dD2xYZZq82d9"
+        "details"=> {
+          "name"=> params[:card_holder_name],
+          "phone"=> params[:holder_phone],
+          "email"=> params[:holder_email],
+          # "customer"=> {
+          #   "logged_in"=> true,
+          #   "successful_purchases"=> 14,
+          #   "created_at"=> 1379784950,
+          #   "updated_at"=> 1379784950,
+          #   "offline_payments"=> 4,
+          #   "score"=> 9
+          # },
+          "line_items"=> [{
+            "name"=> "Box of Cohiba S1s",
+            "description"=> "Imported From Mex.",
+            "unit_price"=> 20000,
+            "quantity"=> 1,
+            "sku"=> "cohb_s1",
+            "category"=> "food"
+          }]
+        }
+      })
+
+    rescue Conekta::ParameterValidationError => e
+      Rails.logger.info "ParameterValidationError: #{e.message_to_purchaser}"
+      # puts e.message_to_purchaser
+      #alguno de los parámetros fueron inválidos
+
+    rescue Conekta::ProcessingError => e
+      Rails.logger.info "ProcessingError: #{e.message_to_purchaser}"
+      # puts e.message_to_purchaser
+      #la tarjeta no pudo ser procesada
+
+    rescue Conekta::Error => e
+      Rails.logger.info "Error: #{e.message_to_purchaser}"
+      # puts e.message_to_purchaser
+      #un error ocurrió que no sucede en el flujo normal de cobros como por ejemplo un auth_key incorrecto
+
+    end
+
+    Rails.logger.info "Cargo: #{charge.inspect}"
+
+    render :back unless charge.status == "paid"
+
     signature = generate_signature
 
     booking_structure = BookingStructure.new

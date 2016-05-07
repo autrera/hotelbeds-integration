@@ -8,9 +8,6 @@ ready = () ->
     showLoader()
     return
 
-  $('form').on 'submit', () ->
-    showLoader()
-
   @select = $('.destinations-select').selectize
     openOnFocus: false
     onChange: (value) ->
@@ -25,6 +22,19 @@ ready = () ->
     format: 'mm/dd/yyyy'
     # format: 'dd/mm/yyyy'
     # format: 'MM d yyyy'
+
+  conektaSuccessResponseHandler = (token) ->
+    $form = $("#new-reservation-form")
+    $form.append($("<input type='hidden' name='conektaTokenId'>").val(token.id))
+    $form.get(0).submit()
+    showLoader()
+    return
+
+  conektaErrorResponseHandler = (response) ->
+    $form = $("#new-reservation-form")
+    $form.find(".card-errors").text(response.message)
+    $form.find("button").prop("disabled", false)
+    return
 
   $('input[name=check_in]').datepicker(datepicker_options).on 'changeDate', (e) ->
     return
@@ -62,20 +72,6 @@ ready = () ->
       return
     return
 
-  if $('#new-reservation-form').length > 0
-    Conekta.setPublishableKey('key_ERsAnyHxGz7r4R71vmPfQxw');
-
-    $("#card-form").submit (event) ->
-      $form = $(this)
-
-      # Previene hacer submit más de una vez
-      $form.find("button").prop("disabled", true)
-      Conekta.token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler)
-
-      # Previene que la información de la forma sea enviada al servidor
-      return false
-    return
-
   if $('select[name=number_of_rooms]').length > 0
 
     $('select[name=number_of_rooms]').trigger 'change'
@@ -84,7 +80,7 @@ ready = () ->
 
   if $('#reservation-submit').length > 0
 
-    $('#reservation-submit').on 'click', (event) =>
+    $('#reservation-submit').on 'click', (event) ->
       event.preventDefault()
       $('.form-control.error').removeClass 'error'
 
@@ -139,7 +135,15 @@ ready = () ->
         $('input[name=card_cvc]').addClass 'error'
         return
 
-      $('#new-reservation-form').submit()
+      Conekta.setPublishableKey('key_ERsAnyHxGz7r4R71vmPfQxw');
+
+      $form = $('#new-reservation-form')
+
+      # Previene hacer submit más de una vez
+      $form.find("button").prop("disabled", true)
+      Conekta.token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler)
+
+      # $('#new-reservation-form').submit()
 
       return
 
