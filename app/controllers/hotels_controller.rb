@@ -16,6 +16,7 @@ class HotelsController < ApplicationController
       paymentType: "AT_WEB"
     }
 
+    Rails.logger.info "Availability Hash #{JSON.generate(availability_request_hash)}"
     # respond_to do |format|
     #   format.html { render json: JSON.generate(availability_request_hash) }
     # end
@@ -109,7 +110,7 @@ class HotelsController < ApplicationController
     content_request.on_complete do |response|
       if response.success?
         @hotel_content = JSON.parse response.body
-        Rails.logger.info "Hotels Content: #{response.body}"
+        # Rails.logger.info "Hotels Content: #{response.body}"
       else
         # Rails.logger.info response.body.inspect
       end
@@ -126,6 +127,18 @@ class HotelsController < ApplicationController
 
     if @hotel_content != nil && @hotel_availability != nil
       # Redirect to error page or sth
+    end
+
+    # Reestructuring rates
+    @hotel_availability['hotels']['hotels'][0]['rooms'].each do |room|
+      new_rate_structure = Hash.new
+      room['rates'].each do |rate|
+        new_rate_structure[rate['boardCode']] = []
+      end
+      room['rates'].each do |rate|
+        new_rate_structure[rate['boardCode']].push rate
+      end
+      room['boards'] = new_rate_structure
     end
 
     # hotel_file = File.read(Rails.root + "app/assets/jsons/hotel_availability.json")

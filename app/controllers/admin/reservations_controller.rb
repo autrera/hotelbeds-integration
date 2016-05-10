@@ -8,6 +8,8 @@ class Admin::ReservationsController < AdminController
 
     reference_id = params[:reservation_reference]
 
+    redirect_to admin_reservation_path(params[:reservation_reference]) unless reference_id == nil
+
     start_date = params[:start_date] != nil ? Date.strptime(params[:start_date], '%m/%d/%Y') : (Date.today - 30.days)
     end_date = params[:end_date] != nil ? Date.strptime(params[:end_date], '%m/%d/%Y') : Date.today
 
@@ -21,7 +23,7 @@ class Admin::ReservationsController < AdminController
     }
 
     reservations_list_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-api/1.0/bookings",
+      "https://api.test.hotelbeds.com/hotel-api/1.0/bookings/#{params[:reservation_reference]}",
       method: :get,
       params: reservations_params_hash,
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
@@ -50,6 +52,8 @@ class Admin::ReservationsController < AdminController
     Rails.logger.info "Response: #{reservation_body.inspect}"
 
     @reservation = reservation_body['booking']
+
+    redirect_to admin_reservations_path, alert: "No encontramos ninguna reservación con ese ID." unless @reservation != nil
   end
 
   def cancel

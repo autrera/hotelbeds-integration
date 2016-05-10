@@ -9,25 +9,31 @@
 
           = hidden_field_tag 'max-date', Date.today.strftime('%m/%d/%Y')
           %form{ method: 'get', action: admin_reservations_path }
-            .row.input-daterange
-              .col-sm-4
+            .row
+              .col-sm-3
                 .form-group.label-floating
                   %label.control-label{ for: 'reservation_reference' }
                     Id:
                   %input.form-control{ id: 'reservation_reference', name: 'reservation_reference', type: 'text' }
-              .col-sm-3
-                .form-group.label-floating
-                  %label.control-label{ for: 'start_date' }
-                    Desde:
-                  %input.form-control{ id: 'start_date', name: 'start_date', value: params[:start_date] || (Date.today - 30.days).strftime('%m/%d/%Y'), type: 'text' }
-              .col-sm-3
-                .form-group.label-floating
-                  %label.control-label{ for: 'end_date' }
-                    Hasta:
-                  %input.form-control{ id: 'end_date', name: 'end_date', value: params[:end_date] || Date.today.strftime('%m/%d/%Y'), type: 'text' }
-              .col-sm-2
-                %button.btn.btn-primary.btn-raised{ type: 'submit' }
-                  Buscar
+              .col-sm-9
+                .row.input-daterange
+                  .col-sm-5
+                    .form-group.label-floating
+                      %label.control-label{ for: 'start_date' }
+                        Desde:
+                      %input.form-control{ id: 'start_date', name: 'start_date', value: params[:start_date] || (Date.today - 30.days).strftime('%m/%d/%Y'), type: 'text' }
+                  .col-sm-5
+                    .form-group.label-floating
+                      %label.control-label{ for: 'end_date' }
+                        Hasta:
+                      %input.form-control{ id: 'end_date', name: 'end_date', value: params[:end_date] || Date.today.strftime('%m/%d/%Y'), type: 'text' }
+                  .col-sm-2
+                    %button.btn.btn-primary.btn-block.btn-raised{ type: 'submit' }
+                      Buscar
+
+            - if flash[:alert] != nil
+              .alert.alert-danger
+                = flash[:alert]
 
           - if @reservations != nil
             %table.table.table-striped
