@@ -6,30 +6,30 @@ class ReservationsController < ApplicationController
     # hotel_rechecked_rates = File.read(Rails.root + "app/assets/jsons/recheck_rate.json")
     # @hotel = (JSON.parse hotel_rechecked_rates)['hotel']
 
-    signature = generate_signature
-    availability_request_hash = generate_single_availability_request_hash(params)
-    availability_request_hash.except! "destination"
-    availability_request_hash["hotels"] = {
-      hotel: [params[:hotel_code]]
-    }
-    availability_request_hash["rooms"] = {
-      included: true,
-      room: [params[:room_code]]
-    }
-    availability_request_hash["boards"] = {
-      included: true,
-      board: [params[:board_code]]
-    }
-    availability_request_hash["filter"] = {
-      paymentType: "AT_WEB"
-    }
+    # signature = generate_signature
+    # availability_request_hash = generate_single_availability_request_hash(params)
+    # availability_request_hash.except! "destination"
+    # availability_request_hash["hotels"] = {
+    #   hotel: [params[:hotel_code]]
+    # }
+    # availability_request_hash["rooms"] = {
+    #   included: true,
+    #   room: [params[:room_code]]
+    # }
+    # availability_request_hash["boards"] = {
+    #   included: true,
+    #   board: [params[:board_code]]
+    # }
+    # availability_request_hash["filter"] = {
+    #   paymentType: "AT_WEB"
+    # }
 
-    availability_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-api/1.0/hotels",
-      method: :post,
-      body: JSON.generate(availability_request_hash),
-      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
-    )
+    # availability_request = Typhoeus::Request.new(
+    #   "https://api.test.hotelbeds.com/hotel-api/1.0/hotels",
+    #   method: :post,
+    #   body: JSON.generate(availability_request_hash),
+    #   headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+    # )
     # availability_request.on_complete do |response|
     #   if response.success?
     #     @hotel_availability = JSON.parse response.body
@@ -38,27 +38,36 @@ class ReservationsController < ApplicationController
     #     # Rails.logger.info response.body.inspect
     #   end
     # end
-    availability_request.run
-    @response = availability_request.response
-    @hotel = JSON.parse @response.body
+    # availability_request.run
+    # @response = availability_request.response
+    # @hotel = JSON.parse @response.body
 
-    Rails.logger.info "Availability Request: #{JSON.generate(availability_request_hash)}"
-    Rails.logger.info "Hotel: #{@hotel.inspect}"
+    # Rails.logger.info "Availability Request: #{JSON.generate(availability_request_hash)}"
+    # Rails.logger.info "Hotel: #{@hotel.inspect}"
 
-    rate_keys_hash = {
-      rooms: []
-    }
-    @hotel['hotels']['hotels'][0]['rooms'][0]['rates'].each_with_index do |rate, index|
-      rate_keys_hash[:rooms][index] = {
-        rateKey: rate['rateKey']
-      }
-    end
+    # rate_keys_hash = {
+    #   rooms: []
+    # }
+    # @hotel['hotels']['hotels'][0]['rooms'][0]['rates'].each_with_index do |rate, index|
+    #   rate_keys_hash[:rooms][index] = {
+    #     rateKey: rate['rateKey']
+    #   }
+    # end
 
     # respond_to do |format|
     #   format.html { render json: JSON.generate(rate_keys_hash) }
     # end
 
-    # signature = generate_signature
+    rate_keys_hash = {
+      rooms: []
+    }
+    params[:rate_key].each_with_index do |rate, index|
+      rate_keys_hash[:rooms][index] = {
+        rateKey: rate
+      }
+    end
+
+    signature = generate_signature
 
     check_rates_request = Typhoeus::Request.new(
       "https://api.test.hotelbeds.com/hotel-api/1.0/checkrates",

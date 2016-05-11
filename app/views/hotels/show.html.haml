@@ -76,58 +76,84 @@
               - Rails.logger.info "Boards: #{room['boards'].inspect}"
               - keys = room['boards'].keys
               - keys.each do |key|
+                - board_name = ""
+                - gross_sum = Money.new(0, @hotel_availability['hotels']['hotels'][0]['currency'])
+                - client_total_sum = Money.new(0, @hotel_availability['hotels']['hotels'][0]['currency'])
+                - offers = []
+                - rate_keys = []
+                - cancellation_policies = { amount: Money.new(0, @hotel_availability['hotels']['hotels'][0]['currency']), from: "" }
+                - currency = ""
+                - rate_class = ""
                 - room['boards'][key].each do |rate|
+                  - board_name = rate['boardName']
                   - calculated_rates = calculate_gross_room_rate(rate)
-                  .rate
+                  - currency = calculated_rates['client_total'].currency.iso_code
+                  - gross_sum += calculated_rates["gross"]
+                  - client_total_sum += calculated_rates["client_total"]
+                  - rate_class = rate['rateClass']
+                  - rate_keys.push rate['rateKey']
+                  - if rate.has_key? 'offers'
+                    - rate['offers'].each do |offer|
+                      - offers.push offer
+                  - if rate.has_key? 'cancellationPolicies'
+                    - rate['cancellationPolicies'].each do |cancellation_policy|
+                      - cancellation_policies[:amount] += Monetize.parse(cancellation_policy['amount'])
+                      - cancellation_policies[:from] = cancellation_policy['from']
+                .rate
+                  .row
+                    .col-sm-4
+                      .row
+                        .col-sm-12
+                          .board-name
+                            = board_name
+                      / # - if rate.has_key? 'offers'
+                      - unless offers.empty?
+                        - offers.each do |offer|
+                          .row
+                            .col-sm-12
+                              .offer
+                                = offer['name']
+                                / = offer['name']
+                                / = offer['amount']
+                    .col-sm-4
+                      - if gross_sum != client_total_sum
+                        .comparison
+                          .original
+                            = gross_sum.currency.iso_code
+                            = gross_sum.format
+                          .new
+                            = client_total_sum.currency.iso_code
+                            = client_total_sum.format
+                    .col-sm-4
+                      .price
+                        = client_total_sum.currency.iso_code
+                        = client_total_sum.format
+
+                      /- room_specifics = { hotel_code: @hotel_code, room_code: room["code"], board_code: rate["boardCode"] }
+                      /- new_reservation_link = new_reservation_path + "?" + room_specifics.to_query + "&" + request.query_parameters.to_query
+                      - rate_keys_url_string = "?"
+                      - rate_keys.each do |rate_key|
+                        - rate_keys_url_string += "rate_key[]=#{rate_key}&"
+                      - rate_keys_url_string = URI.encode rate_keys_url_string
+                      %a.with-loader.btn.btn-warning.btn-mini.pull-right{ href: new_reservation_path + rate_keys_url_string + request.query_parameters.to_query }
+                        Reservar
+
+                  - if rate_class == 'NRF'
                     .row
-                      .col-sm-4
-                        .row
-                          .col-sm-12
-                            .board-name
-                              = rate['boardName']
-                        - if rate.has_key? 'offers'
-                          - rate['offers'].each do |offer|
-                            .row
-                              .col-sm-12
-                                .offer
-                                  = offer['name']
-                                  / = offer['amount']
-                      .col-sm-4
-                        - if calculated_rates['gross'] != calculated_rates['client_total']
-                          .comparison
-                            .original
-                              = calculated_rates['gross'].currency.iso_code
-                              = calculated_rates['gross'].format
-                            .new
-                              = calculated_rates['client_total'].currency.iso_code
-                              = calculated_rates['client_total'].format
-                      .col-sm-4
-                        .price
-                          = calculated_rates['client_total'].currency.iso_code
-                          = calculated_rates['client_total'].format
+                      .col-sm-12
+                        .cancellation
+                          This rate is non-refundable
 
-                        - room_specifics = { hotel_code: @hotel_code, room_code: room["code"], board_code: rate["boardCode"] }
-                        - new_reservation_link = new_reservation_path + "?" + room_specifics.to_query + "&" + request.query_parameters.to_query
-                        %a.with-loader.btn.btn-warning.btn-mini.pull-right{ href: new_reservation_link }
-                          Reservar
-
-                    - if rate['rateClass'] == 'NRF'
+                  - else
+                    - unless cancellation_policies[:from] == ""
                       .row
                         .col-sm-12
                           .cancellation
-                            This rate is non-refundable
-
-                    - else
-                      - if rate.has_key? 'cancellationPolicies'
-                        - rate['cancellationPolicies'].each do |cancellation_policy|
-                          .row
-                            .col-sm-12
-                              .cancellation
-                                Cancellation penalty fee will be of
-                                = calculated_rates['client_total'].currency.iso_code
-                                = "$#{cancellation_policy['amount']}"
-                                after
-                                = DateTime.iso8601(cancellation_policy['from']).strftime("%m/%d/%Y %T %Z")
+                            Cancellation penalty fee will be of
+                            = currency
+                            = cancellation_policies[:amount].format
+                            after
+                            = DateTime.iso8601(cancellation_policies[:from]).strftime("%m/%d/%Y %T %Z")
 
     #hotel-facilities.facilities
       .row
