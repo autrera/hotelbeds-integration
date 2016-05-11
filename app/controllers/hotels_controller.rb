@@ -135,10 +135,17 @@ class HotelsController < ApplicationController
       room['rates'].each do |rate|
         new_rate_structure[rate['boardCode']] = []
       end
-      room['rates'].each do |rate|
-        new_rate_structure[rate['boardCode']].push rate
+      (1..params[:number_of_rooms].to_i).to_a.each_with_index do |room_number, room_index|
+        adults = params["room_#{room_number}_adults"].to_i
+        children = params["room_#{room_number}_children"].to_i
+        room['rates'].each do |rate|
+          if rate["adults"] == adults && rate["children"] == children
+            new_rate_structure[rate['boardCode']].push rate
+          end
+        end
       end
       room['boards'] = new_rate_structure
+      Rails.logger.info "New Rate Structure: #{new_rate_structure.inspect}"
     end
 
     # hotel_file = File.read(Rails.root + "app/assets/jsons/hotel_availability.json")
