@@ -175,7 +175,9 @@
                   %dt Nigths:
                   %dd= check_out.mjd - check_in.mjd
 
-                %table.table
+                %table.table.reservation-details
+                  - if @hotel['rooms'][0]['rates'][0]['rateComments'] != nil
+                    = @hotel['rooms'][0]['rates'][0]['rateComments']
                   - if @hotel['rooms'][0]['rates'][0]['offers'] != nil
                     - @hotel['rooms'][0]['rates'][0]['offers'].each do |offer|
                       %tr
@@ -195,7 +197,15 @@
                         = @hotel['currency']
                         $
                         = @hotel['totalNet']
-                  %tr
-                    %td.text-right
-                      %button#reservation-submit.btn.btn-block.btn-warning
-                        Book
+
+                %button#reservation-submit.btn.btn-block.btn-warning
+                  Book
+
+                %br
+
+                .cancellation-policies.text-danger
+                  Cancellation penalty fee will be of
+                  = @hotel['currency']
+                  = "$#{@hotel['rooms'][0]['rates'][0]['cancellationPolicies'][0]['amount']}"
+                  after
+                  = DateTime.iso8601(@hotel['rooms'][0]['rates'][0]['cancellationPolicies'][0]['from']).strftime("%m/%d/%Y %T %Z")

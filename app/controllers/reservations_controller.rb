@@ -200,6 +200,21 @@ class ReservationsController < ApplicationController
       redirect_to error_reservations_path error: true
     end
 
+    client = Client.find_by_email params[:holder_email]
+    if client.empty?
+      client = Client.new
+      client.name = params[:holder_name]
+      client.surname = params[:holder_surname]
+      client.email = params[:holder_email]
+
+      password = (0...8).map { (65 + rand(26)).chr }.join
+      client.password = password
+      unless client.save
+        Rails.logger.info "No se guardo al usuario"
+      end
+    else
+    end
+
     # respond_to do |format|
     #   format.html { render json: @reservation }
     # end
