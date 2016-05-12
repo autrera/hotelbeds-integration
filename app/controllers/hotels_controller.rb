@@ -140,12 +140,20 @@ class HotelsController < ApplicationController
         children = params["room_#{room_number}_children"].to_i
         room['rates'].each do |rate|
           if rate["adults"] == adults && rate["children"] == children
-            new_rate_structure[rate['boardCode']].push rate
+            children_ages = []
+            if children.to_i > 0
+              children_ages = rate["childrenAges"].split(",")
+              (1..children).to_a.each do |child_number|
+                children_ages.delete params["room_#{room_number}_child_#{child_number}_age"]
+              end
+            end
+            if children_ages.empty?
+              new_rate_structure[rate['boardCode']].push rate
+            end
           end
         end
       end
       room['boards'] = new_rate_structure
-      Rails.logger.info "New Rate Structure: #{new_rate_structure.inspect}"
     end
 
     # hotel_file = File.read(Rails.root + "app/assets/jsons/hotel_availability.json")
