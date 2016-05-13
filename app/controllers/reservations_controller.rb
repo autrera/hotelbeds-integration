@@ -73,6 +73,7 @@ class ReservationsController < ApplicationController
       "https://api.test.hotelbeds.com/hotel-api/1.0/checkrates",
       method: :post,
       body: JSON.generate(rate_keys_hash),
+      accept_encoding: "gzip",
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
     check_rates_request.run
@@ -151,6 +152,7 @@ class ReservationsController < ApplicationController
       "https://api.test.hotelbeds.com/hotel-api/1.0/bookings",
       method: :post,
       body: json_structure,
+      accept_encoding: "gzip",
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
     reservation_request.on_complete do |response|

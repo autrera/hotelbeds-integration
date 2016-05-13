@@ -10,19 +10,19 @@
       .col-sm-7
         .panel.panel-primary
           .panel-heading
-            = "Reservation for #{@hotel['name']}"
+            = "Reservación para #{@hotel['name']}"
           .panel-body
 
             .holder
-              %h2 Reservation Holder
+              %h2 Titular de la Reservación
               .row
                 .col-sm-6
                   .form-group
-                    %label Name
+                    %label Nombre
                     %input.form-control{ name: "holder_name" }
                 .col-sm-6
                   .form-group
-                    %label Surname
+                    %label Apellido
                     %input.form-control{ name: "holder_surname" }
               .row
                 .col-sm-6
@@ -31,11 +31,11 @@
                     %input.form-control{ name: "holder_email" }
                 .col-sm-6
                   .form-group
-                    %label Phone Number
+                    %label Teléfono
                     %input.form-control{ name: "holder_phone" }
 
             .paxes
-              %h2 Pax Information
+              %h2 Información de Pasajeros
               = hidden_field_tag :number_of_rooms, params[:number_of_rooms]
               - adult_age_range = (18..99).to_a
               - (1..params['number_of_rooms'].to_i).to_a.each_with_index do |room_number, index|
@@ -46,10 +46,10 @@
                 %h3= "Room ##{room_number}"
                 %table.table
                   %tr
-                    %th.text-center Adult #
-                    %th Name
-                    %th Surname
-                    %th.text-center Age
+                    %th.text-center Adulto #
+                    %th Nombre
+                    %th Apellido
+                    / %th.text-center Edad
                   - (1..params["room_#{room_number}_adults"].to_i).to_a.each do |adult_number|
                     %tr
                       %td.text-center
@@ -58,18 +58,18 @@
                         %input.form-control{ name: "room_#{room_number}_adult_#{adult_number}_name" }
                       %td
                         %input.form-control{ name: "room_#{room_number}_adult_#{adult_number}_surname" }
-                      %td
-                        %select.form-control{ name: "room_#{room_number}_adult_#{adult_number}_age" }
-                          - adult_age_range.each do |adult_age_number|
-                            %option= adult_age_number
+                      / %td
+                      /   %select.form-control{ name: "room_#{room_number}_adult_#{adult_number}_age" }
+                      /     - adult_age_range.each do |adult_age_number|
+                      /       %option= adult_age_number
 
                   - if params["room_#{room_number}_children"].to_i > 0
                     %table.table
                       %tr
-                        %th.text-center Child #
-                        %th Name
-                        %th Surname
-                        %th.text-center Age
+                        %th.text-center Menor #
+                        %th Nombre
+                        %th Apellido
+                        %th.text-center Edad
                       - (1..params["room_#{room_number}_children"].to_i).to_a.each do |child_number|
                         %tr
                           %td.text-center
@@ -83,34 +83,34 @@
                               %option= params["room_#{room_number}_child_#{child_number}_age"]
 
             .payment
-              %h2 Payment Information
+              %h2 Información de Pago
               .row
                 .col-sm-6
                   .form-group
-                    %label Holder name:
+                    %label Nombre:
                     %input.form-control{ name: "card_holder_name", data: { conekta: 'card[name]' }  }
                 .col-sm-6
                   .form-group
-                    %label Card type:
+                    %label Tipo de Tarjeta:
                     %select.form-control{ name: "card_type" }
                       %option VISA
                       %option AMEX
-                      %option MAESTRO
+                      %option MASTERCARD
               .row
                 .col-sm-6
                   .form-group
-                    %label Card number:
+                    %label Número de Tarjeta:
                     %input.form-control{ name: "card_number", data: { conekta: 'card[number]' }  }
                 .col-sm-6
                   .form-group
                     .row
                       .col-sm-4
-                        %label Month:
+                        %label Mes:
                         %select.form-control{ name: "card_expirity_month", data: { conekta: 'card[exp_month]' }  }
                           - (1..12).to_a.each do |month_number|
                             %option= month_number
                       .col-sm-4
-                        %label Year:
+                        %label Año:
                         %select.form-control{ name: "card_expirity_year", data: { conekta: 'card[exp_year]' }  }
                           - (2016..2025).to_a.each do |year_number|
                             %option= year_number
@@ -157,22 +157,22 @@
           .col-sm-12
             .panel.panel-primary
               .panel-heading
-                Reservation Details
+                Detalles de Reservación
               .panel-body
                 %dl.dl-horizontal
                   - check_in  = Date.strptime(@hotel['checkIn'] , "%Y-%m-%d")
                   - check_out = Date.strptime(@hotel['checkOut'], "%Y-%m-%d")
                   %dt Hotel:
                   %dd= @hotel['name']
-                  %dt Destination:
+                  %dt Destino:
                   %dd= "#{@hotel['destinationName']}, #{@hotel['zoneName']}"
-                  %dt Room:
+                  %dt Habitación:
                   %dd= @hotel['rooms'][0]['name']
-                  %dt Check In:
+                  %dt Entrada:
                   %dd= check_in.strftime("%d/%m/%Y")
-                  %dt Check Out:
+                  %dt Salida:
                   %dd= check_out.strftime("%d/%m/%Y")
-                  %dt Nigths:
+                  %dt Noches:
                   %dd= check_out.mjd - check_in.mjd
 
                 %table.table.reservation-details
@@ -190,7 +190,7 @@
                   - if @hotel['rooms'][0]['rates'][0]['taxes']['allIncluded'] == true
                     %tr
                       %td.text-right
-                        All Taxes Included
+                        Todos los impuestos incluidos
                   %tr
                     %td.text-right
                       .total-net
@@ -199,13 +199,13 @@
                         = @hotel['totalNet']
 
                 %button#reservation-submit.btn.btn-block.btn-warning
-                  Book
+                  Confirmar
 
                 %br
 
                 .cancellation-policies.text-danger
-                  Cancellation penalty fee will be of
+                  La penalidad por cancelación será de
                   = @hotel['currency']
                   = "$#{@hotel['rooms'][0]['rates'][0]['cancellationPolicies'][0]['amount']}"
-                  after
+                  después del
                   = DateTime.iso8601(@hotel['rooms'][0]['rates'][0]['cancellationPolicies'][0]['from']).strftime("%m/%d/%Y %T %Z")

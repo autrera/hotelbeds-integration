@@ -19,10 +19,10 @@
       .row
         .col-sm-12
           .btn-group.btn-group-justified
-            %a.btn.btn-default{ href: "#hotel-images" } Photos
-            %a.btn.btn-default{ href: "#hotel-about" } About
-            %a.btn.btn-default{ href: "#hotel-rooms" } Rooms
-            %a.btn.btn-default{ href: "#hotel-facilities" } Facilities
+            %a.btn.btn-default{ href: "#hotel-images" } Fotos
+            %a.btn.btn-default{ href: "#hotel-about" } Información
+            %a.btn.btn-default{ href: "#hotel-rooms" } Habitaciones
+            %a.btn.btn-default{ href: "#hotel-facilities" } Facilidades
 
     #hotel-images.images
       .row
@@ -142,17 +142,17 @@
                     .row
                       .col-sm-12
                         .cancellation
-                          This rate is non-refundable
+                          Esta tarifa no es reembolsable
 
                   - else
                     - unless cancellation_policies[:from] == ""
                       .row
                         .col-sm-12
                           .cancellation
-                            Cancellation penalty fee will be of
+                            La penalidad por cancelación será de
                             = currency
                             = cancellation_policies[:amount].format
-                            after
+                            despúes del
                             = DateTime.iso8601(cancellation_policies[:from]).strftime("%m/%d/%Y %T %Z")
 
     #hotel-facilities.facilities

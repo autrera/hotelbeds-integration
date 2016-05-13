@@ -13,6 +13,7 @@ module BookingForm
       fields: "all",
       destinationCode: destination_code,
       countryCode: country_code,
+      language: "CAS",
       from: 1,
       to: 1000
     }
@@ -72,6 +73,11 @@ module BookingForm
         code: destination_code
       }
     end
+
+    hash["filter"] = {
+      paymentType: "AT_WEB"
+    }
+    hash["language"] = "CAS"
 
     return hash
 

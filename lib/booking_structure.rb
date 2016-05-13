@@ -18,7 +18,7 @@ class BookingStructure
         hash["rooms"][room_index][:paxes][pax_index] = {
           roomId: 1,
           type: "AD",
-          age: @params["room_#{room_number}_adult_#{adult_number}_age"],
+          # age: @params["room_#{room_number}_adult_#{adult_number}_age"],
           name: @params["room_#{room_number}_adult_#{adult_number}_name"],
           surname: @params["room_#{room_number}_adult_#{adult_number}_surname"]
         }

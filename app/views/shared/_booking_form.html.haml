@@ -22,7 +22,7 @@
       .row{ class: "room_row room_#{room_number}_row #{hide_class}" }
         .col-sm-2
           %label
-            Adults
+            Adultos
           %select.form-control{ name: "room_#{room_number}_adults" }
             - adults_numbers.each do |adult_number|
               - if adult_number == params["room_#{room_number}_adults"].to_i
@@ -31,7 +31,7 @@
                 %option{ value: adult_number }= adult_number
         .col-sm-2
           %label
-            Children
+            Menores
           %select.form-control.children_in_room{ name: "room_#{room_number}_children" }
             - children_possibilities.each do |child_possibility|
               - if child_possibility == params["room_#{room_number}_children"].to_i
@@ -41,7 +41,7 @@
         - children_numbers.each do |child_number|
           %div{ class: "room_#{room_number}_child_#{child_number}_age col-sm-2 hide" }
             %label
-              Age
+              Edad
             %select.form-control{ name: "room_#{room_number}_child_#{child_number}_age" }
               - child_ages.each do |child_age|
                 - if child_age == params["room_#{room_number}_child_#{child_number}_age"].to_i

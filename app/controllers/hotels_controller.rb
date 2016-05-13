@@ -12,9 +12,6 @@ class HotelsController < ApplicationController
     signature = generate_signature
     availability_request_hash = generate_availability_request_hash(params)
     content_request_hash = generate_content_request_hash(params)
-    availability_request_hash["filter"] = {
-      paymentType: "AT_WEB"
-    }
 
     Rails.logger.info "Availability Hash #{JSON.generate(availability_request_hash)}"
     # respond_to do |format|
@@ -31,6 +28,7 @@ class HotelsController < ApplicationController
       "https://api.test.hotelbeds.com/hotel-api/1.0/hotels",
       method: :post,
       body: JSON.generate(availability_request_hash),
+      accept_encoding: "gzip",
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
     availability_request.on_complete do |response|
@@ -46,12 +44,13 @@ class HotelsController < ApplicationController
       "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels",
       method: :get,
       params: content_request_hash,
+      accept_encoding: "gzip",
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
     content_request.on_complete do |response|
       if response.success?
         @hotels_content = JSON.parse response.body
-        # Rails.logger.info "Hotels Content: #{response.body.inspect}"
+        # Rails.logger.info "Hotels Content: #{response.body}"
       else
         # Rails.logger.info response.body.inspect
       end
@@ -79,9 +78,6 @@ class HotelsController < ApplicationController
     availability_request_hash["hotels"] = {
       hotel: [@hotel_code]
     }
-    availability_request_hash["filter"] = {
-      paymentType: "AT_WEB"
-    }
 
     Rails.logger.info "Availability Hash #{JSON.generate(availability_request_hash)}"
     # content_request_hash = generate_content_request_hash(params)
@@ -90,6 +86,7 @@ class HotelsController < ApplicationController
       "https://api.test.hotelbeds.com/hotel-api/1.0/hotels",
       method: :post,
       body: JSON.generate(availability_request_hash),
+      accept_encoding: "gzip",
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
     availability_request.on_complete do |response|
@@ -102,9 +99,10 @@ class HotelsController < ApplicationController
     end
 
     content_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels/#{@hotel_code}",
+      "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels/#{@hotel_code}?language=CAS",
       method: :get,
       # params: content_request_hash,
+      accept_encoding: "gzip",
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
     content_request.on_complete do |response|
