@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: MyString
+  check_in: MyString
+  check_out: MyString
+  holder_name: MyString
+  holder_surname: MyString
+  hotel_id: 
+  hotel_name: MyString
+  destination_code: MyString
+  destination_name: MyString
+  zone_code: 
+  zone_name: MyString
+  latitde: MyString
+  longitude: MyString
+  rooms: MyText
+  supplier: MyText
+  client_total: MyString
+  supplier_net_total: MyString
+  currency: MyString
+  client_id: 
+
+two:
+  status: MyString
+  check_in: MyString
+  check_out: MyString
+  holder_name: MyString
+  holder_surname: MyString
+  hotel_id: 
+  hotel_name: MyString
+  destination_code: MyString
+  destination_name: MyString
+  zone_code: 
+  zone_name: MyString
+  latitde: MyString
+  longitude: MyString
+  rooms: MyText
+  supplier: MyText
+  client_total: MyString
+  supplier_net_total: MyString
+  currency: MyString
+  client_id: 

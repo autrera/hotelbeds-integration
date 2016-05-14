@@ -15,8 +15,8 @@ class Client < ActiveRecord::Base
     def send_client_credentials
       password = (0...8).map { (65 + rand(26)).chr }.join
       self.password = password
-      self.update!
-      ClientMailer.login_credentials(self, password)
+      self.save
+      # ClientMailer.login_credentials(self, password)
     end
 
 end

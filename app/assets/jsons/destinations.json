@@ -418,7 +418,7 @@
     }, {
         "code": "CUN",
         "name": {
-            "content": "Cancun (and vicinity)"
+            "content": "Cancun (y alrededores)"
         },
         "countryCode": "MX",
         "isoCode": "MX",
@@ -595,7 +595,7 @@
     }, {
         "code": "GUA",
         "name": {
-            "content": "Guadalajara & Vicinity"
+            "content": "Guadalajara Alrededores"
         },
         "countryCode": "MX",
         "isoCode": "MX",
@@ -1033,7 +1033,7 @@
     }, {
         "code": "MDF",
         "name": {
-            "content": "Mexico City"
+            "content": "Ciudad de Mexico"
         },
         "countryCode": "MX",
         "isoCode": "MX",
