@@ -5,4 +5,8 @@
         .panel-title
           Clients
       .panel-body
-
+        - unless @clients.empty?
+          - @clients.each do |client|
+            = client.inspect
+        - else
+          No se encontraron clientes

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160415190841) do
+ActiveRecord::Schema.define(version: 20160516212500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,5 +72,30 @@ ActiveRecord::Schema.define(version: 20160415190841) do
 
   add_index "clients", ["email"], name: "index_clients_on_email", unique: true, using: :btree
   add_index "clients", ["reset_password_token"], name: "index_clients_on_reset_password_token", unique: true, using: :btree
+
+  create_table "reservations", force: :cascade do |t|
+    t.string   "status"
+    t.string   "check_in"
+    t.string   "check_out"
+    t.string   "holder_name"
+    t.string   "holder_surname"
+    t.integer  "hotel_id"
+    t.string   "hotel_name"
+    t.string   "destination_code"
+    t.string   "destination_name"
+    t.integer  "zone_code"
+    t.string   "zone_name"
+    t.string   "latitude"
+    t.string   "longitude"
+    t.text     "rooms"
+    t.text     "supplier"
+    t.string   "client_total"
+    t.string   "supplier_net_total"
+    t.string   "currency"
+    t.integer  "client_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "reference"
+  end
 
 end

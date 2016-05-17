@@ -68,7 +68,7 @@ ready = () ->
     if @select.val() != ""
       $('#destination-form').submit()
     else
-      alert("Enter a destination, please.")
+      alert("Selecciona un destino, por favor.")
       return
     return
 

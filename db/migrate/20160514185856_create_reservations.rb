@@ -6,11 +6,11 @@ class CreateReservations < ActiveRecord::Migration
       t.string :check_out
       t.string :holder_name
       t.string :holder_surname
-      t.int :hotel_id
+      t.integer :hotel_id
       t.string :hotel_name
       t.string :destination_code
       t.string :destination_name
-      t.int :zone_code
+      t.integer :zone_code
       t.string :zone_name
       t.string :latitde
       t.string :longitude
@@ -19,7 +19,7 @@ class CreateReservations < ActiveRecord::Migration
       t.string :client_total
       t.string :supplier_net_total
       t.string :currency
-      t.int :client_id
+      t.integer :client_id
 
       t.timestamps null: false
     end

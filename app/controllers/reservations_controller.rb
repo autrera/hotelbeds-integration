@@ -89,6 +89,8 @@ class ReservationsController < ApplicationController
 
     Rails.logger.info "Token: #{params[:conektaTokenId]}"
 
+    params[:holder_email] = params[:holder_email].downcase
+
     begin
       charge = Conekta::Charge.create({
         "amount"=> 51000,
@@ -198,7 +200,10 @@ class ReservationsController < ApplicationController
       # ReservationMailer.client_confirmation(params[:holder_email], @reservation, @hotel_content).deliver
       # Send agents email
 
+      Rails.logger.info "Email: #{params[:holder_email].inspect}"
       client = Client.find_by_email params[:holder_email]
+      # client = Client.find_by_email "Kugel85@gmail.com"
+      Rails.logger.info "Cliente: #{client.inspect}"
       if client == nil
         client = Client.new
         client.name = params[:holder_name]
@@ -212,26 +217,27 @@ class ReservationsController < ApplicationController
         end
       end
 
-      reservation = client.reservations.create {
-        status: @reservation['status']
-        check_in: @reservation['hotel']['checkIn']
-        check_out: @reservation['hotel']['checkOut']
+      reservation = client.reservations.create({
+        reference: @reservation['reference']
+        status: @reservation['status'],
+        check_in: @reservation['hotel']['checkIn'],
+        check_out: @reservation['hotel']['checkOut'],
         holder_name: @reservation['holder']['name'],
         holder_surname: @reservation['holder']['surname'],
         hotel_id: @reservation['hotel']['code'],
         hotel_name: @reservation['hotel']['name'],
-        destination_code: @reservation['hotel']['destinationCode']
-        destination_name: @reservation['hotel']['destinationName']
-        zone_code: @reservation['hotel']['zoneCode']
-        zone_name: @reservation['hotel']['zoneName']
-        latitude: @reservation['hotel']['latitude']
-        longitude: @reservation['hotel']['longitude']
-        rooms: @reservation['hotel']['rooms']
-        supplier: @reservation['hotel']['supplier']
-        client_total: @reservation['totalSellingRate']
-        supplier_net_total: @reservation['totalNet']
+        destination_code: @reservation['hotel']['destinationCode'],
+        destination_name: @reservation['hotel']['destinationName'],
+        zone_code: @reservation['hotel']['zoneCode'],
+        zone_name: @reservation['hotel']['zoneName'],
+        latitude: @reservation['hotel']['latitude'],
+        longitude: @reservation['hotel']['longitude'],
+        rooms: @reservation['hotel']['rooms'],
+        supplier: @reservation['hotel']['supplier'],
+        client_total: @reservation['totalSellingRate'],
+        supplier_net_total: @reservation['totalNet'],
         currency: @reservation['currency']
-      }
+      })
 
       redirect_to success_reservations_path success: true
     else

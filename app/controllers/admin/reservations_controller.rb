@@ -35,6 +35,7 @@ class Admin::ReservationsController < AdminController
     # Rails.logger.info "Response: #{response.body.inspect}"
 
     @reservations = reservations_body['bookings']
+    @local_reservations = Reservation.all
   end
 
   def show
@@ -52,6 +53,7 @@ class Admin::ReservationsController < AdminController
     Rails.logger.info "Response: #{reservation_body.inspect}"
 
     @reservation = reservation_body['booking']
+    @local_reservation = Reservation.find_by_reference params[:id]
 
     redirect_to admin_reservations_path, alert: "No encontramos ninguna reservación con ese ID." unless @reservation != nil
   end
