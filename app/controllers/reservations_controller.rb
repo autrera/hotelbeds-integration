@@ -1,6 +1,7 @@
 class ReservationsController < ApplicationController
 
   include BookingForm
+  include HotelHelper
 
   def new
     # hotel_rechecked_rates = File.read(Rails.root + "app/assets/jsons/recheck_rate.json")
@@ -59,6 +60,7 @@ class ReservationsController < ApplicationController
     # end
 
     rate_keys_hash = {
+      language: 'CAS',
       rooms: []
     }
     params[:rate_key].each_with_index do |rate, index|
@@ -84,6 +86,39 @@ class ReservationsController < ApplicationController
   end
 
   def create
+
+    rate_keys_hash = {
+      language: 'CAS',
+      rooms: []
+    }
+    (1..params['number_of_rooms'].to_i).to_a.each_with_index do |number_of_room, index|
+      rate_keys_hash[:rooms][index] = {
+        rateKey: params["room_#{number_of_room}_rateKey"]
+      }
+    end
+
+    signature = generate_signature
+
+    check_rates_request = Typhoeus::Request.new(
+      "https://api.test.hotelbeds.com/hotel-api/1.0/checkrates",
+      method: :post,
+      body: JSON.generate(rate_keys_hash),
+      accept_encoding: "gzip",
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+    )
+    check_rates_request.run
+    @response = check_rates_request.response
+    @hotel = (JSON.parse @response.body)['hotel']
+
+    client_total = Money.new(0, @hotel['currency'])
+    @hotel['rooms'].each do |room|
+      room['rates'].each do |rate|
+        client_total += (calculate_gross_room_rate(rate))['client_total']
+      end
+    end
+
+    Rails.logger.info "Total del Cliente: #{client_total.inspect}"
+
     require "conekta"
     Conekta.api_key = "key_45w4WQNv6Y4icr2uz8yVGA"
 
@@ -93,8 +128,8 @@ class ReservationsController < ApplicationController
 
     begin
       charge = Conekta::Charge.create({
-        "amount"=> 51000,
-        "currency"=> "MXN",
+        "amount"=> client_total.cents,
+        "currency"=> @hotel['currency'],
         "description"=> "Neandertravel Reservación",
         "reference_id"=> "orden_de_id_interno",
         "card"=> params[:conektaTokenId],  # Ej. "tok_a4Ff0dD2xYZZq82d9"
@@ -168,7 +203,7 @@ class ReservationsController < ApplicationController
     end
 
     content_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels/#{@hotel_code}",
+      "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels/#{params[:hotel_id]}",
       method: :get,
       params: { fields: "all" },
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
@@ -177,7 +212,7 @@ class ReservationsController < ApplicationController
       if response.success?
         response_body_json = JSON.parse response.body
         @hotel_content = response_body_json['hotel']
-        Rails.logger.info "Hotels Content: #{response.body.inspect}"
+        Rails.logger.info "Hotels Content: #{response.body}"
       else
         Rails.logger.info response.body.inspect
       end
@@ -196,13 +231,8 @@ class ReservationsController < ApplicationController
     Rails.logger.info "Respuesta: #{@reservation.inspect}"
 
     if @reservation['status'] == "CONFIRMED"
-      # Send client email
-      # ReservationMailer.client_confirmation(params[:holder_email], @reservation, @hotel_content).deliver
-      # Send agents email
-
       Rails.logger.info "Email: #{params[:holder_email].inspect}"
       client = Client.find_by_email params[:holder_email]
-      # client = Client.find_by_email "Kugel85@gmail.com"
       Rails.logger.info "Cliente: #{client.inspect}"
       if client == nil
         client = Client.new
@@ -218,7 +248,7 @@ class ReservationsController < ApplicationController
       end
 
       reservation = client.reservations.create({
-        reference: @reservation['reference']
+        reference: @reservation['reference'],
         status: @reservation['status'],
         check_in: @reservation['hotel']['checkIn'],
         check_out: @reservation['hotel']['checkOut'],
@@ -234,10 +264,14 @@ class ReservationsController < ApplicationController
         longitude: @reservation['hotel']['longitude'],
         rooms: @reservation['hotel']['rooms'],
         supplier: @reservation['hotel']['supplier'],
-        client_total: @reservation['totalSellingRate'],
+        client_total: client_total.cents,
         supplier_net_total: @reservation['totalNet'],
         currency: @reservation['currency']
       })
+
+      # Send client email
+      ReservationMailer.client_confirmation(params[:holder_email], @reservation, @hotel_content).deliver_now
+      # Send agents email
 
       redirect_to success_reservations_path success: true
     else

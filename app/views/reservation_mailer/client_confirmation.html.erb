@@ -19,7 +19,7 @@
         <tr style="padding:0;text-align:left;vertical-align:top">
           <th style="Margin:0;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;padding:0;text-align:left">
                   <h1 style="Margin:0;Margin-bottom:10px;color:#2980B9;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:34px;font-weight:200;line-height:1.3;margin:28px 0 16px 0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">Gracias por reservar con nosotros</h1>
-                  <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;margin-bottom:10px;padding:0;text-align:left">Estimado(a), <%= @reservation['holder']['name'] %><%= @reservation['holder']['surname'] %></p>
+                  <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;margin-bottom:10px;padding:0;text-align:left">Estimado(a), <%= @reservation['holder']['name'] %> <%= @reservation['holder']['surname'] %></p>
 
                   <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;margin-bottom:10px;padding:0;text-align:left">Muchas gracias por habernos elegido. Puedes estar completamente seguro que tomaste la mejor elecci&#xF3;n con nosotros.</p>
 
@@ -67,15 +67,15 @@
                         </p>
                         <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;margin-bottom:10px;padding:0;text-align:left">
                           <strong>Direcci&#xF3;n</strong><br>
-                          <%= @hotel_content['address'] %>
+                          <%= @hotel_content['address']['content'] %>
                         </p>
                         <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;margin-bottom:10px;padding:0;text-align:left">
                           <strong>Tel&#xE9;fono</strong><br>
-                          <%= @hotel_content['phones'].each do |phone| %>
-                            <%= if phone['phoneType'] == 'PHONEHOTEL' %>
+                          <% @hotel_content['phones'].each do |phone| %>
+                            <% if phone['phoneType'] == 'PHONEHOTEL' %>
                               <%= phone['phoneNumber'] %>
-                            <%= end %>
-                          <%= end %>
+                            <% end %>
+                          <% end %>
                         </p>
                         <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;margin-bottom:10px;padding:0;text-align:left">
                           <strong>Plan de Alimentos</strong><br>
@@ -92,21 +92,21 @@
 
                   <table class="table" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
                     <tr class="tr-even" style="background:#ECF0F1;padding:0;text-align:left;vertical-align:top"><th style="Margin:0;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;padding:6px 10px;text-align:left">Habitacion</th><th style="Margin:0;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;padding:6px 10px;text-align:left">Costo</th></tr>
-                    <%= @reservation['hotel']['rooms'].each do |room| %>
+                    <% @reservation['hotel']['rooms'].each do |room| %>
                     <tr class="" style="padding:0;text-align:left;vertical-align:top">
                       <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;hyphens:auto;line-height:19px;margin:0;padding:6px 10px;text-align:left;vertical-align:top;word-wrap:break-word">
                         <%= room['name'] %>
-                        <%= room['paxes'].each do |pax| %>
+                        <% room['paxes'].each do |pax| %>
                           <br>
                           <%= pax['name'] %> <%= pax['surname'] %>
-                        <%= end %>
+                        <% end %>
                       </td>
                       <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;hyphens:auto;line-height:19px;margin:0;padding:6px 10px;text-align:left;vertical-align:top;word-wrap:break-word"><%= @reservation['currency'] %> $<%= room['rates'][0]['net'] %></td>
                     </tr>
-                    <%= end %>
+                    <% end %>
                     <tr style="padding:0;text-align:left;vertical-align:top">
                       <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;hyphens:auto;line-height:19px;margin:0;padding:6px 10px;text-align:left;vertical-align:top;word-wrap:break-word"><b>Total:</b></td>
-                      <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;hyphens:auto;line-height:19px;margin:0;padding:6px 10px;text-align:left;vertical-align:top;word-wrap:break-word"><%= @reservation['totalSellingRate'] %></td>
+                      <td style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;hyphens:auto;line-height:19px;margin:0;padding:6px 10px;text-align:left;vertical-align:top;word-wrap:break-word"><%= @reservation['currency'] %> $<%= @reservation['totalSellingRate'] %></td>
                     </tr>
                   </table>
 
@@ -114,6 +114,21 @@
                   <br>
                   <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;margin-bottom:10px;padding:0;text-align:left">Nuevamente muchas gracias por reservar con nosotros, nos ponemos a tus ordenes para cualquier duda o informacion adicional.</p>
                   <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;margin-bottom:10px;padding:0;text-align:left">&#xA1;Buen viaje te desea Neandertravel!</p>
+                </th>
+        </tr>
+      </table>
+    </th>
+              </tr></tbody></table>
+              <table class="row footer text-center" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:center;vertical-align:top;width:100%"><tbody><tr style="padding:0;text-align:left;vertical-align:top">
+                    <th class="small-12 large-6 columns first last" style="Margin:0 auto;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0 auto;padding:0;padding-bottom:16px;padding-left:16px;padding-right:16px;text-align:left;width:274px">
+      <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+        <tr style="padding:0;text-align:left;vertical-align:top">
+          <th style="Margin:0;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;padding:0;text-align:left">
+                  <p style="Margin:0;Margin-bottom:10px;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;font-weight:200;line-height:19px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                    Bookable and payable by
+                    <%= @reservation['hotel']['supplier']['name'] %>
+                    <%= @reservation['hotel']['supplier']['vatNumber'] %>
+                  </p>
                 </th>
         </tr>
       </table>
@@ -160,7 +175,7 @@
       <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
         <tr style="padding:0;text-align:left;vertical-align:top">
           <th style="Margin:0;color:#555;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;font-weight:200;line-height:19px;margin:0;padding:0;text-align:left">
-                  <img src="http://placehold.it/170x30" alt="" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto">
+                  <img src="<%= image_url('logo-neander-travel.png') %>" alt="" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto">
                 </th>
         </tr>
       </table>
