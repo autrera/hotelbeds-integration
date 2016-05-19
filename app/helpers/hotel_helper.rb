@@ -3,10 +3,10 @@ module HotelHelper
     if hotel.has_key? "images"
       hotel["images"].each do |image|
         if image["imageTypeCode"] == "GEN" && image['order'] == 1
-          return "http://photos.hotelbeds.com/giata/" + image["path"]
+          return "https://photos.hotelbeds.com/giata/" + image["path"]
         end
       end
-      return "http://photos.hotelbeds.com/giata/" + hotel["images"][0]["path"]
+      return "https://photos.hotelbeds.com/giata/" + hotel["images"][0]["path"]
     end
     # Return default missing image
     return asset_path("logo-neander-travel.png")
@@ -15,7 +15,7 @@ module HotelHelper
   def room_image(room_code, hotel_images)
     hotel_images.each do |image|
       if image['roomCode'] == room_code
-        return "http://photos.hotelbeds.com/giata/" + image['path']
+        return "https://photos.hotelbeds.com/giata/" + image['path']
       end
     end
     return asset_path("logo-neander-travel.png")
