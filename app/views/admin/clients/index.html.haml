@@ -6,7 +6,17 @@
           Clients
       .panel-body
         - unless @clients.empty?
-          - @clients.each do |client|
-            = client.inspect
+          .row
+            .col-sm-12
+              %table.table.table-striped.table-hover
+                %tr
+                  %th Nombre
+                  %th Email
+                - @clients.each do |client|
+                  %tr
+                    %td
+                      = client.name
+                      = client.surname
+                    %td= client.email
         - else
           No se encontraron clientes

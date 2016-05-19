@@ -106,9 +106,12 @@
         = link_to 'Cancelar', { action: :cancel, id: @reservation['reference'] },  method: :delete, class: "btn btn-raised btn-danger", data: { confirm: "Seguro que deseas cancelar la reservación #{@reservation['reference']}?" }
       .col-sm-3.col-sm-offset-7
         .group
-          %label Client Total:
-          = @reservation['currency']
-          $
+          - if @local_reservation != nil
+            - client_total = Money.new @local_reservation.client_total, @reservation['currency']
+            %label Client Total:
+            = @reservation['currency']
+            $
+            = client_total.amount
         .group
           %label Supplier Total:
           = @reservation['currency']
