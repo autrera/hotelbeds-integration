@@ -270,7 +270,7 @@ class ReservationsController < ApplicationController
       })
 
       # Send client email
-      ReservationMailer.client_confirmation(params[:holder_email], @reservation, @hotel_content).deliver_now
+      ReservationMailer.client_confirmation(params[:holder_email], @reservation, @hotel_content, client_total).deliver_now
       # Send agents email
 
       redirect_to success_reservations_path success: true
