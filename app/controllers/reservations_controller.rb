@@ -82,7 +82,7 @@ class ReservationsController < ApplicationController
     @response = check_rates_request.response
     @hotel = (JSON.parse @response.body)['hotel']
 
-    Rails.logger.info "Response: #{@response.body.inspect}"
+    # Rails.logger.info "Response: #{@response.body.inspect}"
   end
 
   def create
@@ -117,12 +117,12 @@ class ReservationsController < ApplicationController
       end
     end
 
-    Rails.logger.info "Total del Cliente: #{client_total.inspect}"
+    # Rails.logger.info "Total del Cliente: #{client_total.inspect}"
 
     require "conekta"
     Conekta.api_key = "key_45w4WQNv6Y4icr2uz8yVGA"
 
-    Rails.logger.info "Token: #{params[:conektaTokenId]}"
+    # Rails.logger.info "Token: #{params[:conektaTokenId]}"
 
     params[:holder_email] = params[:holder_email].downcase
 
@@ -173,7 +173,7 @@ class ReservationsController < ApplicationController
 
     end
 
-    Rails.logger.info "Cargo: #{charge.inspect}"
+    # Rails.logger.info "Cargo: #{charge.inspect}"
 
     render :back unless charge.status == "paid"
 
@@ -183,7 +183,7 @@ class ReservationsController < ApplicationController
     booking_structure.setParams params
     json_structure = JSON.generate booking_structure.generate
 
-    Rails.logger.info "JSON Structure: #{json_structure}"
+    # Rails.logger.info "JSON Structure: #{json_structure}"
 
     reservation_request = Typhoeus::Request.new(
       "https://api.test.hotelbeds.com/hotel-api/1.0/bookings",
@@ -196,7 +196,7 @@ class ReservationsController < ApplicationController
       if response.success?
         response_body_json = JSON.parse response.body
         @reservation = response_body_json['booking']
-        Rails.logger.info "Reservation: #{response.body.inspect}"
+        # Rails.logger.info "Reservation: #{response.body.inspect}"
       else
         Rails.logger.info "Reservation: #{response.body.inspect}"
       end
@@ -212,7 +212,7 @@ class ReservationsController < ApplicationController
       if response.success?
         response_body_json = JSON.parse response.body
         @hotel_content = response_body_json['hotel']
-        Rails.logger.info "Hotels Content: #{response.body}"
+        # Rails.logger.info "Hotels Content: #{response.body}"
       else
         Rails.logger.info response.body.inspect
       end
@@ -228,12 +228,12 @@ class ReservationsController < ApplicationController
     # response_body_json = JSON.parse @response.body
     # @reservation = response_body_json['booking']
 
-    Rails.logger.info "Respuesta: #{@reservation.inspect}"
+    # Rails.logger.info "Respuesta: #{@reservation.inspect}"
 
     if @reservation['status'] == "CONFIRMED"
-      Rails.logger.info "Email: #{params[:holder_email].inspect}"
+      # Rails.logger.info "Email: #{params[:holder_email].inspect}"
       client = Client.find_by_email params[:holder_email]
-      Rails.logger.info "Cliente: #{client.inspect}"
+      # Rails.logger.info "Cliente: #{client.inspect}"
       if client == nil
         client = Client.new
         client.name = params[:holder_name]

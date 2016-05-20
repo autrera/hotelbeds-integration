@@ -1,0 +1,12 @@
+.container
+  .row
+    .col-sm-12
+      = render 'shared/dashboard/logo'
+  .row
+    .col-sm-4.col-sm-offset-8
+      .btn-group.btn-group-justified.btn-group-raised
+        %a.btn{ href: client_reservations_path }
+          Reservaciones
+        = link_to destroy_client_client_session_path, :method => :delete, class: "btn", :data => { confirm: "¿Deseas salir del sistema?" } do
+          = fa_icon 'sign-out'
+          %span.title SALIR

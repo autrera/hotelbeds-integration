@@ -13,7 +13,7 @@ class HotelsController < ApplicationController
     availability_request_hash = generate_availability_request_hash(params)
     content_request_hash = generate_content_request_hash(params)
 
-    Rails.logger.info "Availability Hash #{JSON.generate(availability_request_hash)}"
+    # Rails.logger.info "Availability Hash #{JSON.generate(availability_request_hash)}"
     # respond_to do |format|
     #   format.html { render json: JSON.generate(availability_request_hash) }
     # end
@@ -36,7 +36,7 @@ class HotelsController < ApplicationController
         @hotels_availability = JSON.parse response.body
         # Rails.logger.info "Hotels Availability: #{response.body.inspect}"
       else
-        # Rails.logger.info response.body.inspect
+        Rails.logger.info response.body.inspect
       end
     end
 
@@ -52,7 +52,7 @@ class HotelsController < ApplicationController
         @hotels_content = JSON.parse response.body
         # Rails.logger.info "Hotels Content: #{response.body}"
       else
-        # Rails.logger.info response.body.inspect
+        Rails.logger.info response.body.inspect
       end
     end
 
@@ -79,7 +79,7 @@ class HotelsController < ApplicationController
       hotel: [@hotel_code]
     }
 
-    Rails.logger.info "Availability Hash #{JSON.generate(availability_request_hash)}"
+    # Rails.logger.info "Availability Hash #{JSON.generate(availability_request_hash)}"
     # content_request_hash = generate_content_request_hash(params)
 
     availability_request = Typhoeus::Request.new(
@@ -94,7 +94,7 @@ class HotelsController < ApplicationController
         @hotel_availability = JSON.parse response.body
         # Rails.logger.info "Hotels Availability: #{response.body.inspect}"
       else
-        # Rails.logger.info response.body.inspect
+        Rails.logger.info response.body.inspect
       end
     end
 
@@ -110,7 +110,7 @@ class HotelsController < ApplicationController
         @hotel_content = JSON.parse response.body
         # Rails.logger.info "Hotels Content: #{response.body}"
       else
-        # Rails.logger.info response.body.inspect
+        Rails.logger.info response.body.inspect
       end
     end
 

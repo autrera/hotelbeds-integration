@@ -5,4 +5,31 @@
         .panel-title
           Reservaciones
       .panel-body
+        - if @reservations != nil
+          %table.table.table-striped
+            %tr
+              %th Hotel
+              %th.text-center Destination
+              %th.text-center Check In/Out
+              %th.text-center Created
+              %th.text-center Details
+            - @reservations.each do |reservation|
+              %tr
+                %td
+                  = reservation.hotel_name
+                %td.text-center
+                  = reservation.destination_code
+                %td.text-center
+                  = Date.strptime(reservation.check_in, '%F').strftime('%m/%d/%Y')
+                  %br
+                  = Date.strptime(reservation.check_out, '%F').strftime('%m/%d/%Y')
+                %td.text-center
+                  / # = Date.strptime(reservation.created_at, '%F').strftime('%m/%d/%Y')
+                  = reservation.created_at.strftime('%m/%d/%Y')
+                %td.text-center
+                  %a.btn.btn-primary.btn-xs{ href: client_reservation_path(reservation.reference) }
+                    Detalles
 
+        - else
+          .text-danger.text-center
+            No se encontraron reservaciones

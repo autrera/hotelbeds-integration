@@ -73,7 +73,6 @@
                             %span.fee
                               $
             .col-sm-9
-              - Rails.logger.info "Boards: #{room['boards'].inspect}"
               - keys = room['boards'].keys
               - keys.each do |key|
                 - board_name = ""

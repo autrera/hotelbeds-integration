@@ -5,5 +5,5 @@ class ClientController < ActionController::Base
   before_action :authenticate_client_client!
   # before_action :set_sidebar_partial
 
-  layout 'dashboard'
+  layout 'client_dashboard'
 end
