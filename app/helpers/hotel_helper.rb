@@ -60,16 +60,16 @@ module HotelHelper
     return '/hotels/' + hotel["name"]["content"].parameterize + "-" + hotel["code"].to_s
   end
 
-  def calculate_gross_room_rate(rate)
+  def calculate_gross_room_rate(rate, currency)
     if rate.has_key? 'hotelMandatory'
       # rate_in_cents = rate['sellingRate'].to_f * 100
-      rate_in_cents = Monetize.parse(rate['sellingRate'])
+      rate_in_cents = Monetize.parse("#{currency} #{rate['sellingRate']}")
     else
       # rate_in_cents = rate['net'].to_f * 100 # * 1.25
-      rate_in_cents = Monetize.parse(rate['net']) # * 1.25
+      rate_in_cents = Monetize.parse("#{currency} #{rate['net']}") # * 1.25
     end
 
-    discount_in_cents = Money.new(0, "USD")
+    discount_in_cents = Money.new(0, currency)
     if rate.has_key? 'offers'
       rate['offers'].each do |offer|
         # discount_in_cents += offer['amount'].to_f * (-1) * 100

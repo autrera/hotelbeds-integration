@@ -76,17 +76,17 @@
               - keys = room['boards'].keys
               - keys.each do |key|
                 - board_name = ""
-                - gross_sum = Money.new(0, @hotel_availability['hotels']['hotels'][0]['currency'])
-                - client_total_sum = Money.new(0, @hotel_availability['hotels']['hotels'][0]['currency'])
+                - currency = @hotel_availability['hotels']['hotels'][0]['currency']
+                - gross_sum = Money.new(0, currency)
+                - client_total_sum = Money.new(0, currency)
                 - offers = []
                 - rate_keys = []
-                - cancellation_policies = { amount: Money.new(0, @hotel_availability['hotels']['hotels'][0]['currency']), from: "" }
-                - currency = ""
+                - cancellation_policies = { amount: Money.new(0, currency), from: "" }
                 - rate_class = ""
                 - room['boards'][key].each do |rate|
                   - board_name = rate['boardName']
-                  - calculated_rates = calculate_gross_room_rate(rate)
-                  - currency = calculated_rates['client_total'].currency.iso_code
+                  - calculated_rates = calculate_gross_room_rate(rate, currency)
+                  / # - currency = calculated_rates['client_total'].currency.iso_code
                   - gross_sum += calculated_rates["gross"]
                   - client_total_sum += calculated_rates["client_total"]
                   - rate_class = rate['rateClass']
@@ -96,7 +96,7 @@
                       - offers.push offer
                   - if rate.has_key? 'cancellationPolicies'
                     - rate['cancellationPolicies'].each do |cancellation_policy|
-                      - cancellation_policies[:amount] += Monetize.parse(cancellation_policy['amount'])
+                      - cancellation_policies[:amount] += Monetize.parse("#{currency} #{cancellation_policy['amount']}")
                       - cancellation_policies[:from] = cancellation_policy['from']
                 .rate
                   .row
