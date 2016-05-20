@@ -71,6 +71,732 @@
             "zones": [1]
         }]
     }, {
+        "code": "BCN",
+        "name": {
+            "content": "Barcelona"
+        },
+        "countryCode": "ES",
+        "isoCode": "ES",
+        "zones": [{
+            "zoneCode": 1,
+            "name": "Montcada i Reixach",
+            "description": {
+                "content": "Montcada i Reixach"
+            }
+        }, {
+            "zoneCode": 2,
+            "name": "Vilafranca",
+            "description": {
+                "content": "Vilafranca"
+            }
+        }, {
+            "zoneCode": 3,
+            "name": "Badalona",
+            "description": {
+                "content": "Badalona"
+            }
+        }, {
+            "zoneCode": 4,
+            "name": "Sant Cugat del Valles",
+            "description": {
+                "content": "Sant Cugat del Valles"
+            }
+        }, {
+            "zoneCode": 5,
+            "name": "Sant Boi de Llobregat",
+            "description": {
+                "content": "Sant Boi de Llobregat"
+            }
+        }, {
+            "zoneCode": 6,
+            "name": "Vall DHebron",
+            "description": {
+                "content": "Vall DHebron"
+            }
+        }, {
+            "zoneCode": 7,
+            "name": "Esplugues del Llobregat",
+            "description": {
+                "content": "Esplugues del Llobregat"
+            }
+        }, {
+            "zoneCode": 8,
+            "name": "El Born",
+            "description": {
+                "content": "El Born"
+            }
+        }, {
+            "zoneCode": 9,
+            "name": "Montserrat",
+            "description": {
+                "content": "Montserrat"
+            }
+        }, {
+            "zoneCode": 10,
+            "name": "Granollers Area",
+            "description": {
+                "content": "Granollers Area"
+            }
+        }, {
+            "zoneCode": 11,
+            "name": "Hospitalet de Llobregat",
+            "description": {
+                "content": "Hospitalet de Llobregat"
+            }
+        }, {
+            "zoneCode": 12,
+            "name": "Sant Quirze de Besora",
+            "description": {
+                "content": "Sant Quirze de Besora"
+            }
+        }, {
+            "zoneCode": 13,
+            "name": "Alella",
+            "description": {
+                "content": "Alella"
+            }
+        }, {
+            "zoneCode": 14,
+            "name": "Olerdola",
+            "description": {
+                "content": "Olerdola"
+            }
+        }, {
+            "zoneCode": 15,
+            "name": "La Garriga",
+            "description": {
+                "content": "La Garriga"
+            }
+        }, {
+            "zoneCode": 16,
+            "name": "Cerdanyola del Valles",
+            "description": {
+                "content": "Cerdanyola del Valles"
+            }
+        }, {
+            "zoneCode": 17,
+            "name": "Barbera del Valles",
+            "description": {
+                "content": "Barbera del Valles"
+            }
+        }, {
+            "zoneCode": 18,
+            "name": "Rubi",
+            "description": {
+                "content": "Rubi"
+            }
+        }, {
+            "zoneCode": 19,
+            "name": "Terrassa",
+            "description": {
+                "content": "Terrassa"
+            }
+        }, {
+            "zoneCode": 20,
+            "name": "Martorell Area",
+            "description": {
+                "content": "Martorell Area"
+            }
+        }, {
+            "zoneCode": 21,
+            "name": "Sabadell",
+            "description": {
+                "content": "Sabadell"
+            }
+        }, {
+            "zoneCode": 22,
+            "name": "Igualada Area",
+            "description": {
+                "content": "Igualada Area"
+            }
+        }, {
+            "zoneCode": 23,
+            "name": "Castelldefells Area",
+            "description": {
+                "content": "Castelldefells Area"
+            }
+        }, {
+            "zoneCode": 24,
+            "name": "Torrelles de Llobregat",
+            "description": {
+                "content": "Torrelles de Llobregat"
+            }
+        }, {
+            "zoneCode": 25,
+            "name": "Santa Coloma de Gramanet",
+            "description": {
+                "content": "Santa Coloma de Gramanet"
+            }
+        }, {
+            "zoneCode": 27,
+            "name": "Viladecans",
+            "description": {
+                "content": "Viladecans"
+            }
+        }, {
+            "zoneCode": 40,
+            "name": "Sant Just Desvern",
+            "description": {
+                "content": "Sant Just Desvern"
+            }
+        }, {
+            "zoneCode": 41,
+            "name": "Las Ramblas",
+            "description": {
+                "content": "Las Ramblas"
+            }
+        }, {
+            "zoneCode": 42,
+            "name": "Paseo de Gracia",
+            "description": {
+                "content": "Paseo de Gracia"
+            }
+        }, {
+            "zoneCode": 43,
+            "name": "Eixample",
+            "description": {
+                "content": "Eixample"
+            }
+        }, {
+            "zoneCode": 44,
+            "name": "Parallel",
+            "description": {
+                "content": "Parallel"
+            }
+        }, {
+            "zoneCode": 45,
+            "name": "Barrio Gotico",
+            "description": {
+                "content": "Barrio Gotico"
+            }
+        }, {
+            "zoneCode": 46,
+            "name": "Sagrada Familia Area",
+            "description": {
+                "content": "Sagrada Familia Area"
+            }
+        }, {
+            "zoneCode": 47,
+            "name": "Plaza Catalunya",
+            "description": {
+                "content": "Plaza Catalunya"
+            }
+        }, {
+            "zoneCode": 48,
+            "name": "Barcelona Aeropuerto Area",
+            "description": {
+                "content": "Barcelona Aeropuerto Area"
+            }
+        }, {
+            "zoneCode": 49,
+            "name": "Park Güell Area",
+            "description": {
+                "content": "Park Güell Area"
+            }
+        }, {
+            "zoneCode": 51,
+            "name": "Camp Nou Area",
+            "description": {
+                "content": "Camp Nou Area"
+            }
+        }, {
+            "zoneCode": 52,
+            "name": "Paseo Marítimo / Playa",
+            "description": {
+                "content": "Paseo Marítimo / Playa"
+            }
+        }, {
+            "zoneCode": 53,
+            "name": "Diagonal N.",
+            "description": {
+                "content": "Diagonal N."
+            }
+        }, {
+            "zoneCode": 54,
+            "name": "Diagonal S.",
+            "description": {
+                "content": "Diagonal S."
+            }
+        }, {
+            "zoneCode": 55,
+            "name": "Sants-Montjuic",
+            "description": {
+                "content": "Sants-Montjuic"
+            }
+        }, {
+            "zoneCode": 56,
+            "name": "Gracia Area",
+            "description": {
+                "content": "Gracia Area"
+            }
+        }, {
+            "zoneCode": 57,
+            "name": "Sarria Area",
+            "description": {
+                "content": "Sarria Area"
+            }
+        }, {
+            "zoneCode": 58,
+            "name": "Otras Zonas",
+            "description": {
+                "content": "Otras Zonas"
+            }
+        }, {
+            "zoneCode": 59,
+            "name": "Molins de Rei",
+            "description": {
+                "content": "Molins de Rei"
+            }
+        }, {
+            "zoneCode": 60,
+            "name": "Cardona Area",
+            "description": {
+                "content": "Cardona Area"
+            }
+        }, {
+            "zoneCode": 61,
+            "name": "Seva Area",
+            "description": {
+                "content": "Seva Area"
+            }
+        }, {
+            "zoneCode": 62,
+            "name": "Manresa Area",
+            "description": {
+                "content": "Manresa Area"
+            }
+        }, {
+            "zoneCode": 63,
+            "name": "Mollet del Valles",
+            "description": {
+                "content": "Mollet del Valles"
+            }
+        }, {
+            "zoneCode": 64,
+            "name": "Cornella del Llobregat",
+            "description": {
+                "content": "Cornella del Llobregat"
+            }
+        }, {
+            "zoneCode": 65,
+            "name": "Sant Joan Despi",
+            "description": {
+                "content": "Sant Joan Despi"
+            }
+        }, {
+            "zoneCode": 66,
+            "name": "Caldes de Montbui",
+            "description": {
+                "content": "Caldes de Montbui"
+            }
+        }, {
+            "zoneCode": 89,
+            "name": "Mataro Area",
+            "description": {
+                "content": "Mataro Area"
+            }
+        }, {
+            "zoneCode": 90,
+            "name": "Vic Area",
+            "description": {
+                "content": "Vic Area"
+            }
+        }, {
+            "zoneCode": 91,
+            "name": "La Maquinista Area",
+            "description": {
+                "content": "La Maquinista Area"
+            }
+        }, {
+            "zoneCode": 93,
+            "name": "Sant Esteve de Palautordera"
+        }, {
+            "zoneCode": 94,
+            "name": "Vallromanes",
+            "description": {
+                "content": "Vallromanes"
+            }
+        }, {
+            "zoneCode": 95,
+            "name": "Vilassar De Dalt",
+            "description": {
+                "content": "Vilassar De Dalt"
+            }
+        }],
+        "groupZones": [{
+            "groupZoneCode": "BARCEBCN9",
+            "name": {
+                "content": "Barcelona city"
+            },
+            "zones": [6, 8, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 53, 54, 55, 56, 57, 91]
+        }, {
+            "groupZoneCode": "BCN-1",
+            "name": {
+                "content": "Montcada i Reixach"
+            },
+            "zones": [1]
+        }, {
+            "groupZoneCode": "BCN-10",
+            "name": {
+                "content": "Granollers"
+            },
+            "zones": [10]
+        }, {
+            "groupZoneCode": "BCN-11",
+            "name": {
+                "content": "Hospitalet de Llobregat"
+            },
+            "zones": [11]
+        }, {
+            "groupZoneCode": "BCN-12",
+            "name": {
+                "content": "Barcelona Central"
+            },
+            "zones": [8, 41, 42, 43, 44, 45, 46, 47]
+        }, {
+            "groupZoneCode": "BCN-13",
+            "name": {
+                "content": "Barcelona city"
+            },
+            "zones": [6, 8, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 53, 54, 55, 56, 57, 91]
+        }, {
+            "groupZoneCode": "BCN-14",
+            "name": {
+                "content": "Barcelona Surroundings"
+            },
+            "zones": [1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 40, 59, 60, 61, 62, 63, 65, 89, 90]
+        }, {
+            "groupZoneCode": "BCN-15",
+            "name": {
+                "content": "Alella"
+            },
+            "zones": [13]
+        }, {
+            "groupZoneCode": "BCN-16",
+            "name": {
+                "content": "La Garriga"
+            },
+            "zones": [15]
+        }, {
+            "groupZoneCode": "BCN-17",
+            "name": {
+                "content": "Barbera del Valles"
+            },
+            "zones": [17]
+        }, {
+            "groupZoneCode": "BCN-18",
+            "name": {
+                "content": "Rubi"
+            },
+            "zones": [18]
+        }, {
+            "groupZoneCode": "BCN-19",
+            "name": {
+                "content": "Terrassa"
+            },
+            "zones": [19]
+        }, {
+            "groupZoneCode": "BCN-2",
+            "name": {
+                "content": "Vilafranca"
+            },
+            "zones": [2]
+        }, {
+            "groupZoneCode": "BCN-20",
+            "name": {
+                "content": "Martorell"
+            },
+            "zones": [20]
+        }, {
+            "groupZoneCode": "BCN-21",
+            "name": {
+                "content": "Sabadell"
+            },
+            "zones": [21]
+        }, {
+            "groupZoneCode": "BCN-22",
+            "name": {
+                "content": "Igualada"
+            },
+            "zones": [22]
+        }, {
+            "groupZoneCode": "BCN-23",
+            "name": {
+                "content": "Castelldefells city area"
+            },
+            "zones": [23]
+        }, {
+            "groupZoneCode": "BCN-24",
+            "name": {
+                "content": "Sant Joan Despi"
+            },
+            "zones": [65]
+        }, {
+            "groupZoneCode": "BCN-25",
+            "name": {
+                "content": "Torrelles de Llobregat"
+            },
+            "zones": [24]
+        }, {
+            "groupZoneCode": "BCN-27",
+            "name": {
+                "content": "Viladecans"
+            },
+            "zones": [27]
+        }, {
+            "groupZoneCode": "BCN-3",
+            "name": {
+                "content": "Badalona"
+            },
+            "zones": [3]
+        }, {
+            "groupZoneCode": "BCN-4",
+            "name": {
+                "content": "Sant Cugat del Valles"
+            },
+            "zones": [4]
+        }, {
+            "groupZoneCode": "BCN-40",
+            "name": {
+                "content": "Sant Just Desvern"
+            },
+            "zones": [40]
+        }, {
+            "groupZoneCode": "BCN-41",
+            "name": {
+                "content": "Las Ramblas"
+            },
+            "zones": [41]
+        }, {
+            "groupZoneCode": "BCN-42",
+            "name": {
+                "content": "Paseo de Gracia"
+            },
+            "zones": [42]
+        }, {
+            "groupZoneCode": "BCN-43",
+            "name": {
+                "content": "Eixample"
+            },
+            "zones": [43]
+        }, {
+            "groupZoneCode": "BCN-44",
+            "name": {
+                "content": "Parallel"
+            },
+            "zones": [44]
+        }, {
+            "groupZoneCode": "BCN-45",
+            "name": {
+                "content": "Gothic Quarter"
+            },
+            "zones": [45]
+        }, {
+            "groupZoneCode": "BCN-46",
+            "name": {
+                "content": "Sagrada Familia Area"
+            },
+            "zones": [46]
+        }, {
+            "groupZoneCode": "BCN-47",
+            "name": {
+                "content": "Plaza Catalunya"
+            },
+            "zones": [47]
+        }, {
+            "groupZoneCode": "BCN-48",
+            "name": {
+                "content": "Barcelona Airport Area"
+            },
+            "zones": [48]
+        }, {
+            "groupZoneCode": "BCN-49",
+            "name": {
+                "content": "Park Güell Area"
+            },
+            "zones": [49]
+        }, {
+            "groupZoneCode": "BCN-5",
+            "name": {
+                "content": "Sant Boi de Llobregat"
+            },
+            "zones": [5]
+        }, {
+            "groupZoneCode": "BCN-51",
+            "name": {
+                "content": "Camp Nou Stadium Area"
+            },
+            "zones": [51]
+        }, {
+            "groupZoneCode": "BCN-52",
+            "name": {
+                "content": "Barcelona - Sea Front - Beach Area"
+            },
+            "zones": [52]
+        }, {
+            "groupZoneCode": "BCN-53",
+            "name": {
+                "content": "North Diagonal"
+            },
+            "zones": [53]
+        }, {
+            "groupZoneCode": "BCN-54",
+            "name": {
+                "content": "South Diagonal"
+            },
+            "zones": [54]
+        }, {
+            "groupZoneCode": "BCN-55",
+            "name": {
+                "content": "Sants-Montjuic"
+            },
+            "zones": [55]
+        }, {
+            "groupZoneCode": "BCN-56",
+            "name": {
+                "content": "Gracia area"
+            },
+            "zones": [56]
+        }, {
+            "groupZoneCode": "BCN-57",
+            "name": {
+                "content": "Sarria Area"
+            },
+            "zones": [57]
+        }, {
+            "groupZoneCode": "BCN-58",
+            "name": {
+                "content": "Otras Zonas"
+            },
+            "zones": [58]
+        }, {
+            "groupZoneCode": "BCN-59",
+            "name": {
+                "content": "Molins De Rei"
+            },
+            "zones": [59]
+        }, {
+            "groupZoneCode": "BCN-6",
+            "name": {
+                "content": "Cerdanyola del Valles"
+            },
+            "zones": [16]
+        }, {
+            "groupZoneCode": "BCN-60",
+            "name": {
+                "content": "Cardona"
+            },
+            "zones": [60]
+        }, {
+            "groupZoneCode": "BCN-61",
+            "name": {
+                "content": "Seva"
+            },
+            "zones": [61]
+        }, {
+            "groupZoneCode": "BCN-62",
+            "name": {
+                "content": "Manresa"
+            },
+            "zones": [62]
+        }, {
+            "groupZoneCode": "BCN-63",
+            "name": {
+                "content": "Mollet del Valles"
+            },
+            "zones": [63]
+        }, {
+            "groupZoneCode": "BCN-64",
+            "name": {
+                "content": "Cornella del Llobregat"
+            },
+            "zones": [64]
+        }, {
+            "groupZoneCode": "BCN-66",
+            "name": {
+                "content": "Caldes de Montbui"
+            },
+            "zones": [66]
+        }, {
+            "groupZoneCode": "BCN-7",
+            "name": {
+                "content": "Esplugues de Llobregat"
+            },
+            "zones": [7]
+        }, {
+            "groupZoneCode": "BCN-71",
+            "name": {
+                "content": "Vall d'Hebron"
+            },
+            "zones": [6]
+        }, {
+            "groupZoneCode": "BCN-8",
+            "name": {
+                "content": "El Born"
+            },
+            "zones": [8]
+        }, {
+            "groupZoneCode": "BCN-89",
+            "name": {
+                "content": "Mataro"
+            },
+            "zones": [89]
+        }, {
+            "groupZoneCode": "BCN-9",
+            "name": {
+                "content": "Montserrat"
+            },
+            "zones": [9]
+        }, {
+            "groupZoneCode": "BCN-90",
+            "name": {
+                "content": "Vic Area"
+            },
+            "zones": [90]
+        }, {
+            "groupZoneCode": "BCN-91",
+            "name": {
+                "content": "La Maquinista Area"
+            },
+            "zones": [91]
+        }, {
+            "groupZoneCode": "BCN-93",
+            "name": {
+                "content": "Sant Quize de Besora"
+            },
+            "zones": [12]
+        }, {
+            "groupZoneCode": "BCN-94",
+            "name": {
+                "content": "Vallromanes"
+            },
+            "zones": [14, 94]
+        }, {
+            "groupZoneCode": "BCN-95",
+            "name": {
+                "content": "Santa Coloma de Gramanet"
+            },
+            "zones": [25]
+        }, {
+            "groupZoneCode": "BCN-96",
+            "name": {
+                "content": "Vilassar de Dalt"
+            },
+            "zones": [95]
+        }, {
+            "groupZoneCode": "BCN-99",
+            "name": {
+                "content": "Olerdola"
+            },
+            "zones": [14]
+        }, {
+            "groupZoneCode": "RESTOBCN16",
+            "name": {
+                "content": "REST OF PROVINCE"
+            },
+            "zones": [1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 27, 40, 58, 59, 60, 61, 62, 63, 64, 65, 66, 89, 90]
+        }]
+    }, {
         "code": "BDC",
         "name": {
             "content": "Barrancas del Cobre"
