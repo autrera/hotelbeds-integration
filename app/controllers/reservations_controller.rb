@@ -113,7 +113,7 @@ class ReservationsController < ApplicationController
     client_total = Money.new(0, @hotel['currency'])
     @hotel['rooms'].each do |room|
       room['rates'].each do |rate|
-        client_total += (calculate_gross_room_rate(rate))['client_total']
+        client_total += (calculate_gross_room_rate(rate, @hotel['currency']))['client_total']
       end
     end
 
