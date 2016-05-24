@@ -209,4 +209,5 @@
                   = @hotel['currency']
                   = "$#{@hotel['rooms'][0]['rates'][0]['cancellationPolicies'][0]['amount']}"
                   después del
-                  = DateTime.iso8601(@hotel['rooms'][0]['rates'][0]['cancellationPolicies'][0]['from']).strftime("%m/%d/%Y %T %Z")
+                  = DateTime.iso8601(@hotel['rooms'][0]['rates'][0]['cancellationPolicies'][0]['from']).strftime("%m/%d/%Y %T %Z") + "."
+                  Uso horario del destino.

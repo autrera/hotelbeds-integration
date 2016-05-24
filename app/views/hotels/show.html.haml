@@ -152,7 +152,8 @@
                             = currency
                             = cancellation_policies[:amount].format
                             despúes del
-                            = DateTime.iso8601(cancellation_policies[:from]).strftime("%m/%d/%Y %T %Z")
+                            = DateTime.iso8601(cancellation_policies[:from]).strftime('%m/%d/%Y %T %Z') + "."
+                            Uso horario del destino.
 
     #hotel-facilities.facilities
       .row
