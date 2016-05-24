@@ -151,6 +151,12 @@ class HotelsController < ApplicationController
           end
         end
       end
+      keys = new_rate_structure.keys
+      keys.each do |key|
+        if new_rate_structure[key].length < params[:number_of_rooms].to_i
+          new_rate_structure.delete key
+        end
+      end
       room['boards'] = new_rate_structure
     end
 
