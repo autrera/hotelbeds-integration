@@ -1,42 +1,46 @@
 %h1= "Hoteles en #{full_destination(@country_code, @destination_code, @zone_code)}"
 %br
 .hotels
-  - @hotels_content['hotels'].each do |hotel|
-    - hotel_availability = extract_hotel_availability(hotel['code'], @hotels_availability['hotels']['hotels'])
-    - next if hotel_availability == nil
-    - hotel_show_link = hotel_link(hotel) + "?" + request.query_parameters.to_query
-    .hotel-index
-      .row
-        .col-sm-2
-          %a.with-loader.image-container{ href: hotel_show_link }
-            %img{ src: hotel_image(hotel) }
-        .col-sm-8
-          .row
-            .col-sm-12
-              %h2
-                %a.with-loader{ href: hotel_show_link }
-                  = hotel["name"]["content"]
-                  %small
-                    = "(#{hotel_availability["categoryName"]})"
-                %span.star-rating{ class: "star-" + hotel["categoryCode"] }
-                  &nbsp;
-          .row
-            .col-sm-12
-              - if hotel.has_key? "description"
-                %p= hotel["description"]["content"].truncate(200, separator: ' ')
-        .col-sm-2
-          .row
-            .col-sm-12
-              .text-center
-                Habitación desde
-          .row
-            .col-sm-12
-              .price
-                = hotel_availability['currency']
-                $
-                = hotel_availability['minRate']
-          .row
-            .col-sm-12
-              %a.with-loader.btn.btn-block.btn-warning{ href: hotel_show_link }
-                Ver Hotel
-                = fa_icon "angle-right"
+  - if @hotels_availability['hotels']['hotels'] == nil
+    .alert.alert-danger{ style: 'margin: 28px 0 89px;' }
+      Lo sentimos, pero no encontramos ningún Hotel en el destino. Favor de seleccionar otro.
+  - else
+    - @hotels_content['hotels'].each do |hotel|
+      - hotel_availability = extract_hotel_availability(hotel['code'], @hotels_availability['hotels']['hotels'])
+      - next if hotel_availability == nil
+      - hotel_show_link = hotel_link(hotel) + "?" + request.query_parameters.to_query
+      .hotel-index
+        .row
+          .col-sm-2
+            %a.with-loader.image-container{ href: hotel_show_link }
+              %img{ src: hotel_image(hotel) }
+          .col-sm-8
+            .row
+              .col-sm-12
+                %h2
+                  %a.with-loader{ href: hotel_show_link }
+                    = hotel["name"]["content"]
+                    %small
+                      = "(#{hotel_availability["categoryName"]})"
+                  %span.star-rating{ class: "star-" + hotel["categoryCode"] }
+                    &nbsp;
+            .row
+              .col-sm-12
+                - if hotel.has_key? "description"
+                  %p= hotel["description"]["content"].truncate(200, separator: ' ')
+          .col-sm-2
+            .row
+              .col-sm-12
+                .text-center
+                  Habitación desde
+            .row
+              .col-sm-12
+                .price
+                  = hotel_availability['currency']
+                  $
+                  = hotel_availability['minRate']
+            .row
+              .col-sm-12
+                %a.with-loader.btn.btn-block.btn-warning{ href: hotel_show_link }
+                  Ver Hotel
+                  = fa_icon "angle-right"

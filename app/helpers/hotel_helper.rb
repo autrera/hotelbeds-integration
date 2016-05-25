@@ -73,7 +73,7 @@ module HotelHelper
     if rate.has_key? 'offers'
       rate['offers'].each do |offer|
         # discount_in_cents += offer['amount'].to_f * (-1) * 100
-        discount_in_cents += Monetize.parse(offer['amount'].delete("-"))
+        discount_in_cents += Monetize.parse("#{currency} #{offer['amount'].delete("-")}")
       end
     end
 

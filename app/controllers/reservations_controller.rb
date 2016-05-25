@@ -175,7 +175,14 @@ class ReservationsController < ApplicationController
 
     # Rails.logger.info "Cargo: #{charge.inspect}"
 
-    render :back unless charge.status == "paid"
+    # if charge == nil
+    #   redirect_to(:back, :flash => { :error => "No se pudo realizar el cargo." })
+    #   return
+    # end
+    # unless charge.status == "paid"
+    #   redirect_to(:back, :flash => { :error => "No se pudo realizar el cargo." })
+    #   return
+    # end
 
     signature = generate_signature
 
@@ -229,6 +236,11 @@ class ReservationsController < ApplicationController
     # @reservation = response_body_json['booking']
 
     # Rails.logger.info "Respuesta: #{@reservation.inspect}"
+
+    unless @reservation.has_key? 'status'
+      redirect_to error_reservations_path error: true
+      return
+    end
 
     if @reservation['status'] == "CONFIRMED"
       # Rails.logger.info "Email: #{params[:holder_email].inspect}"

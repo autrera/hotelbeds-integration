@@ -1,8 +1,12 @@
 .new-reservation
   .row
-    %form#new-reservation-form{ action: reservations_path, method: :post }
+    .col-sm-12
+      - flash.each do |key, value|
+        = content_tag :div, value, class: "alert alert-danger #{key}"
       %span.card-errors
 
+  .row
+    %form#new-reservation-form{ action: reservations_path, method: :post }
       = hidden_field_tag :authenticity_token, form_authenticity_token
       = hidden_field_tag :hotel_id, @hotel['code']
       - params[:rate_key].each do |rate|

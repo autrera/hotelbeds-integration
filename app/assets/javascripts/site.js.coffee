@@ -1,5 +1,7 @@
 ready = () ->
 
+  $('.loader').addClass 'hidden'
+
   showLoader = () ->
     $('.loader').removeClass 'hidden'
     return
