@@ -210,9 +210,10 @@ class ReservationsController < ApplicationController
     end
 
     content_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels/#{params[:hotel_id]}",
+      "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels/#{params[:hotel_id]}?language=CAS",
       method: :get,
       params: { fields: "all" },
+      accept_encoding: "gzip",
       headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
     )
     content_request.on_complete do |response|
