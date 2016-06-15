@@ -61,18 +61,18 @@ module BookingForm
       end
     end
 
-    country_code, destination_code, zone_code = params['destination'].split '-'
+    # country_code, destination_code, zone_code = params['destination'].split '-'
 
-    if zone_code != nil
-      hash["destination"] = {
-        code: destination_code,
-        zone: zone_code
-      }
-    else
-      hash["destination"] = {
-        code: destination_code
-      }
-    end
+    # if zone_code != nil
+    #   hash["destination"] = {
+    #     code: destination_code,
+    #     zone: zone_code
+    #   }
+    # else
+    #   hash["destination"] = {
+    #     code: destination_code
+    #   }
+    # end
 
     hash["filter"] = {
       paymentType: "AT_WEB"

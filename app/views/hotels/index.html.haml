@@ -1,7 +1,7 @@
 %h1= "Hoteles en #{full_destination(@country_code, @destination_code, @zone_code)}"
 %br
 .hotels
-  - if @hotels_availability['hotels']['hotels'] == nil
+  - if @hotels_availability == nil
     .alert.alert-danger{ style: 'margin: 28px 0 89px;' }
       Lo sentimos, pero no encontramos ningún Hotel en el destino. Favor de seleccionar otro.
   - else

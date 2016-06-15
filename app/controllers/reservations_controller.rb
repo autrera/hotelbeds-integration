@@ -69,6 +69,8 @@ class ReservationsController < ApplicationController
       }
     end
 
+    # Rails.logger.info "Rate Keys: #{JSON.generate(rate_keys_hash)}"
+
     signature = generate_signature
 
     check_rates_request = Typhoeus::Request.new(
@@ -82,7 +84,7 @@ class ReservationsController < ApplicationController
     @response = check_rates_request.response
     @hotel = (JSON.parse @response.body)['hotel']
 
-    # Rails.logger.info "Response: #{@response.body.inspect}"
+    # Rails.logger.info "Recheck Rates Response: #{@response.body}"
   end
 
   def create
@@ -98,6 +100,8 @@ class ReservationsController < ApplicationController
     end
 
     signature = generate_signature
+
+    # Rails.logger.info "Rate Keys: #{JSON.generate(rate_keys_hash)}"
 
     check_rates_request = Typhoeus::Request.new(
       "https://api.test.hotelbeds.com/hotel-api/1.0/checkrates",
@@ -203,7 +207,7 @@ class ReservationsController < ApplicationController
       if response.success?
         response_body_json = JSON.parse response.body
         @reservation = response_body_json['booking']
-        # Rails.logger.info "Reservation: #{response.body.inspect}"
+        # Rails.logger.info "Reservation: #{response.body}"
       else
         Rails.logger.info "Reservation: #{response.body.inspect}"
       end
