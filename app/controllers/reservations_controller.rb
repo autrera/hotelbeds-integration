@@ -1,5 +1,7 @@
 class ReservationsController < ApplicationController
 
+  force_ssl if: :ssl_configured?
+
   include BookingForm
   include HotelHelper
 
@@ -209,7 +211,7 @@ class ReservationsController < ApplicationController
         @reservation = response_body_json['booking']
         # Rails.logger.info "Reservation: #{response.body}"
       else
-        Rails.logger.info "Reservation: #{response.body.inspect}"
+        Rails.logger.info "Reservation: #{response.body}"
       end
     end
 
@@ -313,5 +315,11 @@ class ReservationsController < ApplicationController
       render 'error'
     end
   end
+
+  private
+
+    def ssl_configured?
+      !Rails.env.development?
+    end
 
 end
