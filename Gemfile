@@ -32,7 +32,8 @@ gem 'devise'
 gem 'monetize'
 gem 'money'
 # Plataforma de pago
-gem 'conekta'
+# gem 'conekta'
+gem 'paypal-sdk-rest'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

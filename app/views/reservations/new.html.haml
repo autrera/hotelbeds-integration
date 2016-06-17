@@ -192,10 +192,11 @@
                           = @hotel['currency']
                           $
                           = offer['amount'].to_f * -1
-                  - if @hotel['rooms'][0]['rates'][0]['taxes']['allIncluded'] == true
-                    %tr
-                      %td.text-right
-                        Todos los impuestos incluidos
+                  - if @hotel['rooms'][0]['rates'][0].has_key? 'taxes'
+                    - if @hotel['rooms'][0]['rates'][0]['taxes']['allIncluded'] == true
+                      %tr
+                        %td.text-right
+                          Todos los impuestos incluidos
                   %tr
                     %td.text-right
                       .total-net
