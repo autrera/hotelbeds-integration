@@ -23,14 +23,11 @@ class HotelsController < ApplicationController
     content_response = content_request.response
     if content_response.success?
       @hotels_content = JSON.parse content_response.body
-      # Rails.logger.info "Hotels Content: #{content_response.body.inspect}"
+      # Rails.logger.info "Hotels Content: #{content_response.body}"
       # Rails.logger.info "Hotels Content: #{@hotels_content.inspect}"
     else
-      Rails.logger.info content_response.body.inspect
+      Rails.logger.info content_response.body
     end
-
-    # Rails.logger.info "Availability Hash #{JSON.generate(availability_request_hash)}"
-    # Rails.logger.info "Hotels Map: #{@hotels_content['hotels'].map { |e| e['code'] }}"
 
     availability_request_hash = generate_availability_request_hash(params)
     availability_request_hash["hotels"] = {
@@ -50,9 +47,9 @@ class HotelsController < ApplicationController
     availability_response = availability_request.response
     if availability_response.success?
       @hotels_availability = JSON.parse availability_response.body
-      # Rails.logger.info "Hotels Availability: #{availability_response.body.inspect}"
+      # Rails.logger.info "Hotels Availability: #{availability_response.body}"
     else
-      Rails.logger.info availability_response.body.inspect
+      Rails.logger.info availability_response.body
     end
 
     # hydra = Typhoeus::Hydra.hydra
@@ -109,7 +106,7 @@ class HotelsController < ApplicationController
         @hotel_content = JSON.parse response.body
         # Rails.logger.info "Hotels Content: #{response.body}"
       else
-        Rails.logger.info response.body.inspect
+        Rails.logger.info response.body
       end
     end
 
