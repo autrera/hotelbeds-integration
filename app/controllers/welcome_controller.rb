@@ -14,6 +14,7 @@ class WelcomeController < ApplicationController
   end
 
   def letsencrypt
-    render text: "C1e3XhAIk_jfgWe1qxNC6J-r_83yR2GAFYfju5d_NT0.2EdrOjgOoZdLN7d_2JUHU0C_vatKPkygTLwqRfGQtz4"
+
+    render text: "#{params[:id]}.2EdrOjgOoZdLN7d_2JUHU0C_vatKPkygTLwqRfGQtz4"
   end
 end
