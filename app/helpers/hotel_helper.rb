@@ -66,7 +66,7 @@ module HotelHelper
       rate_in_cents = Monetize.parse("#{currency} #{rate['sellingRate']}")
     else
       # rate_in_cents = rate['net'].to_f * 100 # * 1.25
-      rate_in_cents = Monetize.parse("#{currency} #{rate['net']}") # * 1.25
+      rate_in_cents = Monetize.parse("#{currency} #{rate['net']}") * 1.25
     end
 
     discount_in_cents = Money.new(0, currency)
@@ -80,6 +80,11 @@ module HotelHelper
     gross_rate_in_cents = rate_in_cents + discount_in_cents
 
     return { "gross" => gross_rate_in_cents, "client_total" => rate_in_cents }
+  end
+
+  def add_markup_to_rate(rate, currency)
+    new_rate = Monetize.parse("#{currency} #{rate}") * 1.25
+    return new_rate
   end
 
   def group_facilities(facilities)

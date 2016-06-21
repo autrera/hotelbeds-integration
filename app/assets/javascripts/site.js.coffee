@@ -137,15 +137,15 @@ ready = () ->
         $('input[name=card_cvc]').addClass 'error'
         return
 
-      Conekta.setPublishableKey('key_ERsAnyHxGz7r4R71vmPfQxw');
+      # Conekta.setPublishableKey('key_ERsAnyHxGz7r4R71vmPfQxw');
 
       $form = $('#new-reservation-form')
 
       # Previene hacer submit más de una vez
       $form.find("button").prop("disabled", true)
-      Conekta.token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler)
+      # Conekta.token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler)
 
-      # $('#new-reservation-form').submit()
+      $('#new-reservation-form').submit()
 
       return
 

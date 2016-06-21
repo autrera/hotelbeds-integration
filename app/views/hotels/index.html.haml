@@ -38,7 +38,7 @@
                 .price
                   = hotel_availability['currency']
                   $
-                  = hotel_availability['minRate']
+                  = add_markup_to_rate(hotel_availability['minRate'], hotel_availability['currency'])
             .row
               .col-sm-12
                 %a.with-loader.btn.btn-block.btn-warning{ href: hotel_show_link }

@@ -6,11 +6,11 @@
       %span.card-errors
 
   .row
-    %form#new-reservation-form{ action: reservations_path, method: :post }
+    %form#new-reservation-form{ action: payment_reservations_path, method: :get }
       = hidden_field_tag :authenticity_token, form_authenticity_token
       = hidden_field_tag :hotel_id, @hotel['code']
-      - params[:rate_key].each do |rate|
-        = hidden_field_tag "rate_key[]", rate
+      / - params[:rate_key].each do |rate|
+      /   = hidden_field_tag "rate_key[]", rate
 
       .col-sm-7
         .panel.panel-primary
@@ -87,75 +87,80 @@
                             %select.form-control{ name: "room_#{room_number}_child_#{child_number}_age" }
                               %option= params["room_#{room_number}_child_#{child_number}_age"]
 
-            .payment
-              %h2 Información de Pago
-              .row
-                .col-sm-6
-                  .form-group
-                    %label Nombre:
-                    %input.form-control{ name: "card_holder_name", data: { conekta: 'card[name]' }  }
-                .col-sm-6
-                  .form-group
-                    %label Tipo de Tarjeta:
-                    %select.form-control{ name: "card_type" }
-                      %option VISA
-                      %option AMEX
-                      %option MASTERCARD
-              .row
-                .col-sm-6
-                  .form-group
-                    %label Número de Tarjeta:
-                    %input.form-control{ name: "card_number", data: { conekta: 'card[number]' }  }
-                .col-sm-6
-                  .form-group
-                    .row
-                      .col-sm-4
-                        %label Mes:
-                        %select.form-control{ name: "card_expirity_month", data: { conekta: 'card[exp_month]' }  }
-                          - (1..12).to_a.each do |month_number|
-                            %option= month_number
-                      .col-sm-4
-                        %label Año:
-                        %select.form-control{ name: "card_expirity_year", data: { conekta: 'card[exp_year]' }  }
-                          - (2016..2025).to_a.each do |year_number|
-                            %option= year_number
-                      .col-sm-4
-                        .form-group
-                          %label CVC:
-                          %input.form-control{ name: "card_cvc", data: { conekta: 'card[cvc]' }  }
+            / .payment
+            /   %h2 Información de Pago
+            /   .row
+            /     .col-sm-6
+            /       .form-group
+            /         %label Nombre:
+            /         %input.form-control{ name: "card_holder_name" }
+            /     .col-sm-6
+            /       .form-group
+            /         %label Tipo de Tarjeta:
+            /         %select.form-control{ name: "card_type" }
+            /           %option{ value: 'visa' } VISA
+            /           %option{ value: 'amex' } AMERICAN EXPRESS
+            /           %option{ value: 'mastercard' } MASTERCARD
+            /           %option{ value: 'discover' } DISCOVER
+            /           %option{ value: 'jcb' } JCB
+            /   .row
+            /     .col-sm-6
+            /       .form-group
+            /         %label Número de Tarjeta:
+            /         %input.form-control{ name: "card_number" }
+            /     .col-sm-6
+            /       .form-group
+            /         .row
+            /           .col-sm-4
+            /             %label Mes:
+            /             %select.form-control{ name: "card_expirity_month" }
+            /               - (1..12).to_a.each do |month_number|
+            /                 %option= month_number
+            /           .col-sm-4
+            /             %label Año:
+            /             %select.form-control{ name: "card_expirity_year" }
+            /               - (2016..2025).to_a.each do |year_number|
+            /                 %option= year_number
+            /           .col-sm-4
+            /             .form-group
+            /               %label CVC:
+            /               %input.form-control{ name: "card_cvc" }
 
-              .row
-                .col-sm-6
-                  .form-group
-                    %label Calle:
-                    %input.form-control{ name: "", data: { conekta: 'card[address][street1]' }  }
+            /   .row
+            /     .col-sm-6
+            /       .form-group
+            /         %label Calle:
+            /         %input.form-control{ name: "card_address_street1" }
 
-                .col-sm-6
-                  .form-group
-                    %label Colonia:
-                    %input.form-control{ name: "", data: { conekta: 'card[address][street2]' }  }
+            /     .col-sm-6
+            /       .form-group
+            /         %label Colonia:
+            /         %input.form-control{ name: "card_address_street2" }
 
-              .row
-                .col-sm-6
-                  .form-group
-                    %label Ciudad:
-                    %input.form-control{ name: "", data: { conekta: 'card[address][city]' }  }
+            /   .row
+            /     .col-sm-6
+            /       .form-group
+            /         %label Ciudad:
+            /         %input.form-control{ name: "card_address_city" }
 
-                .col-sm-6
-                  .form-group
-                    %label Estado:
-                    %input.form-control{ name: "", data: { conekta: 'card[address][state]' }  }
+            /     .col-sm-6
+            /       .form-group
+            /         %label Estado:
+            /         %input.form-control{ name: "card_address_state" }
 
-              .row
-                .col-sm-6
-                  .form-group
-                    %label CP:
-                    %input.form-control{ name: "", data: { conekta: 'card[address][zip]' }  }
+            /   .row
+            /     .col-sm-6
+            /       .form-group
+            /         %label CP:
+            /         %input.form-control{ name: "card_address_zip" }
 
-                .col-sm-6
-                  .form-group
-                    %label País:
-                    %input.form-control{ name: "", data: { conekta: 'card[address][country]' }  }
+            /     .col-sm-6
+            /       .form-group
+            /         %label País:
+            /         %select.form-control{ name: "card_address_country" }
+            /           %option{ value: 'MX' } MÉXICO
+            /           %option{ value: 'US' } USA
+            /           %option{ value: 'CA' } CANADA
 
       .col-sm-5
         .row
@@ -202,7 +207,7 @@
                       .total-net
                         = @hotel['currency']
                         $
-                        = @hotel['totalNet']
+                        = add_markup_to_rate(@hotel['totalNet'], @hotel['currency'])
 
                 %button#reservation-submit.btn.btn-block.btn-warning
                   Confirmar

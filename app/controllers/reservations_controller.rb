@@ -2,64 +2,13 @@ class ReservationsController < ApplicationController
 
   force_ssl if: :ssl_configured?
 
+  require 'paypal-sdk-rest'
+
+  include PayPal::SDK::REST
   include BookingForm
   include HotelHelper
 
   def new
-    # hotel_rechecked_rates = File.read(Rails.root + "app/assets/jsons/recheck_rate.json")
-    # @hotel = (JSON.parse hotel_rechecked_rates)['hotel']
-
-    # signature = generate_signature
-    # availability_request_hash = generate_single_availability_request_hash(params)
-    # availability_request_hash.except! "destination"
-    # availability_request_hash["hotels"] = {
-    #   hotel: [params[:hotel_code]]
-    # }
-    # availability_request_hash["rooms"] = {
-    #   included: true,
-    #   room: [params[:room_code]]
-    # }
-    # availability_request_hash["boards"] = {
-    #   included: true,
-    #   board: [params[:board_code]]
-    # }
-    # availability_request_hash["filter"] = {
-    #   paymentType: "AT_WEB"
-    # }
-
-    # availability_request = Typhoeus::Request.new(
-    #   "https://api.test.hotelbeds.com/hotel-api/1.0/hotels",
-    #   method: :post,
-    #   body: JSON.generate(availability_request_hash),
-    #   headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
-    # )
-    # availability_request.on_complete do |response|
-    #   if response.success?
-    #     @hotel_availability = JSON.parse response.body
-    #     # Rails.logger.info "Hotels Availability: #{response.body.inspect}"
-    #   else
-    #     # Rails.logger.info response.body.inspect
-    #   end
-    # end
-    # availability_request.run
-    # @response = availability_request.response
-    # @hotel = JSON.parse @response.body
-
-    # Rails.logger.info "Availability Request: #{JSON.generate(availability_request_hash)}"
-    # Rails.logger.info "Hotel: #{@hotel.inspect}"
-
-    # rate_keys_hash = {
-    #   rooms: []
-    # }
-    # @hotel['hotels']['hotels'][0]['rooms'][0]['rates'].each_with_index do |rate, index|
-    #   rate_keys_hash[:rooms][index] = {
-    #     rateKey: rate['rateKey']
-    #   }
-    # end
-
-    # respond_to do |format|
-    #   format.html { render json: JSON.generate(rate_keys_hash) }
-    # end
 
     rate_keys_hash = {
       language: 'CAS',
@@ -89,7 +38,81 @@ class ReservationsController < ApplicationController
     # Rails.logger.info "Recheck Rates Response: #{@response.body}"
   end
 
-  def create
+  def payment
+    rate_keys_hash = {
+      language: 'CAS',
+      rooms: []
+    }
+    (1..params['number_of_rooms'].to_i).to_a.each_with_index do |number_of_room, index|
+      rate_keys_hash[:rooms][index] = {
+        rateKey: params["room_#{number_of_room}_rateKey"]
+      }
+    end
+
+    signature = generate_signature
+
+    # Rails.logger.info "Rate Keys: #{JSON.generate(rate_keys_hash)}"
+
+    check_rates_request = Typhoeus::Request.new(
+      "https://api.test.hotelbeds.com/hotel-api/1.0/checkrates",
+      method: :post,
+      body: JSON.generate(rate_keys_hash),
+      accept_encoding: "gzip",
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+    )
+    check_rates_request.run
+    @response = check_rates_request.response
+    @hotel = (JSON.parse @response.body)['hotel']
+
+    client_total = Money.new(0, @hotel['currency'])
+    @hotel['rooms'].each do |room|
+      room['rates'].each do |rate|
+        client_total += (calculate_gross_room_rate(rate, @hotel['currency']))['client_total']
+      end
+    end
+
+    PayPal::SDK::REST.set_config(
+      :mode => "sandbox", # "sandbox" or "live"
+      :client_id => ENV['PAYPAL_CLIENT_ID'],
+      :client_secret => ENV['PAYPAL_CLIENT_SECRET']
+    )
+
+    payment = Payment.new({
+      :intent => "sale",
+      :redirect_urls => {
+        :return_url => ENV['PAYPAL_RETURN_URL'] + "?" + request.query_parameters.to_query,
+        :cancel_url => ENV['PAYPAL_CANCEL_URL']
+      },
+      :payer => {
+        :payment_method => "paypal"
+      },
+      :transactions => [{
+        :amount => {
+          :total => client_total.amount,
+          :currency => client_total.currency.iso_code
+        },
+        :description => "NeanderTravel Reservación."
+      }]
+    })
+
+    Rails.logger.info "Pago: #{payment.inspect}"
+
+    if payment.create
+      # payment.id     # Payment Id
+      Rails.logger.info "Pago ID: #{payment.id.inspect}"
+      redirect_url = payment.links.find{|v| v.method == "REDIRECT" }.href
+      redirect_to redirect_url
+      return
+    else
+      # payment.error  # Error Hash
+      Rails.logger.info "Pago Error: #{payment.error.inspect}"
+      redirect_to(:back, :flash => { :error => "No se pudo realizar el cargo." })
+      return
+    end
+
+  end
+
+  def book
 
     rate_keys_hash = {
       language: 'CAS',
@@ -125,59 +148,75 @@ class ReservationsController < ApplicationController
 
     # Rails.logger.info "Total del Cliente: #{client_total.inspect}"
 
-    require "conekta"
-    Conekta.api_key = "key_45w4WQNv6Y4icr2uz8yVGA"
+    PayPal::SDK::REST.set_config(
+      :mode => "sandbox", # "sandbox" or "live"
+      :client_id => ENV['PAYPAL_CLIENT_ID'],
+      :client_secret => ENV['PAYPAL_CLIENT_SECRET']
+    )
 
-    # Rails.logger.info "Token: #{params[:conektaTokenId]}"
+    payment = Payment.find(params[:paymentId])
+
+    if payment.execute(:payer_id => params[:PayerID])
+      Rails.logger.info "Pago ID: #{payment.id.inspect}"
+    else
+      Rails.logger.info "Pago Error: #{payment.error.inspect}"
+      redirect_to(:back, :flash => { :error => "No se pudo realizar el cargo." })
+      return
+    end
 
     params[:holder_email] = params[:holder_email].downcase
 
-    begin
-      charge = Conekta::Charge.create({
-        "amount"=> client_total.cents,
-        "currency"=> @hotel['currency'],
-        "description"=> "Neandertravel Reservación",
-        "reference_id"=> "orden_de_id_interno",
-        "card"=> params[:conektaTokenId],  # Ej. "tok_a4Ff0dD2xYZZq82d9"
-        "details"=> {
-          "name"=> params[:card_holder_name],
-          "phone"=> params[:holder_phone],
-          "email"=> params[:holder_email],
-          # "customer"=> {
-          #   "logged_in"=> true,
-          #   "successful_purchases"=> 14,
-          #   "created_at"=> 1379784950,
-          #   "updated_at"=> 1379784950,
-          #   "offline_payments"=> 4,
-          #   "score"=> 9
-          # },
-          "line_items"=> [{
-            "name"=> "Box of Cohiba S1s",
-            "description"=> "Imported From Mex.",
-            "unit_price"=> 20000,
-            "quantity"=> 1,
-            "sku"=> "cohb_s1",
-            "category"=> "food"
-          }]
-        }
-      })
+    # require "conekta"
+    # Conekta.api_key = "key_45w4WQNv6Y4icr2uz8yVGA"
 
-    rescue Conekta::ParameterValidationError => e
-      Rails.logger.info "ParameterValidationError: #{e.message_to_purchaser}"
-      # puts e.message_to_purchaser
-      #alguno de los parámetros fueron inválidos
+    # Rails.logger.info "Token: #{params[:conektaTokenId]}"
 
-    rescue Conekta::ProcessingError => e
-      Rails.logger.info "ProcessingError: #{e.message_to_purchaser}"
-      # puts e.message_to_purchaser
-      #la tarjeta no pudo ser procesada
+    # begin
+    #   charge = Conekta::Charge.create({
+    #     "amount"=> client_total.cents,
+    #     "currency"=> @hotel['currency'],
+    #     "description"=> "Neandertravel Reservación",
+    #     "reference_id"=> "orden_de_id_interno",
+    #     "card"=> params[:conektaTokenId],  # Ej. "tok_a4Ff0dD2xYZZq82d9"
+    #     "details"=> {
+    #       "name"=> params[:card_holder_name],
+    #       "phone"=> params[:holder_phone],
+    #       "email"=> params[:holder_email],
+    #       # "customer"=> {
+    #       #   "logged_in"=> true,
+    #       #   "successful_purchases"=> 14,
+    #       #   "created_at"=> 1379784950,
+    #       #   "updated_at"=> 1379784950,
+    #       #   "offline_payments"=> 4,
+    #       #   "score"=> 9
+    #       # },
+    #       "line_items"=> [{
+    #         "name"=> "Box of Cohiba S1s",
+    #         "description"=> "Imported From Mex.",
+    #         "unit_price"=> 20000,
+    #         "quantity"=> 1,
+    #         "sku"=> "cohb_s1",
+    #         "category"=> "food"
+    #       }]
+    #     }
+    #   })
 
-    rescue Conekta::Error => e
-      Rails.logger.info "Error: #{e.message_to_purchaser}"
-      # puts e.message_to_purchaser
-      #un error ocurrió que no sucede en el flujo normal de cobros como por ejemplo un auth_key incorrecto
+    # rescue Conekta::ParameterValidationError => e
+    #   Rails.logger.info "ParameterValidationError: #{e.message_to_purchaser}"
+    #   # puts e.message_to_purchaser
+    #   #alguno de los parámetros fueron inválidos
 
-    end
+    # rescue Conekta::ProcessingError => e
+    #   Rails.logger.info "ProcessingError: #{e.message_to_purchaser}"
+    #   # puts e.message_to_purchaser
+    #   #la tarjeta no pudo ser procesada
+
+    # rescue Conekta::Error => e
+    #   Rails.logger.info "Error: #{e.message_to_purchaser}"
+    #   # puts e.message_to_purchaser
+    #   #un error ocurrió que no sucede en el flujo normal de cobros como por ejemplo un auth_key incorrecto
+
+    # end
 
     # Rails.logger.info "Cargo: #{charge.inspect}"
 
@@ -285,7 +324,9 @@ class ReservationsController < ApplicationController
         supplier: @reservation['hotel']['supplier'],
         client_total: client_total.cents,
         supplier_net_total: @reservation['totalNet'],
-        currency: @reservation['currency']
+        currency: @reservation['currency'],
+        payment_id: params[:paymentId],
+        payer_id: params[:PayerID]
       })
 
       # Send client email

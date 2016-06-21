@@ -6,10 +6,12 @@ Rails.application.routes.draw do
   devise_for :clients
   resources :hotels
   resources :destinations
-  resources :reservations, only: [:new, :create] do
+  resources :reservations, only: [:new] do
     collection do
       get 'success'
       get 'error'
+      get 'payment'
+      get 'book'
     end
   end
 
