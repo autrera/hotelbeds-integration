@@ -5,7 +5,7 @@ test: &default
   client_secret: ENV['PAYPAL_CLIENT_SECRET']
 
   # Mode can be 'live' or 'sandbox'
-  mode: sandbox
+  mode: ENV['PAYPAL_MODE']
 
   # Credentials for Classic APIs
   # app_id: ENV['PAYPAL_APP_ID']
@@ -26,4 +26,4 @@ development:
 
 production:
   <<: *default
-  mode: live
+  mode: ENV['PAYPAL_MODE']

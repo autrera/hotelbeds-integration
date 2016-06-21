@@ -72,7 +72,7 @@ class ReservationsController < ApplicationController
     end
 
     PayPal::SDK::REST.set_config(
-      :mode => "sandbox", # "sandbox" or "live"
+      :mode => ENV['PAYPAL_MODE'], # "sandbox" or "live"
       :client_id => ENV['PAYPAL_CLIENT_ID'],
       :client_secret => ENV['PAYPAL_CLIENT_SECRET']
     )
@@ -149,7 +149,7 @@ class ReservationsController < ApplicationController
     # Rails.logger.info "Total del Cliente: #{client_total.inspect}"
 
     PayPal::SDK::REST.set_config(
-      :mode => "sandbox", # "sandbox" or "live"
+      :mode => ENV['PAYPAL_MODE'], # "sandbox" or "live"
       :client_id => ENV['PAYPAL_CLIENT_ID'],
       :client_secret => ENV['PAYPAL_CLIENT_SECRET']
     )
