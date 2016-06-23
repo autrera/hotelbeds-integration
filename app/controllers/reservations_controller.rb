@@ -235,7 +235,7 @@ class ReservationsController < ApplicationController
     booking_structure.setParams params
     json_structure = JSON.generate booking_structure.generate
 
-    # Rails.logger.info "JSON Structure: #{json_structure}"
+    Rails.logger.info "JSON Structure: #{json_structure}"
 
     reservation_request = Typhoeus::Request.new(
       "https://api.test.hotelbeds.com/hotel-api/1.0/bookings",
