@@ -24,13 +24,14 @@
             %a.btn.btn-default{ href: "#hotel-rooms" } Habitaciones
             %a.btn.btn-default{ href: "#hotel-facilities" } Facilidades
 
-    #hotel-images.images
-      .row
-        .col-sm-12
-          .owl-carousel
-            - hotel_content['images'].each do |image|
-              .item
-                %img.image.owl-lazy{ data: { src: "https://photos.hotelbeds.com/giata/bigger/" + image['path'] } }
+    - if hotel_content.has_key?('images') && hotel_content['images'] != []
+      #hotel-images.images
+        .row
+          .col-sm-12
+            .owl-carousel
+              - hotel_content['images'].each do |image|
+                .item
+                  %img.image.owl-lazy{ data: { src: "https://photos.hotelbeds.com/giata/bigger/" + image['path'] } }
 
     #hotel-about.about
       .row
