@@ -1,7 +1,7 @@
 module BookingForm
 
   def generate_signature
-    signature = Digest::SHA256.hexdigest "4whec3tnzq9abhrx2ku9n78t" + "bS6CCG3tkc" + Time.now.to_i.to_s
+    signature = Digest::SHA256.hexdigest ENV['HB_KEY'] + ENV['HB_SECRET'] + Time.now.to_i.to_s
     return signature
   end
 

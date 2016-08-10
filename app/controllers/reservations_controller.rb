@@ -29,7 +29,7 @@ class ReservationsController < ApplicationController
       method: :post,
       body: JSON.generate(rate_keys_hash),
       accept_encoding: "gzip",
-      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => ENV['HB_KEY'], 'X-Signature' => signature }
     )
     check_rates_request.run
     @response = check_rates_request.response
@@ -58,7 +58,7 @@ class ReservationsController < ApplicationController
       method: :post,
       body: JSON.generate(rate_keys_hash),
       accept_encoding: "gzip",
-      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => ENV['HB_KEY'], 'X-Signature' => signature }
     )
     check_rates_request.run
     @response = check_rates_request.response
@@ -133,7 +133,7 @@ class ReservationsController < ApplicationController
       method: :post,
       body: JSON.generate(rate_keys_hash),
       accept_encoding: "gzip",
-      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => ENV['HB_KEY'], 'X-Signature' => signature }
     )
     check_rates_request.run
     @response = check_rates_request.response
@@ -242,7 +242,7 @@ class ReservationsController < ApplicationController
       method: :post,
       body: json_structure,
       accept_encoding: "gzip",
-      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => ENV['HB_KEY'], 'X-Signature' => signature }
     )
     reservation_request.on_complete do |response|
       if response.success?
@@ -259,7 +259,7 @@ class ReservationsController < ApplicationController
       method: :get,
       params: { fields: "all" },
       accept_encoding: "gzip",
-      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => ENV['HB_KEY'], 'X-Signature' => signature }
     )
     content_request.on_complete do |response|
       if response.success?

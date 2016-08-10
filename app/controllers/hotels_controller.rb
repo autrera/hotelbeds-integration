@@ -17,7 +17,7 @@ class HotelsController < ApplicationController
       method: :get,
       params: content_request_hash,
       accept_encoding: "gzip",
-      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => ENV['HB_KEY'], 'X-Signature' => signature }
     )
     content_request.run
     content_response = content_request.response
@@ -41,7 +41,7 @@ class HotelsController < ApplicationController
       method: :post,
       body: JSON.generate(availability_request_hash),
       accept_encoding: "gzip",
-      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => ENV['HB_KEY'], 'X-Signature' => signature }
     )
     availability_request.run
     availability_response = availability_request.response
@@ -83,7 +83,7 @@ class HotelsController < ApplicationController
       method: :post,
       body: JSON.generate(availability_request_hash),
       accept_encoding: "gzip",
-      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => ENV['HB_KEY'], 'X-Signature' => signature }
     )
     availability_request.on_complete do |response|
       if response.success?
@@ -99,7 +99,7 @@ class HotelsController < ApplicationController
       method: :get,
       # params: content_request_hash,
       accept_encoding: "gzip",
-      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => "4whec3tnzq9abhrx2ku9n78t", 'X-Signature' => signature }
+      headers: { 'Accept' => "application/json", 'Content-Type' => "application/json", 'Api-Key' => ENV['HB_KEY'], 'X-Signature' => signature }
     )
     content_request.on_complete do |response|
       if response.success?
