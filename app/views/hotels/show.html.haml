@@ -58,10 +58,11 @@
                 .col-sm-12
                   .name
                     = room['name']
-              .row
-                .col-sm-12
-                  .image-container
-                    %img{ src: room_image(room['code'], hotel_content['images']) }
+              - if hotel_content.has_key?('images') && hotel_content['images'] != nil
+                .row
+                  .col-sm-12
+                    .image-container
+                      %img{ src: room_image(room['code'], hotel_content['images']) }
               - room_facilities = find_room_facilities(room['code'], hotel_content['rooms'])
               - if room_facilities
                 .row
