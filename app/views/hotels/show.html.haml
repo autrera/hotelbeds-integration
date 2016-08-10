@@ -161,21 +161,23 @@
                               = DateTime.iso8601(cancellation_policies[:from]).strftime('%m/%d/%Y %T %Z') + "."
                               Uso horario del destino.
 
-    #hotel-facilities.facilities
-      .row
-        .col-sm-12
-          %h2.title
-            Facilities
-      .row
-        .col-sm-12
-          .row
-            - grouped_facilities = group_facilities hotel_content['facilities']
-            - grouped_facilities.each do |grouped_facility|
-              .col-sm-3
-                %ul
-                  - grouped_facility.each do |facility|
-                    %li
-                      = facility['description']['content']
-                      - if facility.has_key? 'indFee'
-                        %span.facility_fee
-                          $
+    - if hotel_content.has_key?('facilities') && hotel_content['facilities'] != nil
+      #hotel-facilities.facilities
+        .row
+          .col-sm-12
+            %h2.title
+              Facilities
+        .row
+          .col-sm-12
+            .row
+              - grouped_facilities = group_facilities hotel_content['facilities']
+              - grouped_facilities.each do |grouped_facility|
+                .col-sm-3
+                  %ul
+                    - grouped_facility.each do |facility|
+                      %li
+                        = facility['description']['content']
+                        - if facility.has_key? 'indFee'
+                          %span.facility_fee
+                            $
+
