@@ -24,7 +24,7 @@
             %a.btn.btn-default{ href: "#hotel-rooms" } Habitaciones
             %a.btn.btn-default{ href: "#hotel-facilities" } Facilidades
 
-    - if hotel_content.has_key?('images') && hotel_content['images'] != []
+    - if hotel_content.has_key?('images') && hotel_content['images'] != nil
       #hotel-images.images
         .row
           .col-sm-12
