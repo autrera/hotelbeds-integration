@@ -13,7 +13,7 @@ class HotelsController < ApplicationController
     content_request_hash = generate_content_request_hash(params)
 
     content_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels",
+      "#{ENV['HB_CONTENT_API_END_POINT']}/#{ENV['HB_CONTENT_API_VERSION']}/hotels",
       method: :get,
       params: content_request_hash,
       accept_encoding: "gzip",
@@ -37,7 +37,7 @@ class HotelsController < ApplicationController
     # Rails.logger.info "Availability Hash #{JSON.generate(availability_request_hash)}"
 
     availability_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-api/1.0/hotels",
+      "#{ENV['HB_BOOKING_API_END_POINT']}/#{ENV['HB_BOOKING_API_VERSION']}/hotels",
       method: :post,
       body: JSON.generate(availability_request_hash),
       accept_encoding: "gzip",
@@ -79,7 +79,7 @@ class HotelsController < ApplicationController
     # content_request_hash = generate_content_request_hash(params)
 
     availability_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-api/1.0/hotels",
+      "#{ENV['HB_BOOKING_API_END_POINT']}/#{ENV['HB_BOOKING_API_VERSION']}/hotels",
       method: :post,
       body: JSON.generate(availability_request_hash),
       accept_encoding: "gzip",
@@ -95,7 +95,7 @@ class HotelsController < ApplicationController
     end
 
     content_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels/#{@hotel_code}?language=CAS",
+      "#{ENV['HB_CONTENT_API_END_POINT']}/#{ENV['HB_CONTENT_API_VERSION']}/hotels/#{@hotel_code}?language=CAS",
       method: :get,
       # params: content_request_hash,
       accept_encoding: "gzip",

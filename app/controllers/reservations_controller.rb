@@ -25,7 +25,7 @@ class ReservationsController < ApplicationController
     signature = generate_signature
 
     check_rates_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-api/1.0/checkrates",
+      "#{ENV['HB_BOOKING_API_END_POINT']}/#{ENV['HB_BOOKING_API_VERSION']}/checkrates",
       method: :post,
       body: JSON.generate(rate_keys_hash),
       accept_encoding: "gzip",
@@ -54,7 +54,7 @@ class ReservationsController < ApplicationController
     # Rails.logger.info "Rate Keys: #{JSON.generate(rate_keys_hash)}"
 
     check_rates_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-api/1.0/checkrates",
+      "#{ENV['HB_BOOKING_API_END_POINT']}/#{ENV['HB_BOOKING_API_VERSION']}/checkrates",
       method: :post,
       body: JSON.generate(rate_keys_hash),
       accept_encoding: "gzip",
@@ -129,7 +129,7 @@ class ReservationsController < ApplicationController
     # Rails.logger.info "Rate Keys: #{JSON.generate(rate_keys_hash)}"
 
     check_rates_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-api/1.0/checkrates",
+      "#{ENV['HB_BOOKING_API_END_POINT']}/#{ENV['HB_BOOKING_API_VERSION']}/checkrates",
       method: :post,
       body: JSON.generate(rate_keys_hash),
       accept_encoding: "gzip",
@@ -238,7 +238,7 @@ class ReservationsController < ApplicationController
     Rails.logger.info "JSON Structure: #{json_structure}"
 
     reservation_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-api/1.0/bookings",
+      "#{ENV['HB_BOOKING_API_END_POINT']}/#{ENV['HB_BOOKING_API_VERSION']}/bookings",
       method: :post,
       body: json_structure,
       accept_encoding: "gzip",
@@ -255,7 +255,7 @@ class ReservationsController < ApplicationController
     end
 
     content_request = Typhoeus::Request.new(
-      "https://api.test.hotelbeds.com/hotel-content-api/1.0/hotels/#{params[:hotel_id]}?language=CAS",
+      "#{ENV['HB_CONTENT_API_END_POINT']}/#{ENV['HB_CONTENT_API_VERSION']}/hotels/#{params[:hotel_id]}?language=CAS",
       method: :get,
       params: { fields: "all" },
       accept_encoding: "gzip",
